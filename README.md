@@ -1,1 +1,1 @@
-"#ekisan" 
+e-Kisan is a farmers portal to provide the farmers and consumer a common digital platform to sell and buy Agricultural Food Products
