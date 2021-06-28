@@ -1,0 +1,556 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seeds Dealers</title><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <style>
+
+    body{
+     background-image: url("{% static 'images/seednfert/seedbg.jpg' %} ");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+
+    .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -5px;
+            margin-left:0;
+            margin-right:0;
+            width:100%
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        .gtrans {
+            margin-left: 30%;
+        }
+
+    .fert{
+    position:absolute;
+    top:38px;
+    left: 400px;
+    font-size:70px;
+    color:#000;
+    }
+
+    .rectangle {
+    position:absolute;
+    top:120px;
+    left:50px;
+      height: 270px;
+      width: 1410px;
+      background-color: #E2A76F;
+      border-radius: 25px;
+    }
+    .table{
+    position: absolute;
+    top:440px;
+    left: 200px;
+    }
+
+    table {
+      border: 2px solid black;
+      border-radius:5px;
+      width: 1100px;
+
+       font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even){background-color: #FFFFCC;}
+    tr:nth-child(odd){background-color: #F2BB66;}
+
+     tr:hover {background-color: #ddd;}
+
+   td,  th {
+      border: 1px solid grey;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color:#F2BB66;
+      color: black;
+      height: 45px;
+    }
+
+    /* Pagination links */
+    .pagination{
+    margin-left: 630px;
+
+    }
+
+    .pagination a {
+
+      margin-top: 1315px;
+       margin-left: 18px;
+       margin-bottom: 30px;
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 0.5px solid grey;
+      background-color: #E2A76F;
+      border-radius: 50px;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {background-color: #C0C0C0; border-radius: 50px;}
+
+    #foot{
+
+	margin-top: 91%;
+}
+.container1{
+	max-width: 100%;
+	margin: auto;
+
+}
+.row1{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.footer{
+	position: absolute;
+	left:0;
+	background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 10px;
+}
+.footer p{
+	color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+	min-width: 400px;
+	height: 250px;
+	margin-bottom: 20px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+	margin-left: 30px;
+
+}
+.footer-col-1 img{
+	width:150px;
+	margin-left: 110px;
+}
+.footer-col-1 p{
+
+	margin-left: 150px;
+	color: #3B9C9C;
+}
+.footer-col-2{
+	flex: 1;
+	margin-left: 15px;
+
+}
+.footer-col-2 input{
+
+ 	border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+ 	border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+
+
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+
+}
+.footer-col-3{
+	flex-basis: 12%;
+	margin-left: 30px;
+	text-align: left;
+}
+.footer-col-3 .fa{
+
+	margin-right: 8px;
+	font-size: 25px;
+	height: 40px;
+	width:40px;
+	text-align: center;
+	padding-top: 7px;
+	color: #3B9C9C;
+	background-color:black;
+}
+/*to remove bullet style*/
+ul{
+	list-style-type: none;
+}
+
+.copyright{
+	text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+    </style>
+</head>
+<body>
+<div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+    <center>
+        <div class="rectangle"><p class="fert"><img src="{% static 'images/seednfert/seedback.png' %}">Seeds Dealers</p>
+        </div>
+
+        <div class="table">
+            <table>
+                <tr>
+                  <th  style="width:7%">Sr No.</th>
+                  <th>State</th>
+                  <th>District/Village</th>
+                  <th>Name & Address</th>
+                  <th style="width:20%">Phone no</th>
+
+                </tr>
+                <!--row 1 begin-->
+                <tr>
+                  <td>01</td>
+                  <td rowspan="3"> KERALA</td>
+                  <td>CHANGLANG / BORDUMSA</td>
+                  <td>Name: Kaveri Fertilizers industries<br>
+                     Address:Near St. Marys Church, Alangad Aluva
+                  </td>
+                    <td>  9435036781</td>
+                </tr>
+                   <tr>
+                  <td>02</td>
+                  <td>KOLLAM</td>
+                  <td>Name: Swasraya Karshaka Samithi<br>
+                    Address: SKS Anchal, 691306</td>
+                  <td>8547600101</td>
+
+                </tr>
+                   <tr>
+                  <td>03</td>
+                  <td>KOLLAM</td>
+                  <td>Name: Bharathy Agricone Pvt. Ltd.<br>
+                    Address: Thattamala P O Kollam</td>
+                  <td>9447410525</td>
+                 </tr>
+                <!--row 1 end-->
+                <!--row 2 begin-->
+                <tr>
+                  <td>04</td>
+                  <td rowspan="3" >	ODISHA</td>
+                  <td>BALASORE</td>
+                  <td>Name: Umesh Ch. Maharana<br>
+                     Address:At:- Ramachandrapur, Po:- Kenheibindha
+                  </td>
+                    <td>9937209214</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>BOUDH</td>
+                  <td>Name:  JOGINDRA PRADHAN<br>
+                     Address:At:- ICHHAPUR, BADHIGAON
+                  </td>
+                    <td>9937112686</td>
+                </tr>
+                <tr>
+                  <td>06</td>
+                  <td>BAUDH</td>
+                  <td>Name: KHAGESWAR MAHAKUD<br>
+                     Address:AT: LAIDA, PO/GP: DAPALA, VIA: BAGHIABAHAL, DIST: BOUDH
+                  </td>
+                    <td>9938503510</td>
+                </tr>
+
+                <!--row 2 end-->
+                <!--row 3 begin-->
+                <tr>
+                  <td>07</td>
+                  <td rowspan="5">PUNJAB</td>
+                  <td>MUKTSAR</td>
+                  <td>Name:Bharat seed corp.<br>
+                     Address:116 A NGM Muktsar
+                  </td>
+                    <td> 9815041111</td>
+                </tr>
+                   <tr>
+                  <td>08</td>
+                  <td>SHAHID BHAGAT SINGH NAGAR</td>
+                  <td>Name:  Tata Beej Bhandar<br>
+                    Address: VPO: Jadla</td>
+                  <td>9988708854 </td>
+
+                </tr>
+                   <tr>
+                  <td>09</td>
+                  <td>SHAHID BHAGAT SINGH NAGAR</td>
+                  <td>Name:  Zimidara Seed Store DURGA<br>
+                    Address: Balachaur</td>
+                  <td>9417885494</td>
+                 </tr>
+
+                <tr>
+                  <td>10</td>
+                  <td>TARN TARAN</td>
+                  <td>Name:  Chaudhary Seed Store<br>
+                    Address: MOHANIA</td>
+                  <td>9815188230</td>
+                 </tr>
+
+                <tr>
+                  <td>11</td>
+                  <td>KAPURTHALA</td>
+                  <td>Name:ZIMIDARA KHTI STORE<br>
+                    Address:SCF 15 NEW SABZI MANDI KAPURTHALA</td>
+                  <td>9814252149</td>
+                 </tr>
+
+                <!--row 3 end-->
+                <!--row 4 begin-->
+                <tr>
+                  <td>12</td>
+                  <td rowspan="3">RAJASTHAN</td>
+                  <td> PALI</td>
+                  <td>Name: RAMDEV AGRO AGENCY<br>
+                     Address:JAITARAN
+                  </td>
+                    <td> 7737596570</td>
+                </tr>
+                   <tr>
+                  <td>13</td>
+                  <td>PALI</td>
+                  <td>Name:VEER TEJA AGRO SALES<br>
+                    Address: LAMBIYA</td>
+                  <td>9782838413 </td>
+
+                </tr>
+                   <tr>
+                  <td>14</td>
+                  <td>BARMER</td>
+                  <td>Name:DEPUTY DIRECTOR OF THE AGRICULTURE Z.P. BARMER<br>
+                    Address: BARMER</td>
+                  <td>9414205680</td>
+                 </tr>
+                <!--row 4 end-->
+                <!--row 5 begin-->
+                <tr>
+                  <td>15</td>
+                  <td rowspan="3">SIKKIM</td>
+                  <td> GANGTOK</td>
+                  <td>Name: Sushil Sharma<br>
+                     Address:M.G.Marg, Gangtok
+                  </td>
+                    <td>9832017610</td>
+                </tr>
+                   <tr>
+                  <td>16</td>
+                  <td>GANGTOK</td>
+                  <td>Name: JP Enterprise<br>
+                    Address:Denzong Cinema Road, Gangtok</td>
+                  <td>9800892620</td>
+
+                </tr>
+
+                <!--row 5 end-->
+            </table><br>
+        </div>
+        <br>
+        <br></center>
+        <div class="pagination">
+            <a href="/seed1/">&laquo;</a>
+          <a href="/seed1/">1</a>
+          <a class="active"  href="#">2</a>
+          <a href="/seed3/">3</a>
+          <a href="/seed3/">&raquo;</a>
+        </div>
+        <br>
+<section id="foot">
+<div class="footer">
+	<div class="container1">
+		<div class="row1">
+			<div class="footer-col-1">
+				 <img src="{% static 'images/lll.png' %}">
+				<a href="/about/"><p>About us</p></a>
+				<a href="/contact/"><p>Contact us</p></a>
+			</div>
+			<div class="footer-col-2">
+
+				<p><b>FEEDBACK FORM</b></p>
+				<input type="email" placeholder="ENTER YOUR NAME">
+				<input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+				<textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+				</textarea><br>
+				<button type="button" class="btn btn-primary">SUBMIT</button>
+			</div>
+			<div class=" footer-col-3">
+				<p></p>
+				<p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+				<p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+				<p><i class="fa fa-phone"></i> 9323131444</p>
+				 <div class="social-media">
+			        <ul>
+			           <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+			        </ul>
+			      </div>
+			</div>
+		</div>
+		<!-- <hr> -->
+		<p class="copyright">Copyright 2021 e-Kisan</p>
+	</div>
+</div>
+</section>
+
+</body>
+</html>

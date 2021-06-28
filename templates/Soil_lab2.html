@@ -1,0 +1,652 @@
+<!--<!DOCTYPE html>-->
+{% load static %}
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <style>
+        .header ul {
+            list-style-type: none;
+            margin-top: -40px;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+        <!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        .gtrans {
+            margin-left: 25%;
+        }
+
+        table {
+            margin-top: 10px;
+            margin-left: 120px;
+            width: 85%;
+            /* background-color: rgb(46, 8, 4);
+            opacity: 0.6;
+            color: rgb(255, 255, 255); */
+            font-size: 14px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgb(225, 225, 225);
+            padding-left: 9px;
+            padding-top: 0px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: left;
+        }
+
+        body {
+            background-image: url("{% static 'images/soil/Soil_labdood.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+            border-radius: 17px;
+        }
+
+        .pagination a.active {
+            background-color: #6F4E37;
+            color: white;
+            border: 1px solid #6F4E37;
+            border-radius: 17px;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 17px;
+        }
+
+        #head {
+            background-color: rgb(237, 241, 229);
+            color: #000;
+            font-weight: bold;
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        /* #headname {
+            color: rgb(80, 75, 75);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
+            margin-top: 0px;
+            padding-top: 10px;
+            height: 90px;
+            margin-bottom: 40px;
+        } */
+
+        tr:nth-child(odd) {
+            background-color: rgb(255, 254, 254);
+            color: #6F4E37;
+            border-color: #6F4E37;
+        }
+
+        tr:nth-child(even) {
+            background-color: #6F4E37;
+            color: white;
+            border-color: white;
+        }
+
+        /* #textblock {
+            margin-top: 0px;
+        } */
+
+        /* h1{
+            background-image: url('soil_testhead.jfif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }     */
+        .column {
+            float: left;
+            /* width: 33.33%; */
+            /* padding: 5px; */
+        }
+
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #firstimg {
+            /* margin-left: 230px; */
+            margin-left: 140px;
+        }
+
+        #vid {
+            margin-left: 20px;
+            margin-top: -90px;
+        }
+
+        #lastimg {
+            margin-left: 20px;
+        }
+
+        h1 {
+            background-image: url("{% static 'images/soil/Soil_headbg.png' %}");
+            border-radius: 14px;
+            padding-top: 20px;
+            width: 900px;
+            justify-self: center;
+        }
+
+        #textblock {
+            height: 140px;
+            color: rgb(223, 215, 215);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-top: -20px;
+            margin-top: 10px;
+            text-shadow: 3px 3px 0 #3d2b1e;
+            font-size: 80px;
+        }
+
+        .container1 {
+            max-width: 100%;
+            margin: auto;
+
+        }
+
+        .row1 {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 10px;
+            margin-right: -30px;
+        }
+
+        .footer p {
+            color: #8a8a8a;
+
+        }
+
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            min-width: 400px;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col-1 {
+            flex-basis: 30%;
+            margin-left: 30px;
+
+        }
+
+        .footer-col-1 img {
+            width: 150px;
+            margin-left: 110px;
+
+        }
+
+        .footer-col-1 p {
+
+            margin-left: 150px;
+            color: #3B9C9C;
+        }
+
+        .footer-col-2 {
+            flex: 1;
+            margin-left: 15px;
+
+        }
+
+        .footer-col-2 input {
+
+            border: 1px solid #3B9C9C;
+            padding: 10px;
+            width: 77%;
+            border-radius: 18px;
+            background-color: black;
+            color: #8a8a8a;
+        }
+
+        .footer-col-2 textarea {
+            border: 1px solid #3B9C9C;
+            border-radius: 18px;
+            text-align: center;
+            width: 77%;
+            color: #8a8a8a;
+            background-color: black;
+
+
+        }
+
+        .btn-primary {
+            box-shadow: none !important;
+            border: none;
+            border-radius: 25px;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #3B9C9C;
+            width: 110px;
+
+
+        }
+
+        .footer-col-3 {
+            flex-basis: 12%;
+            margin-left: 30px;
+            text-align: left;
+        }
+
+        .footer-col-3 .fa {
+
+            margin-right: 8px;
+            font-size: 25px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding-top: 7px;
+            color: #3B9C9C;
+            background-color: black;
+        }
+
+        /*to remove bullet style*/
+        ul {
+            list-style-type: none;
+        }
+
+        .copyright {
+            text-align: center;
+
+        }
+
+        /*----------social media--------------*/
+        .social-media {
+            width: 100%;
+            text-align: left;
+        }
+
+        .social-media ul {
+            list-style: none;
+        }
+
+        .social-media ul li {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            border-radius: 35px;
+        }
+        .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+
+<body>
+    <br><br>
+    <div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+    </div>
+
+    <center>
+        <h1 id="textblock">
+            <b>Soil Testing Labs</b>
+        </h1>
+    </center><br><br>
+    <!-- </h1> -->
+    <div class="row">
+        <div id='firstimg' class="column">
+            <img src="{% static 'images/soil/Soil_labhead.jpg' %}" width="350px" height="200px" style="border: 1px solid black;">
+        </div>
+        <div class="column">
+            <video id='vid' width='460' height="380" autoplay muted loop>
+                <source src="{% static 'images/soil/soil.mp4' %}" type="video/mp4">
+                <source src="{% static 'images/soil/soil.ogg' %}" type="video/ogg">
+            </video>
+        </div>
+        <div id='lastimg' class="column">
+            <img src="{% static 'images/soil/Soil_labhead1.jpg' %}" width="350px" height="200px" style="border: 1px solid black;">
+        </div>
+    </div>
+    <table>
+        <tr id='head'>
+            <th>Sr.No.</th>
+            <th>District</th>
+            <th>Lab No.</th>
+            <th>Name & Address</th>
+            <th>Contact No.</th>
+            <th>Micronutrient facility</th>
+            <th>Analyzing Capacity per Annum (Nos)</th>
+        </tr>
+        <tr>
+            <td rowspan="2">6</td>
+            <td rowspan="2">Nandurbar</td>
+            <td>1</td>
+            <td>
+                <p>PSGVP Mandals soil and water testing Laboratory, Shahada, Dist. Nandurbar
+                </p>
+            </td>
+            <td>8484979796</td>
+            <td>YES</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <p>Vanashree Mruda Va Jal Parikshan Proyogshala Shahada vanashree</p>
+            </td>
+            <td>02364/262237</td>
+            <td>YES</td>
+            <td>6570</td>
+        </tr>
+        <tr>
+            <td rowspan="6">7</td>
+            <td rowspan="6">Nasik</td>
+            <td>1</td>
+            <td>
+                <p>District t Soil survey & soil testing laboratory Reshma Manzil, Ganjmal Nashik .</p>
+            </td>
+            <td>9403277098
+            </td>
+            <td>YES</td>
+            <td>5760</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <p>Ashvmedh Engineers & Consultant, Survey No.102,Plot No.26, Wadala Pathardi Road Pandav Nagari, Indira
+                    Nagar
+                    Nashik-422009.</p>
+            </td>
+            <td>0253-2392225,<br>
+                9325385525
+
+
+            </td>
+            <td>YES</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <p>Om Laboratory, Senapati Glass House Shivraj Nagar,Wadner Gate Post Devlali, Nashik 422101</p>
+            </td>
+            <td>0253-241440349<br>
+                226576980,<br>9226576980
+            </td>
+            <td>YES</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                <p>Bio Organic Solution,663, A Wing, Market Yard, Dindori Road, Panchavati, Nashik-3</p>
+            </td>
+            <td>9822304864,<br>
+                9011480064</td>
+            <td>YES</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                <p>Nirmala krushi, 15, Shivam Tower Mumbai Agra highway National Highway Pimpalgaon
+                    Bas. Tal: Niphad Dist: Nashik .
+                </p>
+            </td>
+            <td>02550-251336<br>
+                9890485336
+
+            </td>
+            <td>YES</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                <p>Krushidoot Analyticals ,Survey No.37 Jaulke Dindori Industrial Area,10th Mail, jaulke Tal. Dindori
+                    Dist.Nashik - 422206</p>
+            </td>
+            <td>9922416704<br>
+                9860951698
+            </td>
+            <td>YES</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td rowspan="5">8</td>
+            <td rowspan="5">Dhule</td>
+            <td>1</td>
+            <td>
+                <p>District Soil Survey & Soil Testing Officer, Agrir Polyclnic,Taluka SeedFarm Pimpri , Chalisgaon Road
+                    Dhule
+                </p>
+            </td>
+            <td>9420735729</td>
+            <td>YES</td>
+            <td>7000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <p>Priyadarshani Soil Testing Lab Shirpur, Dist. Dhule</p>
+            </td>
+            <td>9615961515</td>
+            <td>YES</td>
+            <td>12000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <p>Vision Agriculure Devlopment, Soil Testing Laboratory 16/3, Near krushi Utpanna Bajar Samiti parola
+                    Road
+                    Dhule</p>
+            </td>
+            <td>9615961515</td>
+            <td>YES</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                <p>Shree Sai Analytical Lab Shindkheda, Dist. Dhule</p>
+            </td>
+            <td>9403097678</td>
+            <td>YES</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                <p>Krishi Vigyan Kendra, Dhule Agriculture College Campus, Parola Chaufuly, Mumbai-Agra Highway (NH-3),
+                    Dhule
+                    424 004</p>
+            </td>
+            <td>02562-230362</td>
+            <td>YES</td>
+            <td>1000</td>
+        </tr>
+    </table><br><br>
+    <div class="center">
+        <div class="pagination">
+            <a href="/soil1/">&laquo;</a>
+            <a href="/soil1/">1</a>
+            <a href="#" class="active">2</a>
+            <a href="/soil3/">3</a>
+            <a href="/soil4/">4</a>
+            <a href="/soil3/">&raquo;</a>
+        </div>
+    </div>
+    <br>
+    <section id="foot">
+        <div class="footer">
+            <div class="container1">
+                <div class="row1">
+                    <div class="footer-col-1">
+                        <img src="{% static 'images/lll.png' %}">
+                        <a href="/about/">
+                            <p>About us</p>
+                        </a>
+                        <a href="/contact/">
+                            <p>Contact us</p>
+                        </a>
+                    </div>
+                    <div class="footer-col-2">
+
+                        <p><b>FEEDBACK FORM</b></p>
+                        <input type="email" placeholder="ENTER YOUR NAME">
+                        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+                        <textarea rows="5" cols="50" style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+    				</textarea><br>
+                        <button type="button" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                    <div class=" footer-col-3">
+                        <p></p>
+                        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+                        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+                        <p><i class="fa fa-phone"></i> 9323131444</p>
+                        <div class="social-media">
+                            <ul>
+                                <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <p class="copyright">Copyright 2021 e-Kisan</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

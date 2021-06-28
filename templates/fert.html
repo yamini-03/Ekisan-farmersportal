@@ -1,0 +1,565 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fertilizers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+
+
+<link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+  
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="Home.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="generator" content="Nicepage 3.7.2, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">
+
+  <style>
+    body {
+      background-image: url("{% static 'images/seednfert/fbg.png' %}");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -5px;
+            width:100%
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        .gtrans {
+            margin-left: 30%;
+        }
+
+    .fert {
+      position: absolute;
+      top: 80px;
+      left: 470px;
+      font-size: 70px;
+      color: #fff;
+    }
+
+    .rectangle {
+      position: absolute;
+      top: 105px;
+      left: 50px;
+      height: 270px;
+      width: 1410px;
+      background-color: #3B9C9C;
+      border-radius: 25px;
+    }
+
+    .table {
+      position: absolute;
+      top: 440px;
+      left: 200px;
+    }
+
+    table {
+      border: 2px solid black;
+      border-radius: 5px;
+      width: 1100px;
+
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #baf5dd;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    td,
+    th {
+      border: 1px solid grey;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: #43BFC7;
+      color: white;
+      height: 45px;
+    }
+
+    /* Pagination links */
+    .pagination {
+      margin-left: 630px;
+
+    }
+
+    .pagination a {
+
+      margin-top: 1250px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+      color: white;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 0.5px solid grey;
+      background-color: #3B9C9C;
+      border-radius: 50px;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {
+      background-color: #C0C0C0;
+      border-radius: 50px;
+    }
+
+    #foot{
+
+	margin-top: 88%;
+}
+.container1{
+	max-width: 100%;
+	margin: auto;
+
+}
+.row1{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.footer{
+	position: absolute;
+	left:0;
+	background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 10px;
+}
+.footer p{
+	color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+	min-width: 400px;
+	height: 250px;
+	margin-bottom: 20px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+	margin-left: 30px;
+
+}
+.footer-col-1 img{
+	width:150px;
+	margin-left: 110px;
+}
+.footer-col-1 p{
+
+	margin-left: 150px;
+	color: #3B9C9C;
+}
+.footer-col-2{
+	flex: 1;
+	margin-left: 15px;
+
+}
+.footer-col-2 input{
+
+ 	border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+ 	border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+
+
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+
+}
+.footer-col-3{
+	flex-basis: 12%;
+	margin-left: 30px;
+	text-align: left;
+}
+.footer-col-3 .fa{
+
+	margin-right: 8px;
+	font-size: 25px;
+	height: 40px;
+	width:40px;
+	text-align: center;
+	padding-top: 7px;
+	color: #3B9C9C;
+	background-color:black;
+}
+/*to remove bullet style*/
+ul{
+	list-style-type: none;
+}
+
+.copyright{
+	text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+  </style>
+</head>
+
+<body>
+<div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+          <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+  <center>
+    <div class="rectangle">
+      <p class="fert"><img src="{% static 'images/seednfert/fertiback.png'%} " height="100px" width="130px">Fertilizers</p>
+    </div>
+
+    <div class="table">
+      <table>
+        <tr>
+          <th style="width:7%">Sr No.</th>
+          <th>State</th>
+          <th>District/Village</th>
+          <th>Name & Address</th>
+          <th style="width:20%">Phone no</th>
+
+        </tr>
+        <!--row 1 begin-->
+        <tr>
+          <td>01</td>
+          <td rowspan="3">ARUNACHAL PRADESH</td>
+          <td>CHANGLANG / BORDUMSA</td>
+          <td>Name: MRS.S.NGEMU (M/S BUILDEX N TRA)<br>
+            Address:MIAO, PS/PO.:KHARSANG, DIST.:CHANGLANG 792122
+          </td>
+          <td> 9435036781</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>TAWANG / JANG-THINGBU</td>
+          <td>Name: Tenzin Enterprises<br>
+            Address: Old Market, PO Tawang</td>
+          <td>9402923290</td>
+
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>LOWER DIBANG VALLEY / ROING</td>
+          <td>Name: M/S MUMTAK ENTERPRISES<br>
+            Address: ROING </td>
+          <td>8787776161</td>
+        </tr>
+        <!--row 1 end-->
+        <!--row 2 begin-->
+        <tr>
+          <td>04</td>
+          <td> ASSAM</td>
+          <td>NALBARI / PASCHIM NALBARI</td>
+          <td>Name: Barman Beej Bhandar<br>
+            Address:Sahpur
+          </td>
+          <td> 9401258822</td>
+        </tr>
+
+        <!--row 2 end-->
+        <!--row 3 begin-->
+        <tr>
+          <td>07</td>
+          <td rowspan="4">BIHAR</td>
+          <td>KAIMUR (BHABUA) / RAMPUR</td>
+          <td>Name:ME PASAI PANCHAYAT KRISAK SEWA PRO- PRAHLAD SHUKL RAMPUR<br>
+            Address:KHARENDA RAMPUR
+          </td>
+          <td> 9430895144</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td>KAIMUR (BHABUA) / CHAND</td>
+          <td>Name: KISAN TREDARS SHIVRAMPUR PRO-VIJAY KUMAR SINGH<br>
+            Address: SHIVRAMPUR CHAND</td>
+          <td>9631403897 </td>
+
+        </tr>
+        <tr>
+          <td>09</td>
+          <td>DURGAWATI</td>
+          <td>Name: PANCHMUKHI CHOK MANIHARI PRO. INDRAJEET KUMAR SINGH DURGA<br>
+            Address: MANIHARI DURGAWATI</td>
+          <td>9430228115</td>
+        </tr>
+
+        <tr>
+          <td>10</td>
+          <td> MOHANIA</td>
+          <td>Name: MAA DURGA INTER PRAISES MOPTPUR PRO- JITENDRA MISHRA MOHA<br>
+            Address: MOHANIA</td>
+          <td>9097232112 </td>
+        </tr>
+        <!--row 3 end-->
+        <!--row 4 begin-->
+        <tr>
+          <td>11</td>
+          <td rowspan="3">CHHATTISGARH</td>
+          <td> BEMETARA</td>
+          <td>Name: SAMITI PRABANDHAK<br>
+            Address:SEVA SAHKARI SAMITI JEORA
+          </td>
+          <td> 9424128442</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td> DURG</td>
+          <td>Name:M/S Gaurav Krishi Kendra<br>
+            Address: Vill & Post- Utai</td>
+          <td>8966890084 </td>
+
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>PATAN</td>
+          <td>Name:Seva Sahkari Samiti Maryadit<br>
+            Address: Village & Post : Kesara</td>
+          <td>9179509810 </td>
+        </tr>
+        <!--row 4 end-->
+        <!--row 5 begin-->
+        <tr>
+          <td>14</td>
+          <td rowspan="3">GUJARAT</td>
+          <td>RADHANPUR</td>
+          <td>Name: KISHAN AGRO CENTER<br>
+            Address:RADHANPUR
+          </td>
+          <td> 9909129695</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>JAMJODHPUR</td>
+          <td>Name: Bharat Fertilizers Corporation<br>
+            Address: C/O Jalaram Chembers,2nd Floor,Petrol Pump Road</td>
+          <td>9685745263</td>
+
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>BHUJ</td>
+          <td>Name: Devalkrupa Agro Center<br>
+            Address: Valji Brahman T</td>
+          <td> 9912345908</td>
+        </tr>
+        <!--row 5 end-->
+      </table><br>
+    </div>
+    <br>
+    <br>
+  </center>
+  <div class="pagination">
+    <a class="active" href="#">1</a>
+    <a href="/fert2/">2</a>
+    <a href="/fert3/">3</a>
+    <a href="/fert2/">&raquo;</a>
+  </div>
+  <br>
+  <!--footer-->
+<section id="foot">
+<div class="footer">
+	<div class="container1">
+		<div class="row1">
+			<div class="footer-col-1">
+				 <img src="{% static 'images/lll.png' %}">
+				<a href=""><p>About us</p></a>
+				<a href=""><p>Contact us</p></a>
+			</div>
+			<div class="footer-col-2">
+
+				<p><b>FEEDBACK FORM</b></p>
+				<input type="email" placeholder="ENTER YOUR NAME">
+				<input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+				<textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+				</textarea><br>
+				<button type="button" class="btn btn-primary">SUBMIT</button>
+			</div>
+			<div class=" footer-col-3">
+				<p></p>
+				<p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+				<p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+				<p><i class="fa fa-phone"></i> 9323131444</p>
+				 <div class="social-media">
+			        <ul>
+			           <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+			        </ul>
+			      </div>
+			</div>
+		</div>
+		<!-- <hr> -->
+		<p class="copyright">Copyright 2021 e-Kisan</p>
+	</div>
+</div>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!--<!DOCTYPE html>-->
+{% load static %}
+
+<html>
+
+<head>
+   <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <style>
+        body {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-family: 'Nunito', sans-serif;
+            background: -webkit-linear-gradient(left, #1bdbbb, #04251e);
+        }
+        h3 {
+
+            font-size: 40px;
+            color: white;
+            spacing:2px;
+        }
+        table {
+            margin-left:250px;
+            width:70%;
+        }
+        table tr {
+            height: 35px;
+        }
+        table th {
+<!--        background: #568621;-->
+            background: transparent;
+            font-size:15px;
+            color:white;
+        }
+        table td {
+            text-align:center;
+            background: rgba(225,225,225,0.7);
+            font-size: 15px;
+            color: #4f524d;
+        }
+        * {box-sizing: border-box;}
+
+        .form-inline {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+        }
+
+        .form-inline label {
+          margin: 5px 10px 5px 0;
+        }
+
+        .form-inline input {
+          vertical-align: middle;
+          margin: 5px 10px 5px 0;
+          padding: 10px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+        }
+
+        .form-inline button {
+          padding: 10px 20px;
+          background-color: dodgerblue;
+          border: 1px solid #ddd;
+          color: white;
+          cursor: pointer;
+        }
+
+        .form-inline button:hover {
+          background-color: royalblue;
+        }
+
+        @media (max-width: 800px) {
+          .form-inline input {
+            margin: 10px 0;
+          }
+
+          .form-inline {
+            flex-direction: column;
+            align-items: stretch;
+
+          }
+        }
+        .formdiv{
+            width:840px;
+            border-radius:3px;
+            margin-top:-56px;
+            background:rgba(0,0,0,0.5);
+            margin-left:670px;
+        }
+        .formdiv2{
+            width:640px;
+            border-radius:3px;
+            background:rgba(0,0,0,0.5);
+            margin-left:10px;
+        }
+       #inputid[type="checkbox"] {
+         display: none;
+      }
+
+      #inputid {
+         border: none;
+         outline: none;
+         background: none;
+      }
+      #inputid {
+         display: block;
+         width: 50px%;
+         margin-top: 5px;
+         font-size: 17px;
+         padding-bottom: 5px;
+         margin-left: 20px;
+         margin-right: 18px;
+         color:white;
+         border-bottom: 2px solid rgba(225,225,225,1);
+         text-align: center;
+         font-family: 'Nunito', sans-serif;
+      }
+      #inputid1[type="checkbox"] {
+         display: none;
+      }
+      #inputid1 {
+         border: none;
+         outline: none;
+         background: none;
+      }
+      #inputid1 {
+         display: block;
+         width: 50px%;
+         margin-top: 5px;
+         font-size: 17px;
+         padding-bottom: 5px;
+         margin-left: 30px;
+         margin-right: 18px;
+         color:white;
+         border-bottom: 2px solid rgba(225,225,225,1);
+         text-align: center;
+         font-family: 'Nunito', sans-serif;
+      }
+      #inputid2[type="checkbox"] {
+         display: none;
+      }
+      #inputid2{
+         border: none;
+         outline: none;
+         background: none;
+      }
+      #inputid2{
+         display: block;
+         width: 50px%;
+         margin-top: 5px;
+         font-size: 17px;
+         padding-bottom: 5px;
+         margin-left: 30px;
+         margin-right: 40px;
+         color:white;
+         border-bottom: 2px solid rgba(225,225,225,1);
+         text-align: center;
+         font-family: 'Nunito', sans-serif;
+      }
+      #inputid3[type="checkbox"] {
+         display: none;
+      }
+      #inputid3 {
+         border: none;
+         outline: none;
+         background: none;
+      }
+      #inputid3 {
+         display: block;
+         width: 140px;
+         margin-top: 5px;
+         margin-left:20px;
+         margin-right:30px;
+         font-size: 17px;
+         padding-bottom: 5px;
+         color:white;
+         border-bottom: 2px solid rgba(225,225,225,1);
+         text-align: center;
+         font-family: 'Nunito', sans-serif;
+      }
+      #inputid4[type="checkbox"] {
+         display: none;
+      }
+      #inputid4 {
+         border: none;
+         outline: none;
+         background: none;
+      }
+      #inputid4 {
+         display: block;
+<!--         width: 60px;-->
+         margin-top: 5px;
+         margin-right: 20px;
+         font-size: 17px;
+         padding-bottom: 5px;
+         color:white;
+         border-bottom: 2px solid rgba(225,225,225,1);
+         text-align: center;
+         font-family: 'Nunito', sans-serif;
+      }
+
+      ::placeholder {
+        color: white;
+      }
+
+      .subbtn {
+        border-radius:3px;
+        font-size:20px;
+        color:#2d2e2d;
+      }
+      .subbtn2 {
+        border-radius:3px;
+        font-size:20px;
+        color:#2d2e2d;
+      }
+      option {
+        background:#97d450;
+      }
+      .datelbl {
+        font-size:20px;
+        color: white;
+      }
+      .btns {
+       height:200px;
+       width:260px;
+       border-radius:7px;
+       font-size:20px;
+       color:white;
+       background: -webkit-linear-gradient(left, #8a8b88, #2d2e2d);
+       padding:10px;
+       text-decoration: none;
+      }
+      #btns2:hover {
+       background: -webkit-linear-gradient(left, #2d2e2d, #8a8b88);
+      }
+      #btns1 {
+            margin-left:420px;
+            padding-left: 20px;
+            padding-right: 20px;
+      }
+      #btns2 {
+            margin-left:300px;
+      }
+
+    </style>
+</head>
+<body>
+<h3><center> <i>Pickup Schedule</i> </center></h3>
+<br><br><br>
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Pickup Date</th>
+    </tr>
+    {% for key, d in detorder.items %}
+        <tr>
+            <td>{{ d.Product_name }}</td>
+            <td>{{ d.Required_quant }}</td>
+            <td>{{ d.Pickup_date }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+
+</html>

@@ -1,0 +1,1960 @@
+{% load static %}
+
+
+{% if mess %}
+<script>
+    alert('{{ mess }}');
+</script>
+{% endif %}
+
+
+<html lang="en">
+<head>
+   <title>Home Page Signup</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+  <style>
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: white;*/
+  /*background: -webkit-linear-gradient(left, #76A63F, #243313);*/
+  font-family: 'Nunito', sans-serif;
+}
+/*-------------for popup------*/
+/*.show-btn{
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color:#243313;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.show-btn{
+  position: absolute;
+  top:10%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+input[type="checkbox"]
+{
+  display: none;
+}
+#show:checked ~ .cont{
+  display: block;
+}*/
+
+/*----------------------------*/
+input, button{
+  border:none;
+  outline: none;
+  background: none;
+}
+
+.cont{
+  /*display:none;*/
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.cont .sub-cont .close-btn{
+  position: absolute;
+  right: 20px;
+  top:15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.close-btn:hover{
+  color: red;
+}
+.form{
+
+  position: relative;
+  width: 640px;
+  height: 100%;
+  /*padding: 50px 30px;*/
+ /* -webkit-transition:-webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;*/
+}
+h2{
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+label{
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+label span{
+  font-size: 14px;
+  font-weight: 600;
+  color: #505f75;
+  text-transform: uppercase;
+}
+
+input{
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+button{
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.submit{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+background: -webkit-linear-gradient(left,  rgb(3, 134, 134),rgb(27, 27, 27));
+}
+
+.submit:hover{
+  background: -webkit-linear-gradient(left,  rgb(3, 134, 134),rgb(27, 27, 27));
+}
+
+.forgot-pass{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c0101;
+  cursor: pointer;
+}
+
+.forgot-pass:hover{
+  padding-bottom: 10px;
+  color: red;
+}
+/*
+.social-media{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+  margin: 25px 15px;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+}*/
+
+.sub-cont{
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+.cont.s-signup .sub-cont{
+  -webkit-transform:translate3d(-640px, 0, 0);
+          transform:translate3d(-640px, 0, 0);
+}
+
+.img{
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+}
+
+.img:before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url("{% static 'images/image22.jpg' %}");
+  background-size: cover;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.cont.s-signup .img:before{
+  -webkit-transform:translate3d(640px, 0, 0);
+          transform:translate3d(640px, 0, 0);
+}
+
+.img-text{
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition:-webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img-text h2{
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.img-text p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cont.s-signup .img-text.m-up{
+
+
+
+
+
+
+
+
+  -webkit-transform:translateX(520px);
+          transform:translateX(520px);
+}
+
+.img-text.m-in{
+  -webkit-transform:translateX(-520px);
+          transform:translateX(-520px);
+}
+
+.cont.s-signup .img-text.m-in{
+  -webkit-transform:translateX(0);
+          transform:translateX(0);
+}
+
+
+.sign-in{
+  padding-top: 30px;
+  -webkit-transition-timing-function:ease-out;
+          transition-timing-function:ease-out;
+}
+
+.cont.s-signup .sign-in{
+  -webkit-transition-timing-function:ease-in-out;
+          transition-timing-function:ease-in-out;
+  -webkit-transition-duration:1.2s;
+          transition-duration:1.2s;
+  -webkit-transform:translate3d(640px, 0, 0);
+          transform:translate3d(640px, 0, 0);
+}
+
+.img-btn{
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.img-btn:after{
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+.img-btn span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack:center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition:-webkit-transform 1.2s;
+  transition: -webkit-transform 1.2s;
+  transition: transform 1.2s;
+  transition: transform 1.2s, -webkit-transform 1.2s;;
+}
+
+.img-btn span.m-in{
+  -webkit-transform:translateY(-72px);
+          transform:translateY(-72px);
+}
+
+.cont.s-signup .img-btn span.m-in{
+  -webkit-transform:translateY(0);
+          transform:translateY(0);
+}
+
+.cont.s-signup .img-btn span.m-up{
+  -webkit-transform:translateY(72px);
+          transform:translateY(72px);
+}
+
+.sign-up{
+  padding-top: 0;
+  -webkit-transform:translate3d(-900px, 0, 0);
+          transform:translate3d(-900px, 0, 0);
+}
+
+.cont.s-signup .sign-up{
+  -webkit-transform:translate3d(0, 0, 0);
+          transform:translate3d(0, 0, 0);
+}
+/*button*/
+
+.btn{
+  display: inline-block;
+  /*background: #ff523b;*/
+  background: -webkit-linear-gradient(left, #76A63F, #243313);
+  color:#fff;
+  padding:8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+
+}
+.btn:hover{
+  background: #563434;
+
+}
+
+    /*<!---------------------------for first form---------------------------->*/
+    .account-page {
+      margin-top: 10px;
+      padding: 0 10px;
+      /*background: -webkit-radial-gradient(#fff, #76A63F);*/
+      /*background:radial-gradient(#fff,green);*/
+    }
+
+    .form-container {
+      margin-bottom: 100px;
+
+      margin-left:150px;
+      /* background: #fff; */
+      width: 390px;
+      height: 460px;
+      background-color: rgb(238, 237, 237);
+      color: rgb(0, 0, 0);
+      position: relative;
+      text-align: center;
+      /*padding: 20px 0;*/
+      /*margin: auto;*/
+      border: 3px solid teal;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 50px;
+    }
+
+    .form-container span {
+      font-weight: bold;
+      padding-top: 14px;
+      padding-bottom: 0px;
+      padding-right:10px;
+      padding-left:10px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      width: 100px;
+      display: inline-block;
+    }
+
+    .form-btn {
+      display: inline-block;
+    }
+
+    .form-container form {
+      max-width: 300px;
+      padding: 0 20px;
+
+      position: absolute;
+      top:75px;
+      transition: transform 1s;
+    }
+
+    form input {
+      width: 100%;
+      height: 30px;
+      margin: 5px 0;
+      padding: 3px 0px;
+      border: 1px solid rgb(34, 34, 34);
+    }
+
+    form .btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    form .btn:focus {
+      outline: none;
+
+    }
+
+    #LoginForm {
+      margin-top: 20px;
+      left: -400px;
+    }
+
+    #RegForm {
+      left: 50px;
+    }
+
+    form a {
+      font-size: 12px;
+      color: red;
+    }
+
+    #Indicator {
+      width: 100px;
+      border: none;
+      /*background: #ff523b;*/
+      background: -webkit-linear-gradient(left, rgb(0, 138, 138), rgb(0, 0, 0));
+      height: 3px;
+      margin-top: 8px;
+      transform: translateX(100px);
+      transition: transform 1s;
+    }
+
+    /*------------snc form--------*/
+    .account-page1 {
+      margin-top: 25px;
+      padding: 0 10px;
+      /*background: -webkit-radial-gradient(#fff, #76A63F);*/
+      /*background:radial-gradient(#fff,green);*/
+    }
+
+    .container1 h2 {
+      text-align: center;
+      margin-top: -14px;
+    }
+
+    .form-container1 {
+      margin-bottom: 100px;
+      background: rgb(238, 237, 237);
+      width: 390px;
+      height: 505px;
+      position: relative;
+      margin-left: 120px;
+      text-align: center;
+      /*padding: 20px 0;*/
+      /*margin: auto;*/
+      border: 3px solid teal;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 50px;
+    }
+
+    .form-container1 span {
+      font-weight: bold;
+      padding-top:14px;
+      padding-bottom: 0 ;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      color: #555;
+      cursor: pointer;
+      width: 100px;
+      display: inline-block;
+    }
+
+    .form-btn1 {
+      display: inline-block;
+    }
+
+    .form-container1 form {
+      max-width: 300px;
+      padding: 0 20px;
+      position: absolute;
+      top: 75px;
+      transition: transform 1s;
+    }
+
+    form input {
+      width: 100%;
+      height: 30px;
+      margin: 7px 0;
+      padding: 0 10px;
+<!--      border: 2px solid #ccc;-->
+      border-radius:10%;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    form .btn1 {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    form .btn1:focus {
+      outline: none;
+
+    }
+
+    #LoginForm1 {
+      left: -400px;
+    }
+
+    .forget{
+    color: red;
+    }
+
+    #RegForm1 {
+      left: 50px;
+    }
+
+    form a {
+      font-size: 12px;
+      color: red;
+    }
+
+    #Indicator1 {
+      width: 100px;
+      border: none;
+      /*background: #ff523b;*/
+      background: -webkit-linear-gradient(left, rgb(0, 138, 138), rgb(0, 0, 0));
+      height: 3px;
+      margin-top: 8px;
+      transform: translateX(100px);
+      transition: transform 1s;
+    }
+
+     .label {
+         display: block;
+         width: 260px;
+         margin: 25px auto 0;
+         text-align: center;
+      }
+
+      .labelspan {
+         font-size: 14px;
+         font-weight: 600;
+         color: #505f75;
+         text-transform: uppercase;
+      }
+      #inputid2[type="checkbox"] {
+         display: none;
+      }
+
+      #inputid2 {
+         border: none;
+         outline: none;
+         background: none;
+      }
+      #inputid2 {
+         display: block;
+         width: 100%;
+         margin-top: 5px;
+         font-size: 16px;
+         padding-bottom: 5px;
+         border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+         text-align: center;
+         font-family: 'Nunito', sans-serif;
+      }
+
+
+
+  </style>
+</head>
+<body>
+  <!-- <input type="checkbox" id="show"> -->
+  <!-- <label for="show" class="show-btn">Farmer ?</label> -->
+  <div class="cont">
+<!---------------------------account page----------------------------->
+
+<div class="form">
+ <!-- <span class="close">x</span> -->
+<div class="account-page">
+  <h2>Consumer ?</h2>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-2">
+        <img src="images/greet4-removebg-preview.png" width=100%>
+      </div> -->
+      <div class="col-2">
+        <div class="form-container">
+          <div class="form-btn">
+            <span onclick ="login()">Login</span>
+            <span onclick ="register()">Sign Up</span>
+            <hr id="Indicator">
+          </div>
+         <form id="LoginForm" class="mainform" method="post" action="/Clogin/">
+                        {% csrf_token %}
+                        <input type="email" placeholder="Email" name="email">
+                        <input type="password" placeholder="Password" name="pass">
+
+
+<!--                        <label class="label">-->
+<!--                        <span class="labelspan">Role</span>-->
+<!--                        <select id='inputid2' name="RoleName">-->
+<!--                            <option value=""></option>-->
+<!--                            <option value="far">far</option>-->
+<!--                            <option value="con">con</option>-->
+<!--                        </select>-->
+<!--                     </label>-->
+
+                        <input type="submit" class="submit" value="Login">
+                        <a href="" class="forget">Forget password</a>
+                      </form>
+
+                      <form id="RegForm" method="post" action="/Csignup/">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="email" placeholder="Email id" name="email">
+                        <input type="tel"  pattern="[0-9]{10}" maxlength="10"  placeholder="Mobile no." name="contact">
+                        <input type="text" placeholder="Address" name="address">
+                        <input type="text" placeholder="City" name="city">
+                        <input type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="Pin Code" name="pin">
+                        <input type="password" placeholder="Password" name="pass">
+                        <input type="submit" class="submit" value="Register">
+
+                      </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <div class="sub-cont">
+       <!-- <span class="close1">x</span> -->
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>Farmer ?</h2>
+          <p>Sell your product to get maximum profit !</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>Are You Consumer ?</h2>
+          <p>Sign up and get our Organic fruits, vegetables, and lot more to your door!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Click me</span>
+          <span class="m-in">Click me</span>
+        </div>
+      </div>
+     <!--  <div class="form sign-up">
+        <label for="show" class="close-btn" title="close">&times;</label>
+        <h2>Farmer Sign Up</h2>
+        <label>
+          <span>Name</span>
+          <input type="text">
+        </label>
+        <label>
+          <span>Address</span>
+          <input type="text">
+        </label>
+        <label>
+          <span>Mobile Number</span>
+          <input type="tel">
+        </label>
+        <label>
+          <span>Adhar Number</span>
+          <input type="text">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password">
+        </label>
+        <label>
+          <span>Farmer ID</span>
+          <input type="value">
+        </label>
+       <button type="button"class="submit" id="btnclick" onclick="rand()">Sign Up Now</button>
+      </div> -->
+
+<!---------------------------account page2----------------------------->
+
+
+<div class="account-page1">
+    <h2>Farmer ?</h2>
+  <div class="container1">
+    <div class="row">
+      <!-- <div class="col-2">
+        <img src="images/greet4-removebg-preview.png" width=100%>
+      </div> -->
+      <div class="col-2">
+        <div class="form-container1">
+          <div class="form-btn1">
+            <span onclick ="loginn()">Login</span>
+            <span onclick ="registerr()">Sign Up</span>
+            <hr id="Indicator1">
+          </div>
+          <form id="LoginForm1" method="post" action="/fsignin/">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Email id" name="email">
+                        <input type="password" placeholder="password" name="pass">
+
+                        <label class="label">
+                        <span class="labelspan">Role</span>
+                        <select id='inputid2' name="RoleName">
+                            <option value=""></option>
+                            <option value="far">far</option>
+                            <option value="con">con</option>
+                        </select>
+                     </label>
+
+                        <input type="submit" value="Login" class="submit" name="mainlogin">
+                        <!-- <button type="submit" class="btn">Login</button> -->
+                        <a href="">Forget password</a>
+                      </form>
+
+                      <form id="RegForm1" method="post" action="/farmsignUp/">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="email" placeholder="Email id" name="email">
+                        <input type="tel"  pattern="[0-9]{10}" maxlength="10"  placeholder="Mobile no." name="contact">
+                        <input type="tel" placeholder="Adhar no." pattern="[0-9]{12}" maxlength="12" name="adhar">
+                        <input type="text" placeholder="Address" name="address">
+                        <input type="text" placeholder="City" name="city">
+                        <input type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="Pin Code" name="pin">
+                        <input type="password" placeholder="Password" name="pass">
+                        <input type="submit" class="submit" value="Register">
+
+                      </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+
+
+
+
+  <!---------- javascript-------------------- -->
+<script >
+  document.querySelector('.img-btn').addEventListener('click', function()
+  {
+    document.querySelector('.cont').classList.toggle('s-signup')
+  }
+);
+</script>
+  <!-- // -------------------for farmer sign up--------------------------------- -->
+
+<!--
+<script >
+
+ document.getElementById("btnclick").onclick =rand;
+alert("Thank you for registration ..! Your userd Id is : "+ rand(0,100));
+ function rand(min,max){
+    return Math.floor(Math.random()* max - min +1)+min;
+  }
+
+
+</script> -->
+<!-- --------------------js for toggle form------------------------------- -->
+
+<!--<script type="text/javascript">-->
+
+<!--  var LoginForm=document.getElementById("LoginForm");-->
+<!--  var  RegForm=document.getElementById("RegForm");-->
+<!--  var Indicator=document.getElementById("Indicator");-->
+<!--  function register(){-->
+
+<!--    RegForm.style.transform="translateX(0px)";-->
+<!--    LoginForm.style.transform="translateX(0px)";-->
+<!--    Indicator.style.transform="translateX(100px)";-->
+<!--  }-->
+<!--  function login(){-->
+<!--    -->
+<!--    RegForm.style.transform="translateX(300px)";-->
+<!--    LoginForm.style.transform="translateX(300px)";-->
+<!--    Indicator.style.transform="translateX(0px)";-->
+<!--  }-->
+<!--  </script>-->
+
+<!--<script type="text/javascript">-->
+
+<!--  var LoginForm1=document.getElementById("LoginForm1");-->
+<!--  var  RegForm1=document.getElementById("RegForm1");-->
+<!--  var Indicator1=document.getElementById("Indicator1");-->
+<!--  function registerr(){-->
+
+<!--    RegForm1.style.transform="translateX(0px)";-->
+<!--    LoginForm1.style.transform="translateX(0px)";-->
+<!--    Indicator1.style.transform="translateX(100px)";-->
+<!--  }-->
+<!--  function loginn(){-->
+<!--    -->
+<!--    RegForm1.style.transform="translateX(300px)";-->
+<!--    LoginForm1.style.transform="translateX(300px)";-->
+<!--    Indicator1.style.transform="translateX(0px)";-->
+<!--  }-->
+<!--</script>-->
+ <!-- --------------------js for toggle form------------------------------- -->
+
+        <script type="text/javascript">
+
+          var LoginForm = document.getElementById("LoginForm");
+          var RegForm = document.getElementById("RegForm");
+          var Indicator = document.getElementById("Indicator");
+          function register() {
+
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+          }
+          function login() {
+
+            RegForm.style.transform = "translateX(350px)";
+            LoginForm.style.transform = "translateX(450px)";
+            Indicator.style.transform = "translateX(0px)";
+          }
+        </script>
+
+        <script type="text/javascript">
+
+          var LoginForm1 = document.getElementById("LoginForm1");
+          var RegForm1 = document.getElementById("RegForm1");
+          var Indicator1 = document.getElementById("Indicator1");
+          function registerr() {
+
+            RegForm1.style.transform = "translateX(0px)";
+            LoginForm1.style.transform = "translateX(0px)";
+            Indicator1.style.transform = "translateX(100px)";
+          }
+          function loginn() {
+
+            RegForm1.style.transform = "translateX(350px)";
+            LoginForm1.style.transform = "translateX(450px)";
+            Indicator1.style.transform = "translateX(0px)";
+          }
+        </script>
+
+</body>
+</html>
+
+
+
+
+<!--{% load static %}-->
+
+
+<!--{% if mess %}-->
+<!--<script>-->
+<!--    alert('{{ mess }}');-->
+<!--</script>-->
+<!--{% endif %}-->
+
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--	<title>Home Page Signup</title>-->
+<!--	<meta charset="UTF-8">-->
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">-->
+
+
+<!--    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">-->
+
+<!--  <style>-->
+
+<!--*, *:before, *:after{-->
+<!--  margin: 0;-->
+<!--  padding: 0;-->
+<!--  box-sizing: border-box;-->
+<!--  font-family: 'Nunito', sans-serif;-->
+<!--}-->
+
+<!--body{-->
+<!--  width: 100%;-->
+<!--  height: 100vh;-->
+<!--  display: flex;-->
+<!--  justify-content: center;-->
+<!--  align-items: center;-->
+<!--  /*background-color: white;*/-->
+<!--  /*background: -webkit-linear-gradient(left, #76A63F, #243313);*/-->
+<!--  font-family: 'Nunito', sans-serif;-->
+<!--}-->
+<!--/*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;for popup&#45;&#45;&#45;&#45;&#45;&#45;*/-->
+<!--/*.show-btn{-->
+<!--  background: #fff;-->
+<!--  padding: 10px 20px;-->
+<!--  font-size: 20px;-->
+<!--  font-weight: 500;-->
+<!--  color:#243313;-->
+<!--  cursor: pointer;-->
+<!--  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);-->
+<!--}-->
+<!--.show-btn{-->
+<!--  position: absolute;-->
+<!--  top:10%;-->
+<!--  left: 50%;-->
+<!--  transform:translate(-50%,-50%);-->
+<!--}-->
+<!--input[type="checkbox"]-->
+<!--{-->
+<!--  display: none;-->
+<!--}-->
+<!--#show:checked ~ .cont{-->
+<!--  display: block;-->
+<!--}*/-->
+
+<!--/*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
+<!--input, button{-->
+<!--  border:none;-->
+<!--  outline: none;-->
+<!--  background: none;-->
+<!--}-->
+
+<!--.cont{-->
+<!--  /*display:none;*/-->
+<!--  overflow: hidden;-->
+<!--  position: relative;-->
+<!--  width: 900px;-->
+<!--  height: 600px;-->
+<!--  background: #fff;-->
+<!--  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);-->
+<!--}-->
+<!--.cont .sub-cont .close-btn{-->
+<!--  position: absolute;-->
+<!--  right: 20px;-->
+<!--  top:15px;-->
+<!--  font-size: 25px;-->
+<!--  cursor: pointer;-->
+<!--}-->
+<!--.close-btn:hover{-->
+<!--  color: red;-->
+<!--}-->
+<!--.form{-->
+
+<!--  position: relative;-->
+<!--  width: 640px;-->
+<!--  height: 100%;-->
+<!--  /*padding: 50px 30px;*/-->
+<!-- /* -webkit-transition:-webkit-transform 1.2s ease-in-out;-->
+<!--  transition: -webkit-transform 1.2s ease-in-out;-->
+<!--  transition: transform 1.2s ease-in-out;-->
+<!--  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;*/-->
+<!--}-->
+<!--h2{-->
+<!--  width: 100%;-->
+<!--  font-size: 30px;-->
+<!--  text-align: center;-->
+<!--}-->
+
+<!--label{-->
+<!--  display: block;-->
+<!--  width: 260px;-->
+<!--  margin: 25px auto 0;-->
+<!--  text-align: center;-->
+<!--}-->
+
+<!--label span{-->
+<!--  font-size: 14px;-->
+<!--  font-weight: 600;-->
+<!--  color: #505f75;-->
+<!--  text-transform: uppercase;-->
+<!--}-->
+
+<!--input{-->
+<!--  display: block;-->
+<!--  width: 100%;-->
+<!--  margin-top: 5px;-->
+<!--  font-size: 16px;-->
+<!--  padding-bottom: 5px;-->
+<!--  border-bottom: 1px solid rgba(109, 93, 93, 0.4);-->
+<!--  text-align: center;-->
+<!--  font-family: 'Nunito', sans-serif;-->
+<!--}-->
+
+<!--button{-->
+<!--  display: block;-->
+<!--  margin: 0 auto;-->
+<!--  width: 260px;-->
+<!--  height: 36px;-->
+<!--  border-radius: 30px;-->
+<!--  color: #fff;-->
+<!--  font-size: 15px;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--.submit{-->
+<!--  margin-top: 40px;-->
+<!--  margin-bottom: 30px;-->
+<!--  text-transform: uppercase;-->
+<!--  text-decoration: none;-->
+<!--  font-weight: 600;-->
+<!--  font-family: 'Nunito', sans-serif;-->
+<!-- background: -webkit-linear-gradient(left, #76A63F, #243313);-->
+<!--}-->
+
+<!--.submit:hover{-->
+<!--  background: -webkit-linear-gradient(left, #243313, #76A63F);-->
+<!--}-->
+
+<!--.forgot-pass{-->
+<!--  margin-top: 15px;-->
+<!--  text-align: center;-->
+<!--  font-size: 14px;-->
+<!--  font-weight: 600;-->
+<!--  color: #0c0101;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--.forgot-pass:hover{-->
+<!--  padding-bottom: 10px;-->
+<!--  color: red;-->
+<!--}-->
+<!--/*-->
+<!--.social-media{-->
+<!--  width: 100%;-->
+<!--  text-align: center;-->
+<!--  margin-top: 20px;-->
+<!--}-->
+
+<!--.social-media ul{-->
+<!--  list-style: none;-->
+<!--}-->
+
+<!--.social-media ul li{-->
+<!--  display: inline-block;-->
+<!--  cursor: pointer;-->
+<!--  margin: 25px 15px;-->
+<!--}-->
+
+<!--.social-media img{-->
+<!--  width: 40px;-->
+<!--  height: 40px;-->
+<!--}*/-->
+
+<!--.sub-cont{-->
+<!--  overflow: hidden;-->
+<!--  position: absolute;-->
+<!--  left: 640px;-->
+<!--  top: 0;-->
+<!--  width: 900px;-->
+<!--  height: 100%;-->
+<!--  padding-left: 260px;-->
+<!--  background: #fff;-->
+<!--  -webkit-transition: -webkit-transform 1.2s ease-in-out;-->
+<!--  transition: -webkit-transform 1.2s ease-in-out;-->
+<!--  transition: transform 1.2s ease-in-out;-->
+<!--}-->
+
+<!--.cont.s-signup .sub-cont{-->
+<!--  -webkit-transform:translate3d(-640px, 0, 0);-->
+<!--          transform:translate3d(-640px, 0, 0);-->
+<!--}-->
+
+<!--.img{-->
+<!--  overflow: hidden;-->
+<!--  z-index: 2;-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  top: 0;-->
+<!--  width: 260px;-->
+<!--  height: 100%;-->
+<!--  padding-top: 360px;-->
+<!--}-->
+
+<!--.img:before{-->
+<!--  content: '';-->
+<!--  position: absolute;-->
+<!--  right: 0;-->
+<!--  top: 0;-->
+<!--  width: 900px;-->
+<!--  height: 100%;-->
+<!--  background-image: url(images/image4.jpg);-->
+<!--  background-size: cover;-->
+<!--  transition: -webkit-transform 1.2s ease-in-out;-->
+<!--  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;-->
+<!--}-->
+
+<!--.img:after{-->
+<!--  content: '';-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  top: 0;-->
+<!--  width: 100%;-->
+<!--  height: 100%;-->
+<!--  background: rgba(0,0,0,0.3);-->
+<!--}-->
+
+<!--.cont.s-signup .img:before{-->
+<!--  -webkit-transform:translate3d(640px, 0, 0);-->
+<!--          transform:translate3d(640px, 0, 0);-->
+<!--}-->
+
+<!--.img-text{-->
+<!--  z-index: 2;-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  top: 50px;-->
+<!--  width: 100%;-->
+<!--  padding: 0 20px;-->
+<!--  text-align: center;-->
+<!--  color: #fff;-->
+<!--  -webkit-transition:-webkit-transform 1.2s ease-in-out;-->
+<!--  transition: -webkit-transform 1.2s ease-in-out;-->
+<!--  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;-->
+<!--}-->
+
+<!--.img-text h2{-->
+<!--  margin-bottom: 10px;-->
+<!--  font-weight: normal;-->
+<!--}-->
+
+<!--.img-text p{-->
+<!--  font-size: 14px;-->
+<!--  line-height: 1.5;-->
+<!--}-->
+
+<!--.cont.s-signup .img-text.m-up{-->
+<!--  -webkit-transform:translateX(520px);-->
+<!--          transform:translateX(520px);-->
+<!--}-->
+
+<!--.img-text.m-in{-->
+<!--  -webkit-transform:translateX(-520px);-->
+<!--          transform:translateX(-520px);-->
+<!--}-->
+
+<!--.cont.s-signup .img-text.m-in{-->
+<!--  -webkit-transform:translateX(0);-->
+<!--          transform:translateX(0);-->
+<!--}-->
+
+
+<!--.sign-in{-->
+<!--  padding-top: 30px;-->
+<!--  -webkit-transition-timing-function:ease-out;-->
+<!--          transition-timing-function:ease-out;-->
+<!--}-->
+
+<!--.cont.s-signup .sign-in{-->
+<!--  -webkit-transition-timing-function:ease-in-out;-->
+<!--          transition-timing-function:ease-in-out;-->
+<!--  -webkit-transition-duration:1.2s;-->
+<!--          transition-duration:1.2s;-->
+<!--  -webkit-transform:translate3d(640px, 0, 0);-->
+<!--          transform:translate3d(640px, 0, 0);-->
+<!--}-->
+
+<!--.img-btn{-->
+<!--  overflow: hidden;-->
+<!--  z-index: 2;-->
+<!--  position: relative;-->
+<!--  width: 100px;-->
+<!--  height: 36px;-->
+<!--  margin: 0 auto;-->
+<!--  background: transparent;-->
+<!--  color: #fff;-->
+<!--  text-transform: uppercase;-->
+<!--  font-size: 15px;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--.img-btn:after{-->
+<!--  content: '';-->
+<!--  z-index: 2;-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  top: 0;-->
+<!--  width: 100%;-->
+<!--  height: 100%;-->
+<!--  border: 2px solid #fff;-->
+<!--  border-radius: 30px;-->
+<!--}-->
+
+<!--.img-btn span{-->
+<!--  position: absolute;-->
+<!--  left: 0;-->
+<!--  top: 0;-->
+<!--  display: -webkit-box;-->
+<!--  display: flex;-->
+<!--  -webkit-box-pack:center;-->
+<!--  justify-content: center;-->
+<!--  align-items: center;-->
+<!--  width: 100%;-->
+<!--  height: 100%;-->
+<!--  -webkit-transition:-webkit-transform 1.2s;-->
+<!--  transition: -webkit-transform 1.2s;-->
+<!--  transition: transform 1.2s;-->
+<!--  transition: transform 1.2s, -webkit-transform 1.2s;;-->
+<!--}-->
+
+<!--.img-btn span.m-in{-->
+<!--  -webkit-transform:translateY(-72px);-->
+<!--          transform:translateY(-72px);-->
+<!--}-->
+
+<!--.cont.s-signup .img-btn span.m-in{-->
+<!--  -webkit-transform:translateY(0);-->
+<!--          transform:translateY(0);-->
+<!--}-->
+
+<!--.cont.s-signup .img-btn span.m-up{-->
+<!--  -webkit-transform:translateY(72px);-->
+<!--          transform:translateY(72px);-->
+<!--}-->
+
+<!--.sign-up{-->
+<!--  padding-top: 0;-->
+<!--  -webkit-transform:translate3d(-900px, 0, 0);-->
+<!--          transform:translate3d(-900px, 0, 0);-->
+<!--}-->
+
+<!--.cont.s-signup .sign-up{-->
+<!--  -webkit-transform:translate3d(0, 0, 0);-->
+<!--          transform:translate3d(0, 0, 0);-->
+<!--}-->
+<!--/*button*/-->
+
+<!--.btn{-->
+<!--  display: inline-block;-->
+<!--  /*background: #ff523b;*/-->
+<!--  background: -webkit-linear-gradient(left, #76A63F, #243313);-->
+<!--  color:#fff;-->
+<!--  padding:8px 30px;-->
+<!--  margin: 30px 0;-->
+<!--  border-radius: 30px;-->
+<!--  transition: background 0.5s;-->
+
+<!--}-->
+<!--.btn:hover{-->
+<!--  background: #563434;-->
+
+<!--}-->
+<!--&lt;!&ndash;/*&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;for first form&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;*/&ndash;&gt;-->
+<!--&lt;!&ndash;.account-page{&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 80px 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;  background: -webkit-radial-gradient(#fff, #76A63F);&ndash;&gt;-->
+<!--&lt;!&ndash;  /*background:radial-gradient(#fff,green);*/&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-container{&ndash;&gt;-->
+<!--&lt;!&ndash;   margin-bottom: 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;  background: #fff;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 350px;&ndash;&gt;-->
+<!--&lt;!&ndash;  height:450px;&ndash;&gt;-->
+<!--&lt;!&ndash;  position:relative;&ndash;&gt;-->
+<!--&lt;!&ndash;  text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 20px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;  overflow: hidden;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: none;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-container span{&ndash;&gt;-->
+<!--&lt;!&ndash;  font-weight: bold;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding:0 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: #555;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;  display: inline-block;&ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-btn{&ndash;&gt;-->
+<!--&lt;!&ndash;  display: inline-block;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-container form{&ndash;&gt;-->
+<!--&lt;!&ndash;  max-width: 300px;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  top:130px;&ndash;&gt;-->
+<!--&lt;!&ndash;  transition: transform 1s;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form input{&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin:10px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 1px solid #ccc;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form .btn{&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;  border:none;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin:10px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form .btn:focus{&ndash;&gt;-->
+<!--&lt;!&ndash;  outline:none; &ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;#LoginForm{&ndash;&gt;-->
+<!--&lt;!&ndash;  left: -250px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;#RegForm{&ndash;&gt;-->
+<!--&lt;!&ndash;  left: 60px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form a{&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 12px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;#Indicator{&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: none;&ndash;&gt;-->
+<!--&lt;!&ndash;  /*background: #ff523b;*/&ndash;&gt;-->
+<!--&lt;!&ndash;  background: -webkit-linear-gradient(left, #76A63F, #243313);&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 3px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: 8px;&ndash;&gt;-->
+<!--&lt;!&ndash;  transform:translateX(100px);&ndash;&gt;-->
+<!--&lt;!&ndash;  transition: transform 1s;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;/*&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;for snd form&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;*/&ndash;&gt;-->
+<!--&lt;!&ndash;.account-page1{&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 80px 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;    background: -webkit-radial-gradient(#fff, #76A63F);&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-container1{&ndash;&gt;-->
+<!--&lt;!&ndash;  background: #fff;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 350px;&ndash;&gt;-->
+<!--&lt;!&ndash;  height:450px;&ndash;&gt;-->
+<!--&lt;!&ndash;  position:relative;&ndash;&gt;-->
+<!--&lt;!&ndash;  text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 20px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin: auto;&ndash;&gt;-->
+<!--&lt;!&ndash;  box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;  overflow: hidden;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-container1 span{&ndash;&gt;-->
+<!--&lt;!&ndash;  font-weight: bold;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding:0 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  color: #555;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;  display: inline-block;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-btn1{&ndash;&gt;-->
+<!--&lt;!&ndash;  display: inline-block;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;.form-container1 form{&ndash;&gt;-->
+<!--&lt;!&ndash;  max-width: 300px;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  top:130px;&ndash;&gt;-->
+<!--&lt;!&ndash;  transition: transform 1s;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form input{&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin:10px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  padding: 0 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: 1px solid #ccc;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form .btn1{&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;  border:none;&ndash;&gt;-->
+<!--&lt;!&ndash;  cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin:10px 0;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form .btn1:focus{&ndash;&gt;-->
+<!--&lt;!&ndash;  outline:none; &ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;#LoginForm1{&ndash;&gt;-->
+<!--&lt;!&ndash;  left: -250px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;#RegForm1{&ndash;&gt;-->
+<!--&lt;!&ndash;  left:60px;&ndash;&gt;-->
+<!--&lt;!&ndash;  /*margin-bottom: 150px;*/&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;form a{&ndash;&gt;-->
+<!--&lt;!&ndash;  font-size: 12px;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;#Indicator1{&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 100px;&ndash;&gt;-->
+<!--&lt;!&ndash;  border: none;&ndash;&gt;-->
+<!--&lt;!&ndash;  /*background: #ff523b;*/&ndash;&gt;-->
+<!--&lt;!&ndash;  background: -webkit-linear-gradient(left, #76A63F, #243313);&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 3px;&ndash;&gt;-->
+<!--&lt;!&ndash;  margin-top: 8px;&ndash;&gt;-->
+<!--&lt;!&ndash;  transform:translateX(100px);&ndash;&gt;-->
+<!--&lt;!&ndash;  transition: transform 1s;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--    /*&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;for first form&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;*/-->
+<!--    .account-page {-->
+<!--      margin-top: 10px;-->
+<!--      padding: 0 10px;-->
+<!--      /*background: -webkit-radial-gradient(#fff, #76A63F);*/-->
+<!--      /*background:radial-gradient(#fff,green);*/-->
+<!--    }-->
+
+<!--    .form-container {-->
+<!--      margin-bottom: 100px;-->
+<!--      /* background: #fff; */-->
+<!--      width: 390px;-->
+<!--      height: 460px;-->
+<!--      background-color: rgb(238, 237, 237);-->
+<!--      color: rgb(0, 0, 0);-->
+<!--      position: relative;-->
+<!--      text-align: center;-->
+<!--      /*padding: 20px 0;*/-->
+<!--      /*margin: auto;*/-->
+<!--      border: 3px solid teal;-->
+<!--      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);-->
+<!--      overflow: hidden;-->
+<!--      border-radius: 50px;-->
+<!--    }-->
+
+<!--    .form-container span {-->
+<!--      font-weight: bold;-->
+<!--      padding-top: 14px;-->
+<!--      padding-bottom: 0px;-->
+<!--      padding-right:10px;-->
+<!--      padding-left:10px;-->
+<!--      color: rgb(0, 0, 0);-->
+<!--      cursor: pointer;-->
+<!--      width: 100px;-->
+<!--      display: inline-block;-->
+<!--    }-->
+
+<!--    .form-btn {-->
+<!--      display: inline-block;-->
+<!--    }-->
+
+<!--    .form-container form {-->
+<!--      max-width: 300px;-->
+<!--      padding: 0 20px;-->
+<!--      position: absolute;-->
+<!--      top:75px;-->
+<!--      transition: transform 1s;-->
+<!--    }-->
+
+<!--    form input {-->
+<!--      width: 100%;-->
+<!--      height: 30px;-->
+<!--      margin: 5px 0;-->
+<!--      padding: 3px 0px;-->
+<!--      border: 1px solid rgb(34, 34, 34);-->
+<!--    }-->
+
+<!--    form .btn {-->
+<!--      width: 100%;-->
+<!--      border: none;-->
+<!--      cursor: pointer;-->
+<!--      margin: 10px 0;-->
+<!--    }-->
+
+<!--    form .btn:focus {-->
+<!--      outline: none;-->
+
+<!--    }-->
+
+<!--    #LoginForm {-->
+<!--      margin-top: 20px;-->
+<!--      left: -400px;-->
+<!--    }-->
+
+<!--    #RegForm {-->
+<!--      left: 50px;-->
+<!--    }-->
+
+<!--    form a {-->
+<!--      font-size: 12px;-->
+<!--      color: red;-->
+<!--    }-->
+
+<!--    #Indicator {-->
+<!--      width: 100px;-->
+<!--      border: none;-->
+<!--      /*background: #ff523b;*/-->
+<!--      background: -webkit-linear-gradient(left, rgb(0, 138, 138), rgb(0, 0, 0));-->
+<!--      height: 3px;-->
+<!--      margin-top: 8px;-->
+<!--      transform: translateX(100px);-->
+<!--      transition: transform 1s;-->
+<!--    }-->
+
+<!--    /*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;snc form&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
+<!--    .account-page1 {-->
+<!--      margin-top: 25px;-->
+<!--      padding: 0 10px;-->
+<!--      /*background: -webkit-radial-gradient(#fff, #76A63F);*/-->
+<!--      /*background:radial-gradient(#fff,green);*/-->
+<!--    }-->
+
+<!--    .container1 h2 {-->
+<!--      text-align: center;-->
+<!--      margin-top: -14px;-->
+<!--    }-->
+
+<!--    .form-container1 {-->
+<!--      margin-bottom: 100px;-->
+<!--      background: rgb(238, 237, 237);-->
+<!--      width: 390px;-->
+<!--      height: 505px;-->
+<!--      position: relative;-->
+<!--      margin-left: 120px;-->
+<!--      text-align: center;-->
+<!--      /*padding: 20px 0;*/-->
+<!--      /*margin: auto;*/-->
+<!--      border: 3px solid teal;-->
+<!--      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);-->
+<!--      overflow: hidden;-->
+<!--      border-radius: 50px;-->
+<!--    }-->
+
+<!--    .form-container1 span {-->
+<!--      font-weight: bold;-->
+<!--      padding-top:14px;-->
+<!--      padding-bottom: 0 ;-->
+<!--      padding-left: 10px;-->
+<!--      padding-right: 10px;-->
+
+<!--      color: #555;-->
+<!--      cursor: pointer;-->
+<!--      width: 100px;-->
+<!--      display: inline-block;-->
+<!--    }-->
+
+<!--    .form-btn1 {-->
+<!--      display: inline-block;-->
+<!--    }-->
+
+<!--    .form-container1 form {-->
+<!--      max-width: 300px;-->
+<!--      padding: 0 20px;-->
+<!--      position: absolute;-->
+<!--      top: 75px;-->
+<!--      transition: transform 1s;-->
+<!--    }-->
+
+<!--    form input {-->
+<!--      width: 100%;-->
+<!--      height: 30px;-->
+<!--      margin: 7px 0;-->
+<!--      padding: 0 10px;-->
+<!--&lt;!&ndash;      border: 2px solid #ccc;&ndash;&gt;-->
+<!--      border-radius:10%;-->
+<!--      border-top: none;-->
+<!--      border-left: none;-->
+<!--      border-right: none;-->
+<!--    }-->
+
+<!--    form .btn1 {-->
+<!--      width: 100%;-->
+<!--      border: none;-->
+<!--      cursor: pointer;-->
+<!--      margin: 10px 0;-->
+<!--    }-->
+
+<!--    form .btn1:focus {-->
+<!--      outline: none;-->
+
+<!--    }-->
+
+<!--    #LoginForm1 {-->
+<!--      left: -400px;-->
+<!--    }-->
+
+<!--    .forget{-->
+<!--    color: red;-->
+<!--    }-->
+
+<!--    #RegForm1 {-->
+<!--      left: 50px;-->
+<!--    }-->
+
+<!--    form a {-->
+<!--      font-size: 12px;-->
+<!--      color: red;-->
+<!--    }-->
+
+<!--    #Indicator1 {-->
+<!--      width: 100px;-->
+<!--      border: none;-->
+<!--      /*background: #ff523b;*/-->
+<!--      background: -webkit-linear-gradient(left, rgb(0, 138, 138), rgb(0, 0, 0));-->
+<!--      height: 3px;-->
+<!--      margin-top: 8px;-->
+<!--      transform: translateX(100px);-->
+<!--      transition: transform 1s;-->
+<!--    }-->
+
+<!--     .label {-->
+<!--         display: block;-->
+<!--         width: 260px;-->
+<!--         margin: 25px auto 0;-->
+<!--         text-align: center;-->
+<!--      }-->
+
+<!--      .labelspan {-->
+<!--         font-size: 14px;-->
+<!--         font-weight: 600;-->
+<!--         color: #505f75;-->
+<!--         text-transform: uppercase;-->
+<!--      }-->
+<!--      #inputid2[type="checkbox"] {-->
+<!--         display: none;-->
+<!--      }-->
+
+<!--      #inputid2 {-->
+<!--         border: none;-->
+<!--         outline: none;-->
+<!--         background: none;-->
+<!--      }-->
+<!--      #inputid2 {-->
+<!--         display: block;-->
+<!--         width: 100%;-->
+<!--         margin-top: 5px;-->
+<!--         font-size: 16px;-->
+<!--         padding-bottom: 5px;-->
+<!--         border-bottom: 1px solid rgba(109, 93, 93, 0.4);-->
+<!--         text-align: center;-->
+<!--         font-family: 'Nunito', sans-serif;-->
+<!--      }-->
+
+
+
+
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--  &lt;!&ndash; <input type="checkbox" id="show"> &ndash;&gt;-->
+<!--  &lt;!&ndash; <label for="show" class="show-btn">Farmer ?</label> &ndash;&gt;-->
+<!--  <div class="cont">-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;account page-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--<div class="form">-->
+<!-- &lt;!&ndash; <span class="close">x</span> &ndash;&gt;-->
+<!--<div class="account-page">-->
+<!--  <h2>Consumer ?</h2>-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      &lt;!&ndash; <div class="col-2">-->
+<!--        <img src="images/greet4-removebg-preview.png" width=100%>-->
+<!--      </div> &ndash;&gt;-->
+<!--      <div class="col-2">-->
+<!--        <div class="form-container">-->
+<!--          <div class="form-btn">-->
+<!--            <span onclick ="login()">Login</span>-->
+<!--            <span onclick ="register()">Sign Up</span>-->
+<!--            <hr id="Indicator">-->
+<!--          </div>-->
+<!--         <form id="LoginForm" class="mainform" method="post" action="/Clogin/">-->
+<!--                        {% csrf_token %}-->
+<!--                        <input type="email" placeholder="Email" name="email">-->
+<!--                        <input type="password" placeholder="Password" name="pass">-->
+
+<!--&lt;!&ndash;                        <label class="label">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="labelspan">Role</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <select id='inputid2' name="RoleName">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <option value=""></option>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <option value="far">far</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <option value="con">con</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                     </label>&ndash;&gt;-->
+
+
+<!--                        <input type="submit" class="submit" value="Login">-->
+<!--                        <a href="" class="forget">Forget password</a>-->
+<!--                      </form>-->
+
+<!--                      <form id="RegForm" method="post" action="/Csignup/">-->
+<!--                        {% csrf_token %}-->
+<!--                        <input type="text" placeholder="Name" name="name">-->
+<!--                        <input type="email" placeholder="Email id" name="email">-->
+<!--                        <input type="tel"  pattern="[0-9]{10}" maxlength="10"  placeholder="Mobile no." name="contact">-->
+<!--                        <input type="text" placeholder="Address" name="address">-->
+<!--                        <input type="text" placeholder="City" name="city">-->
+<!--                        <input type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="Pin Code" name="pin">-->
+<!--                        <input type="password" placeholder="Password" name="pass">-->
+<!--                        <input type="submit" class="submit" value="Register">-->
+
+<!--                      </form>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--    <div class="sub-cont">-->
+<!--       &lt;!&ndash; <span class="close1">x</span> &ndash;&gt;-->
+<!--      <div class="img">-->
+<!--        <div class="img-text m-up">-->
+<!--          <h2>Farmer ?</h2>-->
+<!--          <p>Sell your product to get maximum profit !</p>-->
+<!--        </div>-->
+<!--        <div class="img-text m-in">-->
+<!--          <h2>Are You Consumer ?</h2>-->
+<!--          <p>Sign up and get our Organic fruits, vegetables, and lot more to your door!</p>-->
+<!--        </div>-->
+<!--        <div class="img-btn">-->
+<!--          <span class="m-up">Click me</span>-->
+<!--          <span class="m-in">Click me</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--     &lt;!&ndash;  <div class="form sign-up">-->
+<!--        <label for="show" class="close-btn" title="close">&times;</label>-->
+<!--        <h2>Farmer Sign Up</h2>-->
+<!--        <label>-->
+<!--          <span>Name</span>-->
+<!--          <input type="text">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--          <span>Address</span>-->
+<!--          <input type="text">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--          <span>Mobile Number</span>-->
+<!--          <input type="tel">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--          <span>Adhar Number</span>-->
+<!--          <input type="text">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--          <span>Password</span>-->
+<!--          <input type="password">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--          <span>Farmer ID</span>-->
+<!--          <input type="value">-->
+<!--        </label>-->
+<!--       <button type="button"class="submit" id="btnclick" onclick="rand()">Sign Up Now</button>-->
+<!--      </div> &ndash;&gt;-->
+
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;account page2-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+
+<!--<div class="account-page1">-->
+<!--    <h2>Farmer ?</h2>-->
+<!--  <div class="container1">-->
+<!--    <div class="row">-->
+<!--      &lt;!&ndash; <div class="col-2">-->
+<!--        <img src="images/greet4-removebg-preview.png" width=100%>-->
+<!--      </div> &ndash;&gt;-->
+<!--      <div class="col-2">-->
+<!--        <div class="form-container1">-->
+<!--          <div class="form-btn1">-->
+<!--            <span onclick ="loginn()">Login</span>-->
+<!--            <span onclick ="registerr()">Sign Up</span>-->
+<!--            <hr id="Indicator1">-->
+<!--          </div>-->
+<!--          <form id="LoginForm1" method="post" action="/fsignin/">-->
+<!--                        {% csrf_token %}-->
+<!--                        <input type="text" placeholder="Email id" name="email">-->
+<!--                        <input type="password" placeholder="password" name="pass">-->
+
+<!--                        <label class="label">-->
+<!--                        <span class="labelspan">Role</span>-->
+<!--                        <select id='inputid2' name="RoleName">-->
+<!--                            <option value=""></option>-->
+<!--                            <option value="far">far</option>-->
+<!--                            <option value="con">con</option>-->
+<!--                        </select>-->
+<!--                     </label>-->
+
+
+<!--                        <input type="submit" value="Login" class="submit" name="mainlogin">-->
+<!--                        &lt;!&ndash; <button type="submit" class="btn">Login</button> &ndash;&gt;-->
+<!--                        <a href="">Forget password</a>-->
+<!--                      </form>-->
+
+<!--                      <form id="RegForm1" method="post" action="/farmsignUp/">-->
+<!--                        {% csrf_token %}-->
+<!--                        <input type="text" placeholder="Name" name="name">-->
+<!--                        <input type="email" placeholder="Email id" name="email">-->
+<!--                        <input type="tel"  pattern="[0-9]{10}" maxlength="10"  placeholder="Mobile no." name="contact">-->
+<!--                        <input type="tel" placeholder="Adhar no." pattern="[0-9]{12}" maxlength="12" name="adhar">-->
+<!--                        <input type="text" placeholder="Address" name="address">-->
+<!--                        <input type="text" placeholder="City" name="city">-->
+<!--                        <input type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="Pin Code" name="pin">-->
+<!--                        <input type="password" placeholder="Password" name="pass">-->
+<!--                        <input type="submit" class="submit" value="Register">-->
+
+<!--                      </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+<!--  &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; javascript&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+<!--<script >-->
+<!--  document.querySelector('.img-btn').addEventListener('click', function()-->
+<!--  {-->
+<!--    document.querySelector('.cont').classList.toggle('s-signup')-->
+<!--  }-->
+<!--);-->
+<!--</script>-->
+<!--  &lt;!&ndash; // -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;for farmer sign up-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+
+<!--&lt;!&ndash;-->
+<!--<script >-->
+
+<!-- document.getElementById("btnclick").onclick =rand;-->
+<!--alert("Thank you for registration ..! Your userd Id is : "+ rand(0,100));-->
+<!-- function rand(min,max){-->
+<!--    return Math.floor(Math.random()* max - min +1)+min;-->
+<!--  }-->
+
+
+<!--</script> &ndash;&gt;-->
+<!--&lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;js for toggle form-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+
+<!--&lt;!&ndash;<script type="text/javascript">&ndash;&gt;-->
+
+<!--&lt;!&ndash;  var LoginForm=document.getElementById("LoginForm");&ndash;&gt;-->
+<!--&lt;!&ndash;  var  RegForm=document.getElementById("RegForm");&ndash;&gt;-->
+<!--&lt;!&ndash;  var Indicator=document.getElementById("Indicator");&ndash;&gt;-->
+<!--&lt;!&ndash;  function register(){&ndash;&gt;-->
+
+<!--&lt;!&ndash;    RegForm.style.transform="translateX(0px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    LoginForm.style.transform="translateX(0px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    Indicator.style.transform="translateX(100px)";&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;  function login(){&ndash;&gt;-->
+<!--&lt;!&ndash;    &ndash;&gt;-->
+<!--&lt;!&ndash;    RegForm.style.transform="translateX(300px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    LoginForm.style.transform="translateX(300px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    Indicator.style.transform="translateX(0px)";&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;  </script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<script type="text/javascript">&ndash;&gt;-->
+
+<!--&lt;!&ndash;  var LoginForm1=document.getElementById("LoginForm1");&ndash;&gt;-->
+<!--&lt;!&ndash;  var  RegForm1=document.getElementById("RegForm1");&ndash;&gt;-->
+<!--&lt;!&ndash;  var Indicator1=document.getElementById("Indicator1");&ndash;&gt;-->
+<!--&lt;!&ndash;  function registerr(){&ndash;&gt;-->
+
+<!--&lt;!&ndash;    RegForm1.style.transform="translateX(0px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    LoginForm1.style.transform="translateX(0px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    Indicator1.style.transform="translateX(100px)";&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;  function loginn(){&ndash;&gt;-->
+<!--&lt;!&ndash;    &ndash;&gt;-->
+<!--&lt;!&ndash;    RegForm1.style.transform="translateX(300px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    LoginForm1.style.transform="translateX(300px)";&ndash;&gt;-->
+<!--&lt;!&ndash;    Indicator1.style.transform="translateX(0px)";&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!-- &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;js for toggle form-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+
+<!--        <script type="text/javascript">-->
+
+<!--          var LoginForm = document.getElementById("LoginForm");-->
+<!--          var RegForm = document.getElementById("RegForm");-->
+<!--          var Indicator = document.getElementById("Indicator");-->
+<!--          function register() {-->
+
+<!--            RegForm.style.transform = "translateX(0px)";-->
+<!--            LoginForm.style.transform = "translateX(0px)";-->
+<!--            Indicator.style.transform = "translateX(100px)";-->
+<!--          }-->
+<!--          function login() {-->
+
+<!--            RegForm.style.transform = "translateX(350px)";-->
+<!--            LoginForm.style.transform = "translateX(450px)";-->
+<!--            Indicator.style.transform = "translateX(0px)";-->
+<!--          }-->
+<!--        </script>-->
+
+<!--        <script type="text/javascript">-->
+
+<!--          var LoginForm1 = document.getElementById("LoginForm1");-->
+<!--          var RegForm1 = document.getElementById("RegForm1");-->
+<!--          var Indicator1 = document.getElementById("Indicator1");-->
+<!--          function registerr() {-->
+
+<!--            RegForm1.style.transform = "translateX(0px)";-->
+<!--            LoginForm1.style.transform = "translateX(0px)";-->
+<!--            Indicator1.style.transform = "translateX(100px)";-->
+<!--          }-->
+<!--          function loginn() {-->
+
+<!--            RegForm1.style.transform = "translateX(350px)";-->
+<!--            LoginForm1.style.transform = "translateX(450px)";-->
+<!--            Indicator1.style.transform = "translateX(0px)";-->
+<!--          }-->
+<!--        </script>-->
+
+<!--</body>-->
+<!--</html>-->

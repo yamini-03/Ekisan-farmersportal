@@ -1,0 +1,442 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seeds Varities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <style>
+
+    body{
+     background-image: url("{% static 'images/varities/sv.jpg' %}");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -5px;
+            width:100%
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+        <!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        .gtrans {
+            margin-left: 30%;
+        }
+
+    .rectangle {
+
+    position:absolute;
+    top:55px;
+    left:37px;
+    border-radius: 25px;
+    }
+
+    .var{
+    margin-top: 500px;
+    margin-left:40px;
+    margin-bottom:40px;
+    }
+
+    .accordion {
+      background-color:#6F4E37;
+      color:white;
+      cursor: pointer;
+      padding: 18px 2px;
+      width: 85%;
+      margin-top: 10px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 22px;
+      transition: 0.4s;
+      border-radius: 5px;
+      font-family:Bakerie Bold;
+    }
+
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+       width: 82.5%;
+       font-size: 20px;
+      background-color:#FFCBA4;
+      overflow: hidden;
+    }
+
+    #foot{
+
+	margin-top: 0%;
+}
+.container1{
+	max-width: 100%;
+	margin: auto;
+
+}
+.row1{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.footer{
+	position: absolute;
+	left:0;
+	background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 10px;
+}
+.footer p{
+	color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+	min-width: 400px;
+	height: 250px;
+	margin-bottom: 20px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+	margin-left: 30px;
+
+}
+.footer-col-1 img{
+	width:150px;
+	margin-left: 110px;
+}
+.footer-col-1 p{
+
+	margin-left: 150px;
+	color: #3B9C9C;
+}
+.footer-col-2{
+	flex: 1;
+	margin-left: 15px;
+
+}
+.footer-col-2 input{
+
+ 	border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+ 	border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+
+
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+
+}
+.footer-col-3{
+	flex-basis: 12%;
+	margin-left: 30px;
+	text-align: left;
+}
+.footer-col-3 .fa{
+
+	margin-right: 8px;
+	font-size: 25px;
+	height: 40px;
+	width:40px;
+	text-align: center;
+	padding-top: 7px;
+	color: #3B9C9C;
+	background-color:black;
+}
+/*to remove bullet style*/
+ul{
+	list-style-type: none;
+}
+
+.copyright{
+	text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+    </style>
+</head>
+<body>
+<div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+    </div>
+    <center>
+       <div class="rectangle"><img class="rectangle" src="{% static 'images/varities/seedvar1.png' %}" height="400px" width="1400px">
+        </div>
+        <div class="var">
+            <button class="accordion">&nbsp;&nbsp;Bean</button>
+            <div class="panel">
+              <p>
+                  <img src="{% static 'images/varities/bean1.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>BEAN CORA - Bobby Bean</b><br>
+                  Fine stringless bean variety. Bush type plant (not climbing). White seeded. Very high yielding ability. Attractive straight, smooth, slender, medium green pods. Pods length is 14 to 16 cm. Maturity: 50 to 55 days after sowing. Upright plant habit. Resistance to BCMV (Bean Common Mosaic virus), Anthracnose and Pseudomonas Phaseolicola.
+                  <br><br><img src="{% static 'images/varities/bean2.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>FRENCH BEAN - Long Green</b><br>
+                  Pole French bean (climbing). 55 days maturity after sowing, round-oval pod section, 16-18 cm long. Medium green pods. Black seeded variety. Very high yields. Resistance to BCMV (Bean Common Mosaic virus), Anthracnose and Pseudomonas Phaseolicola.
+                  <br><br><img src="{% static 'images/varities/bean3.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>BEAN -  Green Fire</b><br>
+                  Medium-early maturity (63 days). Pods are straight, stringless, medium/dark green color with round cross section (13-15 cm long x 1.2 cm diameter). Plant height : 150-190 cm. Suitable for Processing use. Tolerant to Xanthomonas, BCMV (Bean Common Mosaic Virus) and Anthracnose.
+                  <br><br><img src="{% static 'images/varities/bean4.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>FRENCH BEAN - Whitney</b><br>
+                  Pole French bean (climbing). 55-60 days maturity after sowing, round-oval pod section, 16-18 cm long. Medium green pods. White seeded variety. Very high yields. Resistance to BCMV (Bean Common Mosaic virus), Anthracnose and Pseudomonas Phaseolicola.
+              </p>
+            </div>
+
+            <button class="accordion">&nbsp;&nbsp;Carrot</button>
+            <div class="panel">
+              <p><img src="{% static 'images/varities/car1.jfif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>Imperator</b><br>
+                    Imperator carrot seed types are the commonest ones you might see in a supermarket. They are long and taper to a pointed tip. One of the reasons they are so reliable for the mass market is that they can be machine-harvested.
+                  <br><br><img src="{% static 'images/varities/car2.jfif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>Chantenay</b><br>
+                    Chantenay carrots are far stouter. They are short, and often quite wide having broad shoulders tapering to a blunt tip. These carrots are ideal for processing and juicing. The little bits of diced carrots you might find in processed foods are likely from Chantenay stock.
+                  <br><br><img src="{% static 'images/varities/car3.jfif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>Danvers</b><br>
+                    Danvers types are known for being conical in shape, with obvious, round shoulders and tapering to a point. These are usually shorter than Imperator types, and work much better in heavy soils. They arose in Danvers, Massachusetts in 1871.
+                  <br><br><img src="{% static 'images/varities/car4.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>Nantes.</b><br>
+                    Nantes carrots are nearly cylindrical, with a rounded point. Nantes are bred for sweetness, and are particularly nice for the home garden.
+              </p></div>
+
+            <button class="accordion">&nbsp;&nbsp;Cauliflower</button>
+            <div class="panel">
+                    <p><img src="{% static 'images/varities/cauli1.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>CAULIFLOWER - F1 Orbit</b><br>
+                    85 days maturity, heat and cold resistant. Big heads over 1.2 kg, and pure white color.
+                  <br><br><img src="{% static 'images/varities/cauli2.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>CAULIFLOWER - F1 Snow Mountain</b><br>
+                    An early variety with a maturity of 50-55 days from transplanting. Heads weight average 0.8-0.9 kg with pure white color. Cropping season is from summer to early autumn in temperate conditions. Resistant to Downy mildew
+                  <br><br><img src="{% static 'images/varities/cauli3.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>CAULIFLOWER - F1 Snowy White</b><br>
+                    Medium early maturity (55-60 days after transplanting) with excellent globe, smooth head and pure white curds with thick and fine texture. Head weight : about 0.9-1 kg. High yielding. Upright plant habit. Best for summer until autumn cropping in temperate conditions. Strong tolerance to heat and cold, as well as to Downy mildew and Black Rot. Very popular variety, easy to grow.
+                  <br><br><img src="{% static 'images/varities/cauli4.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>CAULIFLOWER - F1 Flora-99</b><br>
+                    Extra early maturity (50 days maturity from transplanting) with excellent white curd quality of 0.8 kg per head. High yield. Best for summer cropping in temperate conditions. Suitable for dry tropical season, strong tolerance to heat. Tolerant to Black Rot and Downy mildew.
+              </p>            </div>
+
+             <button class="accordion">&nbsp;&nbsp;Onion</button>
+            <div class="panel">
+                <p><img src="{% static 'images/varities/on1.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>ONION - F1 Bold</b><br>
+                    A market leader in short day type, for tropics and sub-tropics. Very stable and reliable crop, suitable to grow in different conditions. Relatively long storage, far better than common GRANEX variety. Suitable also for fresh market. Easy grower. Almost no bolting and splitting. Flattened globe shape. Medium maturity. About 300-320 gram (0.7 lb) in weight per bulb. Brown yellow colored. Tolerant to Downy mildew and Botrytis.
+                    <br><br><img src="{% static 'images/varities/on2.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>ONION - F1 Golden Acre</b><br>
+                    An early short-day hybrid onion variety that matures 7 days earlier than any other GRANEX hybrid on the market. The bulbs of this hybrid mature approximately 164 days after emergence and are uniform, thick-flat in shape with small necks which cure thoroughly, with a diameter of 6 cm (2.4 in.). The bulbs have golden yellow scales with excellent retention. Flesh is white and mild. Long storage ability.
+                    <br><br><img src="{% static 'images/varities/on3.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>ONION - Texas Yellow Grano</b><br>
+                    Popular short day onion, for tropical areas.
+                  <br><br>
+              </p>
+            </div>
+            <button class="accordion">&nbsp;&nbsp;Pumpkin</button>
+            <div class="panel">
+                <p><img src="{% static 'images/varities/pump1.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>PUMPKIN - Anaconda</b><br>
+                    A long-shaped Asian gourd, gray skin and orange thick flesh, with sweet taste.
+                    <br><br><img src="{% static 'images/varities/pump2.gif' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>PUMPKIN - F1 Giant</b><br>
+                    Medium size fruits, flat shape, with bright yellow flesh, greyish-green skin, light yellow at the bottom. The flavor is very sweet and delicate. Maturity: 82-85 days from sowing, weight about 2.5-3.2 kg (5.5-7 lb). Tolerant to heat, Powdery mildew, Downy mildew.
+                    <br><br><img src="{% static 'images/varities/pump3.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>PUMPKIN - F1 Black Belt</b><br>
+                    Large size, flat shape fruits. The flesh is bright yellow color and firm, whereas its skin is dark green color and smooth. The flavor is very sweet and delicate. Maturity: 85 days from sowing. Weight about 3-4.5 kg (6.6-9.9 lb) per fruit. Mature fruits have a shelf life of 5-6 weeks. Plants grow strongly and provide very high yields (4 fruits per plant on average). Tolerant to Heat, poty viruses, Downy mildew, Powdery mildew.
+                  <br><br>
+              </p>
+            </div>
+                <button class="accordion">&nbsp;&nbsp;Tomato</button>
+            <div class="panel">
+                <p><img src="{% static 'images/varities/tom1.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>TOMATO Seed - F1 Red Delight</b><br>
+                    Determinate Tomato Hybrid. A long shelf life sub-tropical variety (RIN genetic), also suitable for summer cropping in temperate areas. High yielding. Determinate growth. Round fruits, slightly flattened, 7cm to 9 cm in diameter with weight of 180-220 gram per fruit. Suitable for fresh market tomato. Tolerance to Fusarium O, Pseudomonas, Stemphylium, Verticillium.
+                    <br><br><img src="{% static 'images/varities/tom2.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>TOMATO Seed - F1 Sunrise</b><br>
+                    Indeterminate Tomato Hybrid. This tomato hybrid matures in 70-75 days after transplanting and harvest can last one month. Suitable for temperate and subtropical areas. High yields of oblong egg-shaped fruits. Weight is around 100-110 gram per fruit. Thick hard fruits. Indeterminate growth. Good tolerance to fusarium and other common fungi.
+                    <br><br><img src="{% static 'images/varities/tom3.jpg' %}" height="100px" width="100px" style="border-radius:50%;"><br><b>TOMATO Seed - F1 Harvest</b><br>
+                    This Tomato Hybrid gives high yields, shows strong vigor even in extreme conditions (temperature over 35 °C), and big fruits with high yields. Fruits are round, uniform color, bright red at maturity, average weight : 180-200 g per fruit. Determinate growth, flowers appear 23- 27 days after transplant. Maturity : 60 - 65 days after transplant and harvesting period lasts 25-30 days depending on growing conditions. T-01 shows good heat tolerance and high tolerance to Fusarium O, Pseudomonas solanacearum (Bacterial wilt), Stemphylium, Verticillium.
+                  <br><br>
+              </p>
+            </div>
+            </div>
+
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+        </script>
+    </center>
+<section id="foot">
+<div class="footer">
+	<div class="container1">
+		<div class="row1">
+			<div class="footer-col-1">
+				 <img src="{% static 'images/lll.png' %}">
+				<a href="/about/"><p>About us</p></a>
+				<a href="/contact/"><p>Contact us</p></a>
+			</div>
+			<div class="footer-col-2">
+
+				<p><b>FEEDBACK FORM</b></p>
+				<input type="email" placeholder="ENTER YOUR NAME">
+				<input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+				<textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+				</textarea><br>
+				<button type="button" class="btn btn-primary">SUBMIT</button>
+			</div>
+			<div class=" footer-col-3">
+				<p></p>
+				<p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+				<p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+				<p><i class="fa fa-phone"></i> 9323131444</p>
+				 <div class="social-media">
+			        <ul>
+			           <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+			        </ul>
+			      </div>
+			</div>
+		</div>
+		<!-- <hr> -->
+		<p class="copyright">Copyright 2021 e-Kisan</p>
+	</div>
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,687 @@
+{% load static%}
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Buying</title>
+
+
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %} ">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="{% static 'js/modernizr.custom.79639.js' %}"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous" />
+	<!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+	<style>
+	body{
+	background-image: url('{% static "images/buying/catbg.png" %}');
+	}
+
+
+	.ch-img-1 {
+		background-image: url({% static 'images/buying/apples1.jpg' %});
+	}
+
+	.ch-img-2 {
+		background-image: url({% static 'images/buying/peper.jpg'%});
+	}
+
+	.ch-img-3 {
+		background-image: url({% static 'images/buying/carrot.jpg' %});
+	}
+
+	.ch-img-4 {
+		background-image: url({% static 'images/buying/cauli2.jpg' %});
+	}
+
+	.ch-img-5 {
+		background-image: url({% static 'images/buying/cucu2.jpg' %});
+	}
+
+	.ch-img-6 {
+		background-image: url({% static 'images/buying/peas.jpg' %});
+	}
+
+	.ch-img-7 {
+		background-image: url({% static 'images/buying/patato2.jpg' %});
+	}
+
+	.ch-img-8 {
+		background-image: url({% static 'images/buying/tom.jpg' %});
+	}
+
+	.ch-img-9 {
+		background-image: url("{% static 'images/buying/rice2.jpg' %}");
+	}
+
+	.ch-img-10 {
+		background-image: url({% static 'images/buying/wheat.jpg' %});
+	}
+
+
+
+	.header ul {
+            list-style-type: none;
+            margin-top: -15px;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+        #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+		#logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        .gtrans {
+            margin-left: 25%;
+        }
+
+
+	.filter-sections {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	margin-left: 60px;
+	}
+
+	.filter-sections img{
+	width: 70%;
+	display: block;
+	overflow: hidden;
+	margin-top: -40px;
+	margin-left: 30px;
+	margin-bottom: -58px;
+	}
+
+	.filter-sections h5{
+<!--	width: 70%;-->
+<!--	display: block;-->
+<!--	overflow: hidden;-->
+	margin-top: -70px;
+	margin-left: 13px;
+	}
+
+	.filter-sections p{
+	font-size: 16px;
+	margin-top: -38px;
+	}
+
+	.filter-sections div {
+	opacity: 0;
+	display: none;
+	min-height: 50px;
+	margin: 0.5em;
+	text-align: center;
+<!--	padding: 5px 5px;-->
+	float: left;
+	/* transition: all 500s ease; */
+	}
+
+	.view {
+	display: block !important;
+	opacity: 1 !important;
+	/* transform: scale(1) rotate(0deg); */
+	border-radius:4px;
+	/* animation: selected 300ms 1 ease-in-out; */
+	}
+
+	.res{
+		color: white;
+		font-size: 35px;
+		position: absolute;
+		top: 840px;
+	}
+
+<!--	.image{-->
+<!--	position: relative;-->
+<!--	top:0px;-->
+<!--	left: 500px;-->
+<!--	}-->
+
+<!--	.decor{-->
+<!--		position: absolute;-->
+<!--		top :160px;-->
+<!--		height : 200px;-->
+<!--		width:700px;-->
+<!--		border-radius: 10px;-->
+<!--		color: white;-->
+<!--		margin-left: 530px;-->
+<!--		font-size: 50px;-->
+<!--		padding: 15px;-->
+
+<!--	}-->
+
+<!--	.gif{-->
+<!--	margin-left: 850px;-->
+<!--	margin-top: -200px;-->
+<!--	}-->
+
+	
+
+		#foot{
+
+		margin-top: 5px;
+		}
+		.container1{
+			max-width: 100%;
+			margin: auto;
+
+		}
+		.row1{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.footer{
+			position: absolute;
+			left:0;
+			background: #000;
+			color: #8a8a8a;
+			font-size: 14px;
+			padding: 60px 0 10px;
+		}
+		.footer p{
+			color:#8a8a8a;
+
+		}
+		.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+		{
+			min-width: 400px;
+			height: 250px;
+			margin-bottom: 20px;
+		}
+		.footer-col-1{
+			flex-basis: 30%;
+			margin-left: 30px;
+
+		}
+		.footer-col-1 img{
+			width:150px;
+			margin-left: 110px;
+		}
+		.footer-col-1 p{
+
+			margin-left: 150px;
+			color: #3B9C9C;
+		}
+		.footer-col-2{
+			flex: 1;
+			margin-left: 15px;
+
+		}
+		.footer-col-2 input{
+
+			border: 1px solid #3B9C9C;
+			padding: 10px;
+			width: 77%;
+			border-radius: 18px;
+			background-color: black;
+			color: #8a8a8a;
+		}
+
+		.footer-col-2 textarea{
+			border: 1px solid #3B9C9C;
+			border-radius: 18px;
+			text-align: center;
+			width: 77%;
+			color: #8a8a8a;
+			background-color: black;
+
+
+		}
+		.btn-primary{
+		box-shadow:none !important;
+		border: none;
+		border-radius: 25px;
+		margin-top: 5px;
+		padding: 10px;
+		background-color: #3B9C9C;
+		width: 110px;
+
+
+		}
+		.footer-col-3{
+			flex-basis: 12%;
+			margin-left: 30px;
+			text-align: left;
+		}
+		.footer-col-3 .fa{
+
+			margin-right: 8px;
+			font-size: 25px;
+			height: 40px;
+			width:40px;
+			text-align: center;
+			padding-top: 7px;
+			color: #3B9C9C;
+			background-color:black;
+		}
+		/*to remove bullet style*/
+		ul{
+			list-style-type: none;
+		}
+
+		.copyright{
+			text-align: center;
+
+		}
+
+		/*----------social media--------------*/
+		.social-media{
+		  width: 100%;
+		  text-align: left;
+
+		}
+
+		.social-media ul{
+		  list-style: none;
+		}
+
+		.social-media ul li{
+		  display: inline-block;
+		  cursor: pointer;
+		}
+
+		.social-media img{
+		  width: 40px;
+		  height: 40px;
+		  border-radius: 35px;
+		}
+/* <!--		.cart {-->
+<!--			width:100px;-->
+<!--			height:100px;-->
+<!--			background-image: url({% static 'images/cart.png'%});-->
+<!--			background-size:100px 100px;-->
+<!--			border-radius:30px;-->
+<!--			margin-left:200px;-->
+<!--			border-color:none;-->
+<!--		}--> */
+		.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 50px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+	.image{
+position: relative;
+top:0px;
+left: 500px;
+}
+
+.decor{
+   position: absolute;
+   top :160px;
+   height : 200px;
+   width:700px;
+   border-radius: 10px;
+   color: white;
+   margin-left: 530px;
+   font-size: 50px;
+   padding: 15px;
+
+}
+
+.gif{
+margin-left: 850px;
+margin-top: -200px;
+}
+
+   .filter-sections {
+width: 100%;
+display: block;
+overflow: hidden;
+margin-left: 60px;
+}
+
+.filter-sections div {
+opacity: 0;
+display: none;
+min-height: 50px;
+margin: 0.5em;
+text-align: center;
+padding: 2em 1em;
+float: left;
+/* transition: all 500s ease; */
+}
+
+.view {
+display: block !important;
+opacity: 1 !important;
+/* transform: scale(1) rotate(0deg); */
+border-radius:4px;
+/* animation: selected 300ms 1 ease-in-out; */
+}
+
+.product{
+height: 310px;
+width: 250px;
+background-color:rgba(245, 245, 245, 0.753);
+padding: 2px 2px;
+color:rgb(0, 0, 0);
+box-shadow: 4px;
+font-size: 30px;
+border-radius:10px;
+/* box-shadow: rgb(0, 0, 0); */
+box-shadow: 3px 2px rgba(0, 0, 0,0.3);
+}
+   .getmain{
+margin-bottom: 5px;
+   background-color:teal;
+   height: 47px;
+   width: 100px;
+   font-size: 18px;
+   border-radius: 10px;
+color: white;
+}
+
+       .order {
+			background-color:none;
+		}
+		.order:hover {
+			background-color:none;
+			cursor: pointer;
+		}
+		.myorder {
+			margin-top: -5px;
+			margin-left: 30px;
+			width: 85px;
+		    height: 65px;
+		}
+      .pickmeup {
+         border: 2px;
+         display: none;
+         background-color: rgba(0,0,0,0.8);
+         height: 600px;
+         width: 1400px;
+         border-radius: 10px;
+         position: absolute;
+         left: 60px;
+         top: 100px;
+         z-index: 9;
+      }
+</style>
+</head>
+
+<body><br>
+  <div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+
+            <li class="order">
+				<a href="/myorders/"><img  class='myorder' src="{% static 'images/order.png' %}"></a>
+            </li>
+
+
+			<li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+<div class="image"><img src="{% static 'images/buying/blob.png' %}" height="210px" width="380px"></div>
+	<div class="decor">
+		<b>&nbsp;&nbsp;Categories</b></div>
+   <div class="gif"><img src="{% static 'images/gif.gif' %}" height="180px" width="220px">
+   </div>
+   <div class="container">
+      <section class="main">
+
+         <ul class="ch-grid">
+            <li><a href="/apples/">
+               <div class="ch-item ch-img-1">
+                  <div class="ch-info"><br>
+
+                     <h3>Apples</h3>
+
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/bellpeper/">
+               <div class="ch-item ch-img-2">
+                  <div class="ch-info"><br>
+
+                     <h3>Bellpeper</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/carrot/">
+               <div class="ch-item ch-img-3">
+                  <div class="ch-info"><br>
+
+                     <h3>Carrot</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/cauliflower/">
+               <div class="ch-item ch-img-4">
+                  <div class="ch-info"><br>
+
+                     <h3>Cauli-flower</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/cucumber/">
+               <div class="ch-item ch-img-5">
+                  <div class="ch-info"><br>
+
+                     <h3>Cucumber</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/peas/">
+               <div class="ch-item ch-img-6">
+                  <div class="ch-info"><br>
+
+                     <h3>Peas</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/potato/">
+               <div class="ch-item ch-img-7">
+                  <div class="ch-info"><br>
+
+                     <h3>Potato</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/tomato/">
+               <div class="ch-item ch-img-8">
+                  <div class="ch-info"><br>
+
+                     <h3>Tomato</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/rice/">
+               <div class="ch-item ch-img-9">
+                  <div class="ch-info"><br>
+
+                     <h3>Rice</h3>
+                  </div>
+               </div></a>
+            </li>
+            <li><a href="/wheat/">
+               <div class="ch-item ch-img-10">
+                  <div class="ch-info"><br>
+                     <h3>Wheat</h3>
+                  </div>
+               </div></a>
+            </li>
+
+         </ul>
+      </section>
+   </div>
+
+   <img src="{% static 'images/buying/Untitled design.png' %}">
+   <div class="res"><b>Result🔽</b></div>
+      <div class="filter-sections" id="result">
+   {% for key, d  in det.items %}
+       <div class="product">
+           <img src= "{{ d.url }}" width="100px" height="130px" style="border-radius:10px;"><br>
+           <h5>{{ d.Product_name }}</h5>
+           <p><i class="material-icons" style="color:teal">location_on</i> {{ d.city }}</p>
+               <a href="/mainpro/?z={{key}}"><button class="getmain"> Details</button></a>
+       </div>
+   {% endfor %}
+</div>
+<script>
+	  var items = document.querySelectorAll('.filter-sections div');
+        animate(items);
+
+        // forech arrays
+        function each(el, callback) {
+            var allDivs = document.querySelectorAll(el),
+                alltoArr = Array.prototype.slice.call(allDivs);
+            Array.prototype.forEach.call(alltoArr, function (selector, index) {
+                if (callback) return callback(selector);
+            });
+        };
+        // animate function
+        function animate(item) {
+            (function show(counter) {
+                setTimeout(function () {
+                    item[counter].classList.add('view');
+                    counter++;
+                    if (counter < item.length) show(counter);
+                }, 50);
+            })(0);
+        };
+</script>
+
+<section id="foot">
+        <div class="footer">
+            <div class="container1">
+                <div class="row1">
+                    <div class="footer-col-1">
+                        <img src="{% static 'images/lll.png' %}">
+                        <a href="">
+                            <p>About us</p>
+                        </a>
+                        <a href="">
+                            <p>Contact us</p>
+                        </a>
+                    </div>
+                    <div class="footer-col-2">
+
+                        <p><b>FEEDBACK FORM</b></p>
+                        <input type="email" placeholder="ENTER YOUR NAME">
+                        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+                        <textarea rows="5" cols="50" style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+    				</textarea><br>
+                        <button type="button" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                    <div class=" footer-col-3">
+                        <p></p>
+                        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+                        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+                        <p><i class="fa fa-phone"></i> 9323131444</p>
+                        <div class="social-media">
+                            <ul>
+                                <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <p class="copyright">Copyright 2021 e-Kisan</p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
+
+
+
+
+

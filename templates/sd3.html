@@ -1,0 +1,591 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symptoms & diseases</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- <link rel="stylesheet" href="style.css"> -->
+<!--   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+   <style>
+     #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+   body{
+     background-image: url("{% static 'images/animal/aaa.png'%}");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+ .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            top:0;
+            left:0;
+            right:0;
+            position:absolute;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .nav li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #logoimg{
+            margin-top: -80px;
+            margin-right: -40px;
+            height: 230px;
+            width: 230px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+        #textcss{
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+        #textcss1{
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+        #textcss2{
+            margin-top: 10px;
+            margin-left: -30px;
+
+        }
+/*-------------table-----------------------------*/
+    .fert{
+    position:absolute;
+    /*top:10px;*/
+    left: 250px;
+    font-size:70px;
+    /*text-align: center;*/
+    color:#000;
+    }
+
+     .rectangle {
+    position:absolute;
+    top:100px;
+    /*left:50px;*/
+      height: 280px;
+      width: 200vh;
+      background-color:#5ca08e;
+      border-radius: 25px;
+      margin-left: 18px;
+      margin-right: 10px;
+    }
+    .table{
+    position: absolute;
+    /*align-items: center;*/
+    top:450px;
+    margin-left: 200px;
+    margin-right: 30px;
+    }
+
+    table {
+      border: 2px solid black;
+      border-radius:5px;
+      width: 1100px;
+
+       font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even){background-color: #FFFFCC;}
+    tr:nth-child(odd){background-color:#5ca08e;}
+
+     tr:hover {background-color: #ddd;}
+
+   td,  th {
+      border: 1px solid grey;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color:#5ca08e;
+      color: black;
+      height: 45px;
+    }
+
+    /* Pagination links */
+    .pagination{
+    margin-left: 550px;
+
+    }
+
+    .pagination a {
+
+      margin-top: 1250px;
+       margin-left: 20px;
+       margin-bottom: 30px;
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 0.5px solid grey;
+      background-color:#5ca08e;
+      border-radius: 50px;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {background-color: #C0C0C0; border-radius: 50px;}
+
+
+/*---------------footer---------------------------------------------------*/
+
+#foot{
+  margin-top: 90%;
+
+}
+.container1{
+  max-width: 100%;
+  margin: auto;
+  
+}
+.row1{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer{
+  position: absolute;
+  left:0;
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 10px;
+}
+.footer p{
+  color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+  min-width: 400px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+  margin-left: 30px;
+
+}
+.footer-col-1 img{
+  width:150px;
+  margin-left: 110px;
+}
+.footer-col-1 p{
+  
+  margin-left: 150px;
+  color: #3B9C9C;
+}
+.footer-col-2{
+  flex: 1;
+  margin-left: 15px;
+
+}
+.footer-col-2 input{
+  
+  border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+  border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+    
+    
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+  
+}
+.footer-col-3{
+  flex-basis: 12%;
+  margin-left: 30px;
+  text-align: left;
+}
+.footer-col-3 .fa{
+
+  margin-right: 8px;
+  font-size: 25px;
+  height: 40px;
+  width:40px;
+  text-align: center;
+  padding-top: 7px;
+  color: #3B9C9C;
+  background-color:black;
+}
+/*to remove bullet style*/
+ul{
+  list-style-type: none;
+}
+
+.copyright{
+  text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+<body>
+
+  <section id="tab">
+
+    <div class="cent">
+    <center>
+<!-- navbar -->
+
+<div class="nav">
+    <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}" height="55px" width="55px"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+</div>
+<!-- header and table -->
+        <div class="rectangle"><p class="fert"><img src="{% static 'images/animal/cow.png'%}" width="110px">Disease's And Symptom's</p>
+        </div>
+
+        <div class="table">
+       
+
+
+<table>
+        <tr>
+            <th colspan="8">
+                <center>
+                    <h3>Disease's And Symptom's of farm Animal's</h3>
+                </center>
+            </th>
+        </tr>
+        <tr id='head'>
+            <th>Sr.No.</th>
+            <th>Animal</th>
+            <th>Diseases</th>
+            <th>Vaccine ?</th>
+             <th>Symptoms </th>
+            <th>How they contract it</th>
+             <th>Zoonotic ?</th>  
+            
+        </tr>
+    <tr>  
+        <td>21</td>    
+        <td>Horses</td>  
+        <td>Equine Infectious
+Anemia (EIA or
+Swamp Fever)</td>
+        <td>N – Coggins
+Test</td>    
+        <td>Jaundice, rapid breathing, rapid
+heart rate, swelling of limbs,
+bleeding from the nose, bloody
+feces</td>  
+        <td>Blood feeding flies, re-
+used needles from
+
+infected horses, blood
+transfusions,
+contaminated medical
+equipment, in utero</td>
+        <td>N</td>     
+    </tr> 
+    <tr>  
+         <td>22</td>    
+        <td>Horses</td>  
+        <td>Equine Viral Arteritis
+(EVA)</td>
+        <td>Y</td>    
+        <td>Fever, depression, anorexia,
+limb/mammary/scrotum edema,
+hives, conjunctivitis, abortions,
+stillbirths, decreased fertility</td>  
+        <td>Respiratory secretions,
+natural and AI breeding,
+semen</td>
+        <td>N</td>    
+    </tr> 
+    <tr>  
+        <td>23</td>    
+        <td>Horses</td>  
+        <td>Rotavirus A (for foals)</td>
+        <td>Y – through
+
+dam’s milk</td>    
+        <td>Severe diarrhea, possible death</td>  
+        <td>Contact with
+contaminated objects,
+animals, or people</td>
+        <td>Y</td>     
+    </tr>  
+    <tr>  
+        <td>24</td>    
+        <td>Cattle, Horses</td>  
+        <td>Pigeon Fever (Dryland
+Strangles)</td>
+        <td>N</td>    
+        <td>Pigeon Fever (Dryland
+Strangles)</td>  
+        <td>Pigeon Fever (Dryland
+Strangles)</td>
+        <td>Y</td>  
+    </tr>  
+    <tr>  
+          <td>25</td>    
+        <td>Cattle, Horses</td>  
+        <td>Pigeon Fever (Dryland
+Strangles)</td>
+        <td>N</td>    
+        <td>Pigeon Fever (Dryland
+Strangles)</td>  
+        <td>Pigeon Fever (Dryland
+Strangles)</td>
+        <td>N</td>  
+    </tr>  
+    <tr>  
+          <td>26</td>    
+        <td>Swine</td>  
+        <td>Classical Swine Fever</td>
+        <td>Y – require
+USDA
+approval to
+use</td>    
+        <td>Fever, huddling, constipation,
+diarrhea, hemorrhages,
+incoordination, weakness, abortion,
+stillbirths</td>  
+        <td>Mucous membranes, skin
+abrasions, contaminated
+environment and feed</td>
+        <td>N</td>   
+    </tr> 
+    <tr>  
+          <td>27</td>    
+        <td>Swine</td>  
+        <td>Edema Disease</td>
+        <td>Y</td>    
+        <td>Ataxia, anorexia, depression, death,
+
+abnormal squeals</td>  
+        <td>Contaminated
+environment</td>
+        <td>N</td>    
+    </tr> 
+    <tr>  
+         <td>28</td>    
+        <td>Swine</td>  
+        <td>Swine Dysentery
+
+(Bloody Dysentery)</td>
+        <td>N</td>    
+        <td>Diarrhea, excess mucus secretions,
+sunken eyes, depression, erratic
+appetite, sudden death</td>  
+        <td>Direct contact, infected
+sows can give it to piglets
+in-utero, possibly infected
+mice</td>
+        <td>N</td>      
+    </tr>  
+    <tr>  
+         <td>29</td>    
+        <td>Swine</td>  
+        <td>Mycoplasma</td>
+        <td>Y</td>    
+        <td>Arthritis, pneumonia, coughing,
+
+decreased growth</td>  
+        <td>Direct contact, coughing</td>
+        <td>N</td> 
+    </tr>  
+    <tr>  
+         <td>30</td>    
+        <td>Direct contact, coughing</td>  
+        <td>Pseudorabies (PRV)</td>
+        <td>N –
+biosecurity</td>    
+        <td>Abortions, stillbirths, incoordination,
+coughing, sneezing, fever,
+mummified piglets</td>  
+        <td>Direct contact with mouth
+or nose, contaminated
+breeding equipment</td>
+        <td>N</td> 
+    </tr> 
+   
+   
+   
+
+    </table>
+       <br>
+        </div>
+        <br>
+        <br></center>
+        <div class="pagination">
+          <a href="/symdisease/">1</a>
+            <a href="/sd2/">2</a>
+            <a href="#" class="active">3</a>
+            <a href="/sd4/">4</a>
+            <a href="/sd4/">&raquo;</a>
+        </div>
+        <br>
+
+ </div>
+</section>
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+        <img src="{% static 'images/animal/lll.png'%}" >
+        <a href=""><p>About us</p></a>
+        <a href=""><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+        
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/animal/face.png'%}"></li>
+                <li><img src="{% static 'images/animal/twitter.png'%}"></li>
+                <li><img src="{% static 'images/animal/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+</body>
+</html>

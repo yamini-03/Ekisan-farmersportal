@@ -1,0 +1,975 @@
+<!--<!DOCTYPE html>-->
+{% load static %}
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+    <style>
+        .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -40px;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+/* <!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }--> */
+         #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        /* body {
+            background-image: url('static/images/contactUs.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        } */
+        #cont {
+            background-image: url("{% static 'images/contact/contactUs.png' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .heading {
+            color: gray;
+            font-size: 60px;
+            text-shadow: 2px 2px 0 black;
+            font-family: cursive;
+
+        }
+
+        /*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+        @font-face {
+            font-family: Poppins-Regular;
+            src: url('../fonts/poppins/Poppins-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: Poppins-Medium;
+            src: url('../fonts/poppins/Poppins-Medium.ttf');
+        }
+
+        @font-face {
+            font-family: Poppins-Bold;
+            src: url('../fonts/poppins/Poppins-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: Poppins-SemiBold;
+            src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+        }
+
+        /*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* body,
+        html {
+            height: 100%;
+            font-family: Poppins-Regular, sans-serif;
+        } */
+
+        /*---------------------------------------------*/
+        a {
+            font-family: Poppins-Regular;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666666;
+            margin: 0px;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+        }
+
+        a:focus {
+            outline: none !important;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        /*---------------------------------------------*/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0px;
+        }
+
+        p {
+            font-family: Poppins-Regular;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666666;
+            margin: 0px;
+        }
+
+        ul,
+        li {
+            margin: 0px;
+            list-style-type: none;
+        }
+
+
+        /*---------------------------------------------*/
+        input {
+            outline: none;
+            border: none;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        textarea {
+            outline: none;
+            border: none;
+        }
+
+        textarea:focus,
+        input:focus {
+            border-color: transparent !important;
+        }
+
+        input:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        input:focus:-moz-placeholder {
+            color: transparent;
+        }
+
+        input:focus::-moz-placeholder {
+            color: transparent;
+        }
+
+        input:focus:-ms-input-placeholder {
+            color: transparent;
+        }
+
+        textarea:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        textarea:focus:-moz-placeholder {
+            color: transparent;
+        }
+
+        textarea:focus::-moz-placeholder {
+            color: transparent;
+        }
+
+        textarea:focus:-ms-input-placeholder {
+            color: transparent;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #999999;
+        }
+
+        input:-moz-placeholder {
+            color: #999999;
+        }
+
+        input::-moz-placeholder {
+            color: #999999;
+        }
+
+        input:-ms-input-placeholder {
+            color: #999999;
+        }
+
+        textarea::-webkit-input-placeholder {
+            color: #999999;
+        }
+
+        textarea:-moz-placeholder {
+            color: #999999;
+        }
+
+        textarea::-moz-placeholder {
+            color: #999999;
+        }
+
+        textarea:-ms-input-placeholder {
+            color: #999999;
+        }
+
+        /*---------------------------------------------*/
+        button {
+            outline: none !important;
+            border: none;
+            background: transparent;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        iframe {
+            border: none !important;
+        }
+
+
+
+
+        /*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
+
+        .container-contact100 {
+            width: 100%;
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact100-map {
+            position: absolute;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .wrap-contact100 {
+            width: 670px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /*==================================================================
+[ Title form ]*/
+        .contact100-form-title {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            padding: 64px 15px 64px 15px;
+        }
+
+        .contact100-form-title-1 {
+            font-family: Poppins-Bold;
+            font-size: 20px;
+            color: #fff;
+            line-height: 1.2;
+            text-align: center;
+            padding-bottom: 7px;
+        }
+
+        .contact100-form-title-2 {
+            font-family: Poppins-Regular;
+            font-size: 15px;
+            color: #fff;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+
+        .contact100-form-title::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(54, 84, 99, 0.7);
+        }
+
+
+        /*==================================================================
+[ Form ]*/
+
+        .contact100-form {
+            width: 80%;
+            justify-self: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 200px;
+            margin-top: -15px;
+            justify-content: space-between;
+            padding: 43px 88px 57px 190px;
+        }
+
+        /*------------------------------------------------------------------
+[ Input ]*/
+
+        .wrap-input100 {
+            width: 100%;
+            position: relative;
+            border-bottom: 1px solid #b2b2b2;
+            margin-bottom: 26px;
+        }
+
+        .label-input100 {
+            font-family: Poppins-Regular;
+            font-size: 15px;
+            color: #696767;
+            line-height: 1.2;
+            text-align: right;
+            font-weight: bold;
+            position: absolute;
+            top: 14px;
+            left: -105px;
+            width: 80px;
+
+        }
+
+        /*---------------------------------------------*/
+        .input100 {
+            font-family: Poppins-Regular;
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.2;
+
+            display: block;
+            width: 100%;
+            background: transparent;
+            padding: 0 5px;
+        }
+
+        .focus-input100 {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .focus-input100::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 1px;
+
+            -webkit-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            -moz-transition: all 0.6s;
+            transition: all 0.6s;
+
+            background: #57b846;
+        }
+
+
+        /*---------------------------------------------*/
+        input.input100 {
+            height: 45px;
+        }
+
+
+        textarea.input100 {
+            min-height: 115px;
+            padding-top: 14px;
+            padding-bottom: 13px;
+        }
+
+
+        .input100:focus+.focus-input100::before {
+            width: 100%;
+        }
+
+        .has-val.input100+.focus-input100::before {
+            width: 100%;
+        }
+
+
+        /*------------------------------------------------------------------
+[ Button ]*/
+        .container-contact100-form-btn {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 8px;
+        }
+
+        .contact100-form-btn {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            min-width: 160px;
+            height: 50px;
+            background: #1aad00;
+            border-radius: 25px;
+
+            font-family: Poppins-Regular;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.2;
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        .contact100-form-btn i {
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        .contact100-form-btn:hover {
+            background-color: #333333;
+        }
+
+        .contact100-form-btn:hover i {
+            -webkit-transform: translateX(10px);
+            -moz-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+            -o-transform: translateX(10px);
+            transform: translateX(10px);
+        }
+
+
+        /*------------------------------------------------------------------
+[ Responsive ]*/
+
+        @media (max-width: 576px) {
+            .contact100-form {
+                padding: 43px 15px 57px 117px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact100-form {
+                padding: 43px 15px 57px 15px;
+            }
+
+            .label-input100 {
+                text-align: left;
+                position: unset;
+                top: unset;
+                left: unset;
+                width: 100%;
+                padding: 0 5px;
+            }
+        }
+
+
+        /*------------------------------------------------------------------
+[ Alert validate ]*/
+
+        .validate-input {
+            position: relative;
+        }
+
+        .alert-validate::before {
+            content: attr(data-validate);
+            position: absolute;
+            max-width: 70%;
+            background-color: #fff;
+            border: 1px solid #c80000;
+            border-radius: 2px;
+            padding: 4px 25px 4px 10px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 2px;
+            pointer-events: none;
+
+            font-family: Poppins-Medium;
+            color: #c80000;
+            font-size: 13px;
+            line-height: 1.4;
+            text-align: left;
+
+            visibility: hidden;
+            opacity: 0;
+
+            -webkit-transition: opacity 0.4s;
+            -o-transition: opacity 0.4s;
+            -moz-transition: opacity 0.4s;
+            transition: opacity 0.4s;
+        }
+
+        .alert-validate::after {
+            content: "\f06a";
+            font-family: FontAwesome;
+            display: block;
+            position: absolute;
+            color: #c80000;
+            font-size: 15px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 8px;
+        }
+
+        .alert-validate:hover:before {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 992px) {
+            .alert-validate::before {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .contacttable {
+            justify-self: center;
+            margin-left: 250px;
+        }
+
+        #contactinfo td {
+            height: 100px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .gtrans {
+            margin-left: 25%
+        }
+
+        .container1 {
+            max-width: 100%;
+            margin: auto;
+
+        }
+
+        .row1 {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 10px;
+            margin-right: -30px;
+        }
+
+        .footer p {
+            color: #8a8a8a;
+
+        }
+
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            min-width: 400px;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col-1 {
+            flex-basis: 30%;
+            margin-left: 30px;
+
+        }
+
+        .footer-col-1 img {
+            width: 150px;
+            margin-left: 110px;
+
+        }
+
+        .footer-col-1 p {
+
+            margin-left: 150px;
+            color: #3B9C9C;
+        }
+
+        .footer-col-2 {
+            flex: 1;
+            margin-left: 15px;
+
+        }
+
+        .footer-col-2 input {
+
+            border: 1px solid #3B9C9C;
+            padding: 10px;
+            width: 77%;
+            border-radius: 18px;
+            background-color: black;
+            color: #8a8a8a;
+        }
+
+        .footer-col-2 textarea {
+            border: 1px solid #3B9C9C;
+            border-radius: 18px;
+            text-align: center;
+            width: 77%;
+            color: #8a8a8a;
+            background-color: black;
+
+
+        }
+
+        .btn-primary {
+            box-shadow: none !important;
+            border: none;
+            border-radius: 25px;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #3B9C9C;
+            width: 110px;
+
+
+        }
+
+        .footer-col-3 {
+            flex-basis: 12%;
+            margin-left: 30px;
+            text-align: left;
+        }
+
+        .footer-col-3 .fa {
+
+            margin-right: 8px;
+            font-size: 25px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding-top: 7px;
+            color: #3B9C9C;
+            background-color: black;
+        }
+
+        /*to remove bullet style*/
+        ul {
+            list-style-type: none;
+        }
+
+        .copyright {
+            text-align: center;
+
+        }
+
+        /*----------social media--------------*/
+        .social-media {
+            width: 100%;
+            text-align: left;
+        }
+
+        .social-media ul {
+            list-style: none;
+        }
+
+        .social-media ul li {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            border-radius: 35px;
+        }
+        .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+    <script language="JavaScript">
+        function valid() {
+            var uname = document.getElementById("username").value;
+            var uphn = document.getElementById("userphn").value;
+            if (uname.trim() == "") {
+                alert("please fill the Name");
+                username.style.border = "solid 2px red";
+                document.getElementById("iusername").style.visibility = "visible";
+                userphn.style.border = "solid 0px red";
+                document.getElementById("iuserphn").style.visibility = "hidden";
+                return false;
+            }
+            else if (uphn.trim() == "") {
+                alert("please fill the Phone Number");
+                username.style.border = "solid 0px red";
+                document.getElementById("iusername").style.visibility = "hidden";
+                userphn.style.border = "solid 2px red";
+                document.getElementById("iuserphn").style.visibility = "visible";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <br><br>
+    <div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+           <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div id=cont>
+        <div>
+            <center>
+                <p class='heading'>Contact Us</p>
+            </center>
+        </div>
+        <div class="contacttable">
+            <table id="contactinfo" border="0">
+                <tr>
+                    <td><i class="glyphicon glyphicon-map-marker"
+                            style="font-size:30px; color: rgb(20, 189, 20);"></i>121
+                        Walstreet Street,<br>New York, USA</td>
+                    <td><i class="glyphicon glyphicon-envelope" style="font-size:30px; color: rgb(20, 189, 20);"></i>
+                        samradhni.patil14@gmail.com<br>samradhni2009@gmail.com</td>
+                    <td><i class="glyphicon glyphicon-earphone"
+                            style="font-size:30px; color: rgb(20, 189, 20);"></i>+91-8806917986<br> +91-8208443490</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <form onsubmit="return valid()" class="contact100-form validate-form">
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <table>
+                        <tr>
+                            <td><span class="label-input100">Full Name:</span>
+                                <input id='username' class="input100" type="text" name="name"
+                                    placeholder="Enter full name(required)" autocomplete="off">
+                                <span class="focus-input100"></span>
+                            </td>
+                            <td><label id="iusername" style="color: red; visibility: hidden;">Invalid</label></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                    <table>
+                        <tr>
+                            <td><span class="label-input100">Phone:</span>
+                                <input id='userphn' class="input100" type="text" name="phone"
+                                    placeholder="Enter phone number(required)" autocomplete="off">
+                                <span class="focus-input100"></span>
+                            </td>
+                            <td><label id="iuserphn" style="color: red; visibility: hidden;">Invalid</label></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Message is required">
+                    <span class="label-input100">Message:</span>
+                    <textarea class="input100" name="message" placeholder="Your query..."></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        <span>
+                            Submit
+                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section id="foot">
+        <div class="footer">
+            <div class="container1">
+                <div class="row1">
+                    <div class="footer-col-1">
+                        <img src="{% static 'images/lll.png' %}">
+                        <a href="">
+                            <p>About us</p>
+                        </a>
+                        <a href="">
+                            <p>Contact us</p>
+                        </a>
+                    </div>
+                    <div class="footer-col-2">
+
+                        <p><b>FEEDBACK FORM</b></p>
+                        <input type="email" placeholder="ENTER YOUR NAME">
+                        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+                        <textarea rows="5" cols="50" style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+				</textarea><br>
+                        <button type="button" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                    <div class=" footer-col-3">
+                        <p></p>
+                        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+                        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+                        <p><i class="fa fa-phone"></i> 9323131444</p>
+                        <div class="social-media">
+                            <ul>
+                                <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <p class="copyright">Copyright 2021 e-Kisan</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

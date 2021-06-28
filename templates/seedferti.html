@@ -1,0 +1,514 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seeds/Fertilizers</title>
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+<!--    <link rel="stylesheet" href="nicepage.css" media="screen">-->
+<!--  <link rel="stylesheet" href="Home.css" media="screen">-->
+<!--  <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>-->
+<!--  <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>-->
+<!--  <meta name="generator" content="Nicepage 3.7.2, nicepage.com">-->
+<!--  <link id="u-theme-google-font" rel="stylesheet"-->
+<!--    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">-->
+<!--  <link id="u-page-google-font1" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">-->
+
+
+    <style>
+    .header{
+     position: absolute;
+     top: -15px;
+      left: -5px;
+    right: -5px;
+     width: 120%;
+    }
+    .header ul {
+            list-style-type: none;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+        }
+
+        .gtrans {
+            margin-left: 25%;
+        }
+
+
+    body{
+     background-image: url('{% static "images/seednfert/s.jpg" %}');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .myVideo {
+        position:relative;
+      right: 0;
+      top: -160px;
+      left: -7px;
+      right: -7px;
+      margin-top:0;
+      min-width: 120%;
+      min-height: 90%;
+    }
+
+    .content {
+
+  position: absolute;
+  top: 35%;
+  left: -5px;
+  right: -5px;
+
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 110%;
+  padding: 35px;
+    }
+
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+    margin-top:-100px;
+      float: left;
+      width: 25.3%;
+      margin-left: 240px;
+      background: rgba(169,169,169, 0.5);
+      padding: 0 8px;
+      border:2px black;
+      border-radius:10px;
+
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .column {
+      box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 1px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 30%;
+      border-radius: 15px;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    /* The container <div> - needed to position the dropup content */
+    .dropup {
+      position: relative;
+      display: block;
+    }
+
+    /* Dropup content (Hidden by Default) */
+    .dropup-content {
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropup */
+    .dropup-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropup links on hover */
+    .dropup-content a:hover {background-color: #ddd}
+
+    /* Show the dropup menu on hover */
+    .dropup:hover .dropup-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropup button when the dropup content is shown */
+    .dropup:hover .dropbtn {
+      background-color: #2980B9;
+    }
+
+    #foot{
+
+        margin-top:5%;
+    }
+    .container1{
+        max-width: 100%;
+        margin: auto;
+
+    }
+    .row1{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer{
+        position: absolute;
+        left: -7px;
+        right: -7px;
+        background: #000;
+        color: #8a8a8a;
+        font-size: 14px;
+        padding: 60px 0 10px;
+    }
+    .footer p{
+        color:#8a8a8a;
+
+    }
+    .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+    {
+        min-width: 400px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .footer-col-1{
+        flex-basis: 30%;
+        margin-left: 30px;
+
+    }
+    .footer-col-1 img{
+        width:150px;
+        margin-left: 110px;
+    }
+    .footer-col-1 p{
+
+        margin-left: 150px;
+        color: #3B9C9C;
+    }
+    .footer-col-2{
+        flex: 1;
+        margin-left: 15px;
+
+    }
+    .footer-col-2 input{
+
+        border: 1px solid #3B9C9C;
+        padding: 10px;
+        width: 77%;
+        border-radius: 18px;
+        background-color: black;
+        color: #8a8a8a;
+    }
+
+    .footer-col-2 textarea{
+        border: 1px solid #3B9C9C;
+        border-radius: 18px;
+        text-align: center;
+        width: 77%;
+        color: #8a8a8a;
+        background-color: black;
+
+
+    }
+    .btn-primary{
+    box-shadow:none !important;
+    border: none;
+    border-radius: 25px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #3B9C9C;
+    width: 110px;
+
+
+    }
+    .footer-col-3{
+        flex-basis: 12%;
+        margin-left: 30px;
+        text-align: left;
+    }
+    .footer-col-3 .fa{
+
+        margin-right: 8px;
+        font-size: 25px;
+        height: 40px;
+        width:40px;
+        text-align: center;
+        padding-top: 7px;
+        color: #3B9C9C;
+        background-color:black;
+    }
+    /*to remove bullet style*/
+    ul{
+        list-style-type: none;
+    }
+
+    .copyright{
+        text-align: center;
+
+    }
+
+    /*----------social media--------------*/
+    .social-media{
+      width: 100%;
+      text-align: left;
+
+    }
+
+    .social-media ul{
+      list-style: none;
+    }
+
+    .social-media ul li{
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .social-media img{
+      width: 40px;
+      height: 40px;
+      border-radius: 35px;
+    }
+    .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+    </style>
+
+    <script>
+        function myFunction() {
+      document.getElementById("myDropup").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropups = document.getElementsByClassName("dropup-content");
+        var i;
+        for (i = 0; i < dropups.length; i++) {
+          var openDropup = dropups[i];
+          if (openDropup.classList.contains('show')) {
+            openDropup.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+
+
+</head>
+<body>
+
+<video autoplay muted loop class="myVideo">
+  <source src="{% static 'images/seednfert/soilv.mp4' %}" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+    <font size="7">Seeds & Fertilizers</font>
+    <h3>Many schemes such Rashtriya Krishi Vikas Yojna, Macro Management Agriculture, Integrated Scheme for oilseeds, pulses, oil palm and maize (ISOPOM);
+      Technology missions for <br> cotton, National food security Mission etc. provide for subsidized seeds. Some of them also provide incentives for investment in
+      Seed manufacturing infrastructure and upgradations.<br>Fertilizers are any organic/inorganic, natural/synthetic material used in soil to supplement it with plant
+      nutrients which are essential for plant’s growth.Fertilizers are made through <br>industrial processes in which composition of nutrients is precise and deliberately
+      fixed.</h3>
+
+</div>
+<div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="/displaycart/">
+				<a href="cart"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+    </div>
+<center>
+<div class="row">
+  <div class="column">
+    <div class="card"><br>
+      <img src="{% static 'images/seednfert/seed.png' %}" alt="seeds" width="250px" height="160px">
+      <div class="container">
+        <div class="dropup">
+          <p><button class="button" onclick="myFunction()"><h3>Seeds</h3> </button></p>
+          <div id="myDropup" class="dropup-content">
+              <a href="/seed1/"><b><img src="{% static 'images/seednfert/per.png' %}" alt="fertilizer" width="25px" height="28px">&nbsp;Dealers</b></a>
+              <a href="/seedvar/"><b><img src="{% static 'images/seednfert/var1.png' %}" alt="fertilizer" width="25px" height="28px">  Varieties</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card"><br>
+      <img src="{% static 'images/seednfert/fert.png' %}" alt="fertilizer" width="250px" height="150px">
+      <div class="container">
+          <p><a href="/fert1/"><button class="button"><h3>Fertilizer</h3></button></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+<section id="foot">
+        <div class="footer">
+            <div class="container1">
+                <div class="row1">
+                    <div class="footer-col-1">
+                        <img src="{% static 'images/lll.png' %}">
+                        <a href="/about/">
+                            <p>About us</p>
+                        </a>
+                        <a href="contact">
+                            <p>Contact us</p>
+                        </a>
+                    </div>
+                    <div class="footer-col-2">
+
+                        <p><b>FEEDBACK FORM</b></p>
+                        <input type="email" placeholder="ENTER YOUR NAME">
+                        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+                        <textarea rows="5" cols="50" style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+    				</textarea><br>
+                        <button type="button" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                    <div class=" footer-col-3">
+                        <p></p>
+                        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+                        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+                        <p><i class="fa fa-phone"></i> 9323131444</p>
+                        <div class="social-media">
+                            <ul>
+                                <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <p class="copyright">Copyright 2021 e-Kisan</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

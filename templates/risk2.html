@@ -1,0 +1,196 @@
+{% load static %}
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Risk Management</title>
+	<link rel="stylesheet" href="{% static 'css/risk.css'%}">
+	<link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+<!--	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+
+#logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+<body>
+
+<!-- ----------------navbar section------------------------------------------ -->
+<section id="navbar">
+<div class="nav">
+   <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+</div>
+</section>
+
+<!-- main risk page-->
+	<div class="wrapper">
+		<div class="wrapper_inner">
+			<div class="vertical_wrap">
+			<div class="backdrop"></div>
+			<div class="vertical_bar">
+				<div class="profile_info">
+
+				</div>
+				<ul class="menu">
+					<li><a href="/risk/" >
+						<!-- <span class="icon"><i class="fas fa-home"></i></span> -->
+						<span class="text">Drought Management</span>
+					</a></li>
+					<li><a href="#" class="active">
+						<!-- <span class="icon"><i class="fas fa-file-alt"></i></span> -->
+						<span class="text">Hailstorm</span>
+					</a></li>
+					<li><a href="/risk3/">
+						<!-- <span class="icon"><i class="fas fa-chart-pie"></i></span> -->
+						<span class="text">Crop Protection</span>
+					</a></li>
+					<li><a href="/risk4/">
+						<!-- <span class="icon"><i class="fas fa-user"></i></span> -->
+						<span class="text">Soil Fertility</span>
+					</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+		<div class="main_container">
+			<div class="top_bar">
+				<div class="hamburger">
+					<i class="fas fa-bars"></i>
+				</div>
+				<div class="logo">
+					Risk <span>Management</span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content">
+					<div class="item">
+						<h1>
+						To Protect Crop From Hail Damage:-</h1><br><img src="{% static 'images/risk/image41.png'%}" width="100%"><br>
+					Agrometeorological advisories to minimize crop damage before and after hail storm occurrence Along with hail storm forecast by IMD, the following Agromet Advisories can be issued and disseminated to the farmers by the Agrometeorological Field Units for the respective States.</div>
+					<div class="item"><h3>Before the occurrence of hailstorms : </h3><br>
+						<ul>
+					 <li>(i) Use a hail net for orchard crops to protect from hail damage.</li>
+					 <li>(ii) Use hail caps to save the nurseries and young plants.</li>
+					 <li>(iii) Also undertake propping in sugarcane, provide mechanical support to banana, young fruit plants and vegetables to prevent the crops from lodging due to strong winds. Keep already harvested crops at safer places.</li>
+					 <li>(iv) Arrange for adequate drainage to avoid water stagnation in standing crop fields.</li>
+				</ul></div>
+					<div class="item">
+						<h3>Care and advisory for management of hail affected crops :</h3><br>
+						<p>Hailstorms can vary in intensity, duration and when they occur during the growing season, hail can severely damage all types of plants. The hail damage to plants/ trees, varies in severity depending upon the type of tree and the force and size of hail that falls. This damage can include tattered leaves, broken or damaged shoots and wounds on scaffold branches, fruit damage and even fruit being knocked to the ground. Sensitive leaves of plants become shredded, pock marked or ripped by hail. Hail crop damage can severely affect the health of plant and decimate the harvest. In case of new plants which are sprouting and growing tender leaves and stems, hail can completely kill seedlings. Hail damage to trees shows up as split and broken stems/ branches. The tips and tops of trees become scarred and pitted by the hail. This can increase the chance of disease, rotting and insect’s infestation.</p></div>
+					<div class="item"><h3>The following Integrated Management Strategies may be adopted during post hail period :</h3><br>
+						<ul>
+						<li>(i) To clean up the debris and fallen fruits from orchards and trim off broken stems and leaves of plants to avoid further spread of pest and diseases.</li>
+						<li>(ii) If crop has not been fertilized, application of fertilizer to the impacted plants can help them to regrow and develop new foliage.</li>
+						<li>(iii) Injuries to trees that are minor will heal but benefit from an application of fungicide to prevent rot from entering before the wounds are able to seal. </li>
+						<li>(iv) Open wounds on the growing shoots, branches and scaffolds present entry points for bacterial and fungal pathogens and also insects. </li>
+						<li>(v) Plants damaged in the spring season benefit from a layer of mulch around the base of the plant to help it survive in summer.</li>
+						<li>(vi) Some plants are too heavily affected and fixing hail damage is not possible. These plants should be removed and replaced with new plants.  </li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+<script>
+	var hamburger = document.querySelector(".hamburger");
+	var wrapper  = document.querySelector(".wrapper");
+	var backdrop = document.querySelector(".backdrop");
+
+	hamburger.addEventListener("click", function(){
+		wrapper.classList.add("active");
+	})
+
+	backdrop.addEventListener("click", function(){
+		wrapper.classList.remove("active");
+	})
+</script>
+
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+        <img src="{% static 'images/lll.png'%}" >
+        <a href="/about/"><p>About us</p></a>
+        <a href="/contact/"><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/risk/face.png'%}"></li>
+                <li><img src="{% static 'images/risk/twitter.png'%}"></li>
+                <li><img src="{% static 'images/risk/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+</body>
+</html>

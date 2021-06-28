@@ -1,0 +1,531 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>veterinary centre's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+     <!-- <link rel="stylesheet" href="style.css"> -->
+<!--   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+     body{
+     background-image: url("{% static '/images/animal/dud1.png'%}");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+ .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            top:0;
+            left:0;
+            right:0;
+            position:absolute;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+        <!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+        #textcss{
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+        #textcss1{
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+        #textcss2{
+            margin-top: 10px;
+            margin-left: -30px;
+
+        }
+/*<!--   table-->*/
+
+   
+    .fert{
+    position:absolute;
+    /*top:10px;*/
+    left: 355px;
+    font-size:70px;
+    color:#000;
+    }
+      .rectangle {
+    position:absolute;
+    top:100px;
+   /*left:50px;*/
+      height: 280px;
+      width: 200vh;
+      background-color:#3B9C9C;
+      border-radius: 25px;
+      margin-left: 18px;
+      margin-right: 10px;
+    }
+   .table{
+    position: absolute;
+    /*align-items: center;*/
+    top:450px;
+    margin-left: 200px;
+    margin-right: 30px;
+    }
+    table {
+      border: 2px solid black;
+      border-radius:5px;
+      width: 1100px;
+
+       font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even){background-color: #FFFFCC;}
+    tr:nth-child(odd){background-color:#3B9C9C;}
+
+     tr:hover {background-color: #ddd;}
+
+   td,  th {
+      border: 1px solid grey;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color:#3B9C9C;
+      color: black;
+      height: 45px;
+    }
+
+    /* Pagination links */
+    .pagination{
+    margin-left: 550px;
+
+    }
+
+    .pagination a {
+
+      margin-top: 1100px;
+       margin-left: 20px;
+       margin-bottom: 30px;
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 0.5px solid grey;
+      background-color:#3B9C9C;
+      border-radius: 50px;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {background-color: #C0C0C0; border-radius: 50px;}
+
+/*---------------footer---------------------------------------------------*/
+
+#foot{
+  margin-top: 80%;
+
+}
+.container1{
+  max-width: 100%;
+  margin: auto;
+  
+}
+.row1{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer{
+  position: absolute;
+  left:0;
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 10px;
+}
+.footer p{
+  color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+  min-width: 400px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+  margin-left: 30px;
+
+}
+.footer-col-1 img{
+  width:150px;
+  margin-left: 110px;
+}
+.footer-col-1 p{
+  
+  margin-left: 150px;
+  color: #3B9C9C;
+}
+.footer-col-2{
+  flex: 1;
+  margin-left: 15px;
+
+}
+.footer-col-2 input{
+  
+  border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+  border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+    
+    
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+  
+}
+.footer-col-3{
+  flex-basis: 12%;
+  margin-left: 30px;
+  text-align: left;
+}
+.footer-col-3 .fa{
+
+  margin-right: 8px;
+  font-size: 25px;
+  height: 40px;
+  width:40px;
+  text-align: center;
+  padding-top: 7px;
+  color: #3B9C9C;
+  background-color:black;
+}
+/*to remove bullet style*/
+ul{
+  list-style-type: none;
+}
+
+.copyright{
+  text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+    </style>
+</head>
+<body>
+
+  <section id="tab">
+      <div class="cent">
+    <center>
+<!-- navbar -->
+
+<div class="nav">
+    <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+</div>
+<!-- header and table -->
+        <div class="rectangle"><p class="fert"><img src="{% static 'images/animal/doc1.png'%}" width="100px">Veterinary centre's</p>
+        </div>
+
+        <div class="table">
+            <table>
+        <tr>
+            <th colspan="6">
+                <center>
+                    <h3>Veterinary centre's in Maharashtra</h3>
+                </center>
+            </th>
+        </tr>
+        <tr id='head'>
+            <th>Sr.No.</th>
+            <th>District</th>
+            <th>Centre No.</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact No.</th>
+            
+        </tr>
+        <tr>
+            <td rowspan="3">3</td>
+            <td rowspan="3">Amravati</td>
+            <td>1</td>
+            <td>
+                <p>Jeevanraksha Veterinary (Animal) Hospital</p>
+            </td>
+            <td><p>Tower Line Park, 40/1, Vmv Road, New Friends Colony, Vijay Colony, Amravati, Maharashtra 444604</p></td>
+            <td>070664 48866</td>
+           
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <p>City Pet Clinic.</p>
+            </td>
+            <td><p>Sahakar Nagar, Rampuri Camp, Amravati, Maharashtra 444601</p></td>
+            <td>095117 11534</td>
+        </tr>
+       
+          <tr>
+            <td>3</td>
+            <td>
+                <p>Ankit Veterinary Medical</p>
+            </td>
+            <td><p>Rachnashree Commercial, LG 23 A, OPP Telsil Office, Amravati, Maharashtra 444601</p></td>
+            <td><p>087665 60201</p></td>
+            
+        </tr>
+         <tr>
+            <td rowspan="7">4</td>
+            <td rowspan="7">Nagpur</td>
+            <td>1</td>
+            <td>
+                <p>Nagpur Veternary Hospital</p>
+            </td>
+            <td><p>
+Plot no.8,Pushpa Apartment,near Khobragade Hospital,Indora Square,Kamptee Road, Nagpur, Kamptee Road, Nagpur - 440016</p></td>
+<td>0712 2531469</td>
+        </tr>
+         <tr>
+            <td>2</td>
+            <td>
+                <p>Royal Pet Clinic</p>
+            </td>
+            <td><p>12-A, Sankar Nagar, East Shankar Nagar, Near Lakshmi Narayan Temples, Nagpur, Maharashtra 440010</td>
+                <td>094049 51268</td>
+        </tr>
+       
+          <tr>
+            <td>3</td>
+            <td>
+                <p>Friends Animal Dogs Health Clinic</p>
+            </td>
+            <td><p>Behind Supar Bazar, Katol Road, Friends Colony, Nagpur, Maharashtra 440013</p></td>
+            <td>0712 2519059</td>
+            
+        </tr>
+         <tr>
+            <td>4</td>
+            <td>
+                <p>Pet Clinic.</p>
+            </td>
+            <td><p>Wardha Road,Khamla Road, Khamla, Nagpur - 440022</p></td>
+            <td><p>087665 60201</p></td>
+            
+        </tr>
+          <tr>
+            <td>5</td>
+            <td>
+                <p>Nagpur Veterinary College</p>
+            </td>
+            <td><p>Department of Veterinary Public Health & Epidemiology, Seminary Hills, Nagpur, Maharashtra 440006
+</p></td>
+            <td><p>0712 2531469</p></td>
+            
+        </tr>
+           <tr>
+            <td>6</td>
+            <td>
+                <p>Veterinery Hospital</p>
+            </td>
+            <td><p>Backside Of Veterinery Cllege, Seminary Hills, Seminary Hills Road, Nagpur, Maharashtra 440006</p></td>
+            <td><p>0712 2510163</p></td>
+            
+        </tr>
+           <tr>
+            <td>7</td>
+            <td>
+                <p>Vet's World</p>
+            </td>
+            <td><p>Near Timber Bhavan, Petrol Pump Road, Lakadganj, Nagpur, Maharashtra 440008</p></td>
+            <td><p>099750 50480</p></td>
+            
+        </tr>
+    
+    
+    </table>
+
+            <br>
+        </div>
+        <br>
+        <br>
+    </center>
+        <div class="pagination">
+         <a href="/vert1/" >1</a>
+            <a href="/vert2/" >2</a>
+            <a href="#" class="active">3</a>
+            <a href="/vert4/">4</a>
+            <a href="/vert4/">&raquo;</a>
+        </div>
+        <br>
+
+ </div>
+</section>
+
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+        <img src="{% static 'images/animal/lll.png'%}" >
+        <a href="/about/"><p>About us</p></a>
+        <a href="/contact/"><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+        
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/animal/face.png'%}"></li>
+                <li><img src="{% static 'images/animal/twitter.png'%}"></li>
+                <li><img src="{% static 'images/animal/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,1428 @@
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Product detail page</title>
+
+
+
+
+	<link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href=
+		"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- related page -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.ch-img-1 {
+	background-image: url("{% static 'images/productdetail/apples1.jpg'%}");
+}
+
+	.ch-img-3 {
+	background-image: url("{% static 'images/productdetail/carrot.jpg'%}");
+}
+
+.ch-img-4 {
+	background-image: url("{% static 'images/productdetail/cauli2.jpg'}");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Akaya Telivigala', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--------------------navbar------------------------*/
+    #navbar{
+    margin-top:0;
+    }
+ .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            top:0;
+            left:0;
+            right:0;
+            position:absolute;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #logoimg{
+            margin-top: -80px;
+            margin-right: -40px;
+            height: 230px;
+            width: 230px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+        #textcss{
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+        #textcss1{
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+        #textcss2{
+            margin-top: 10px;
+            margin-left: -30px;
+
+        }
+
+a{
+	text-decoration: none;
+	color:#555;
+	/*text-align: right;*/
+}
+p{
+	color: #555;
+}
+
+/*.container{
+	max-width: 1800px;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}*/
+#single-products{
+margin-top:10%;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top:35px;
+	justify-content: space-around;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+.row-2{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	justify-content: space-between;
+	margin:100px auto 50px;
+}
+.col-2{
+	flex-basis: 50%;
+	/*min-width:20px;*/
+	/*box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);*/
+
+}
+.col-2 img{
+	max-width: 100%;
+	padding:50px 0;
+}
+.col-2 h1{
+	font-size: 50px;
+	line-height: 60px;
+	margin: 25px 0;
+}
+.btn{
+	display: inline-block;
+	background: #3B9C9C;
+	color:#fff;
+
+	padding:8px 30px;
+	margin: 30px 0;
+	border-radius: 30px;
+	transition: background 0.5s;
+
+	padding:10px 110px;
+	margin: 30px 0;
+	border-radius: 30px;
+	transition: background 0.5s;
+	height: 30px;
+	width: 600px;
+
+}
+.btn:hover{
+	background: black;
+
+}
+.column1 {
+  float: left;
+  width: 20%;
+  padding: 20px;
+  height: 85px;
+  background-color:#aaa;
+}
+.column1 img{
+	width: 100%;
+}
+.column2 {
+  float: left;
+  width: 80%;
+  text-align: center;
+  height: 85px;
+  font-size: 22px;
+  background-color:#D1D0CE;
+}
+.header{
+	background:radial-gradient(#fff,#FAAEAE);
+}
+.header row{
+	margin-top: 70px;
+
+}
+.categories{
+	margin: 70px 0;
+}
+.col-3{
+	flex-basis: 30%;
+	min-width: 250px;
+	margin-bottom: 30px;
+}
+.col-3 img{
+	width: 100%;
+}
+.small-container{
+	max-width: 1080px;
+	margin:auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+.col-4{
+	flex-basis: 25%;
+	padding: 10px;
+	min-width: 200px;
+	margin-bottom: 50px;
+	transition: transform 0.5s;
+}
+.col-4 img{
+	width:100%;
+}
+/*.row-2{
+	justify-content: space-between;
+	margin:100px auto 50px;
+}*/
+.bgcart {
+			background-color:none;
+		}
+
+		.bgcart:hover {
+			background-color:none;
+		}
+
+
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+/*------------single product details----------------------------------*/
+.single-products{
+	margin-top: 80px;
+
+}
+.single-products .col-2 img{
+	padding:0;
+}
+.single-products .col-2 {
+	padding:20px;
+}
+.single-products  h4{
+	margin:20px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+.single-products select{
+	display: block;
+	padding: 10px;
+	margin-top:20px;
+}
+.single-products input{
+	width: 50px;
+	height: 40px;
+	padding-left: 10px;
+	font-size: 20px;
+	margin-right: 10px;
+	border:1px solid #3B9C9C;
+}
+input:focus{
+	outline: none;
+}
+.single-products .fa{
+	color: #3B9C9C;
+	margin-left: 10px;
+}
+.small-img-row{
+	display: flex;
+	justify-content: space-between;
+}
+.small-img-col{
+	flex-basis:24%;
+	cursor: pointer;
+}
+
+/*--------related products-----------------------------------------------------------------*/
+@import url('normalize.css');
+
+/* General Demo Style */
+body{
+	font-family: Cambria, Georgia, serif;
+	/* background: #ffffff url(../images/bg.jpg); */
+	font-weight: 300;
+	font-size: 15px;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+a{
+	color: #555;
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+	position: relative;
+}
+.clr{
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+.main{
+	width: 100%;
+	margin: 0 ;
+	position: relative;
+}
+.support-note span{
+	color: #ac375d;
+	font-size: 16px;
+	display: none;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+}
+.no-cssanimations .support-note span.no-cssanimations,
+.no-csstransforms .support-note span.no-csstransforms,
+.no-csstransforms3d .support-note span.no-csstransforms3d,
+.no-csstransitions .support-note span.no-csstransitions{
+	display: block;
+}
+
+.ch-grid {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.ch-grid:after,
+.ch-item:before {
+	content: '';
+    display: table;
+}
+
+.ch-grid:after {
+	clear: both;
+}
+
+.ch-grid li {
+	width: 220px;
+	height: 220px;
+	display: inline-block;
+	margin: 20px;
+}
+.ch-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	cursor: default;
+	box-shadow:
+		inset 0 0 0 16px rgba(255,255,255,0.6),
+		0 1px 2px rgba(0,0,0,0.9);
+
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+/*.ch-img-1 {
+	background-image: url(static/images/productdetail/apples1.jpg);
+}*/
+
+/*.ch-img-2 {
+	background-image: url(../images/peper.jpg);
+}*/
+
+/*.ch-img-3 {
+	background-image: url(static/images/productdetail/carrot.jpg);
+}*/
+
+/*.ch-img-4 {
+	background-image: url(static/images/productdetail/cauli.jpg);
+}
+/*
+.ch-img-5 {
+	background-image: url(../images/cucu2.jpg);
+}
+
+.ch-img-6 {
+	background-image: url(../images/peas.jpg);
+}
+
+.ch-img-7 {
+	background-image: url(../images/patato2.jpg);
+}
+
+.ch-img-8 {
+	background-image: url(../images/tom.jpg);
+}
+
+.ch-img-9 {
+	background-image: url(../images/rice2.jpg);
+}
+
+.ch-img-10 {
+	background-image: url(../images/wheat.jpg);
+}
+*/
+
+.ch-info {
+	position: absolute;
+	background: rgba(63,147,147, 1);
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	opacity: 0;
+
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+
+	-webkit-backface-visibility: hidden;
+
+}
+
+.ch-info h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 21px;
+	margin: 0 30px;
+	padding: 40px 0 0 0;
+	height: 140px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-shadow:
+		0 0 1px #fff,
+		0 1px 2px rgba(0,0,0,0.3);
+}
+
+.ch-info i{
+	color:#fff;
+	margin-top:auto;
+}
+
+
+.ch-item:hover {
+	box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+		0 1px 2px rgba(0,0,0,0.1);
+}
+.ch-item:hover .ch-info {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.ch-item:hover .ch-info p {
+	opacity: 1;
+}
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+
+/* 
+   HTML5 display definitions
+   ==== */
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+
+[hidden] {
+    display: none;
+}
+
+
+/* 
+   Base
+   ==== */
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+
+body {
+    margin: 0;
+}
+
+
+/* 
+   Links
+   ==== */
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+/* 
+   Typography
+   ==== */
+
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+
+p,
+pre {
+    margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+/* 1 */
+
+q {
+    quotes: none;
+}
+
+/* 2 */
+
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/* 
+   Lists
+   ==== */
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+
+/* 
+   Embedded content
+   ==== */
+
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* 
+   Figures
+   ==== */
+
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+
+figure {
+    margin: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+
+/* 
+   Forms
+   ==== */
+
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+
+form {
+    margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+
+button,
+input {
+    line-height: normal; /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; /* 1 */
+    -webkit-appearance: button; /* 2 */
+    *overflow: visible;  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+
+/* 
+   Tables
+   ==== */
+
+/*
+ * Remove most spacing between table cells
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Addition */
+/* Apply a natural box layout model to all elements */
+/* Read this post by Paul Irish: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+ * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*----------media query for menu----------------*/
+@media only screen and (max-width: 600px){
+	.row{
+		text-align: center;
+	}
+	.col-2,.col-3,.col-4{
+		flex-basis: 100%;
+
+	}
+	.single-products .row{
+		text-align: left;
+
+	}
+	.single-products .col-2{
+		padding:20px 0;
+	}
+	.single-products h1{
+		font-size: 26px;
+		line-height: 32px;
+	}
+	.cart-info p{
+		display: none;
+	}
+}
+.show {
+         -o-transition: opacity 3s;
+         -moz-transition: opacity 3s;
+         -webkit-transition: opacity 3s;
+         transition: opacity 3s;
+      opacity:1;
+    }
+    .hide{  opacity:0; transition: opacity 3s;}
+
+/*---------------------------------------foooter my foor----------------------------------------------------------------*/
+
+/*---------------footer---------------------------------------------------*/
+
+#foot{
+  margin-top:50px;
+
+
+}
+.container1{
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+
+}
+.row1{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer{
+  position: absolute;
+  left:0;
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 10px;
+}
+.footer p{
+  color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+  min-width: 400px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+  margin-left: 30px;
+
+}
+.footer-col-1 img{
+  width:150px;
+  margin-left: 110px;
+}
+.footer-col-1 p{
+
+  margin-left: 150px;
+  color: #3B9C9C;
+}
+.footer-col-2{
+  flex: 1;
+  margin-left: 15px;
+
+}
+.footer-col-2 input{
+
+  border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+  border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+
+
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+
+}
+.footer-col-3{
+  flex-basis: 12%;
+  margin-left: 30px;
+  text-align: left;
+}
+.footer-col-3 .fa{
+
+  margin-right: 8px;
+  font-size: 25px;
+  height: 40px;
+  width:40px;
+  text-align: center;
+  padding-top: 7px;
+  color: #3B9C9C;
+  background-color:black;
+}
+/*to remove bullet style*/
+.ul{
+  list-style-type: none;
+}
+
+.copyright{
+  text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+#div2{
+<!--	margin-top:80px;-->
+	margin-left:800px;
+}
+
+
+
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+</style>
+</head>
+
+<body>
+
+ ----------------navbar section------------------------------------------
+<section id="navbar">
+<div class="nav">
+    <ul>
+        <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+        <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+
+        <li id="gtrans">
+            <div id="google_translate_element"></div>
+
+     <script type="text/javascript">
+      function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        </li>
+		<li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+            </li>
+    </ul>
+
+
+
+
+</div>
+</section>
+<div id="div2" style="background-color: teal; color:white; font-size: 20px; height:30px; width: 200px; font-weight: bold; padding:10px 20px 5px 20px; " class="hide">
+				 <i class="fal fa-check-circle"></i> Product added to Cart
+</div>
+<!-- ------------------single product detail---------------------------------------------------- -->
+
+<div id="single-products">
+<div class="small-container single-products">
+	<div class="row">
+		<div class="col-2">
+			<img src="{{ url }}" width="100%" id="ProductImg">
+<!--			<div class="small-img-row">-->
+<!--				<div class="small-img-col">-->
+<!--				<img src="straw1.jpg" width="100%" height="90px" class="small-img">-->
+<!--				</div>-->
+<!--				<div class="small-img-col">-->
+<!--				<img src="starw2.jpg" width="100%" height="90px"class="small-img">-->
+<!--				</div>-->
+<!--				<div class="small-img-col">-->
+<!--				<img src="straw3.jpg" width="100%" height="90px"class="small-img">-->
+<!--				</div>-->
+<!--				<div class="small-img-col">-->
+<!--				<img src="straw4.jpg" width="100%" height="90px" class="small-img">-->
+<!--				</div>-->
+<!--			</div>-->
+		</div>
+		<div class="col-2">
+			<p>Product Name</p>
+			<h1>{{ proname }}</h1>
+
+			<p>Price:</p><h4>₹{{ amount }}</h4>
+
+            <p>Max Quantity:</p><h4> {{ quantity }} </h4>
+			<form id="myform" method="post" action="/addtocart/?z={{uid}}">
+				 {% csrf_token %}
+				<p>Quantity:</p><input type="number" value="1" name="req"  min="1" max="{{ quantity }}" required >kg
+				<div id="div1" class="show">
+<!--					<a href="/addtocart/?z={{uid}}" id="sub" class="btn" >Add to Cart</a>-->
+
+					<input type="submit" onclick="/addtocart/" class="btn" value="Add to cart">
+
+				</div>
+<!--onclick="document.getElementById('myform').submit()"-->
+			</form>
+			<script>
+			document.getElementById("sub").onclick = function() {
+				document.getElementById("myform").submit();
+			}
+			</script>
+
+			<h3>Farmer details<i class="fa fa-indent"></i></h3><br>
+			<div class="column1">
+			<img src="{% static 'images/productdetail/avtar1.png'%}" >
+			</div>
+			<div class="column2" >
+			<p><b>Farmer Name:</b><br>{{ fname }}<br>
+</p>
+			</div>
+		</div>
+		<!-- <div class="col-2">
+			hellooow dttyuhjbjk
+		</div> -->
+	</div>
+</div>
+</div>
+ <script>
+	 function ShowSecond()
+    {
+      var div2 = document.getElementById("div2");
+      div2.className="show";
+      setTimeout(function() { div2.className="hide"; }, 10000);
+
+    }
+ </script>
+<!-- -------------title-------------------------------------------------------- -->
+
+<div  class="small-container">
+	<div class="row-2">
+		<h1>Related products:</h1>
+		<p>View More</p>
+	</div>
+</div>
+
+
+
+<!-- -------------related product-------------------->
+<div class="small-container">
+	<div class="container">
+
+		<!-- <h1>Categories</h1> -->
+			<section class="main">
+
+				<ul class="ch-grid">
+					<li>
+						<div class="ch-item ch-img-1">
+							<div class="ch-info"><br>
+<!--								<i class="fas fa-apple-alt fa-6x"></i>-->
+								<h3>Apples</h3>
+
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item ch-img-3">
+							<div class="ch-info"><br>
+<!--								<i class="fas fa-carrot fa-6x"></i>-->
+								<h3>Carrot</h3>
+
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="ch-item ch-img-4">
+							<div class="ch-info"><br>
+<!--								<img src="cauliicon.png">-->
+								<h3>Cauliflower</h3>
+
+							</div>
+						</div>
+					</li>
+
+
+				</ul>
+			</section>
+        </div>
+
+
+
+
+
+</div>
+
+
+<!-- -----------------JS for product gallery------------------------------ -->
+
+
+<script >
+	var ProductImg=document.getElementById("ProductImg");
+	var SmallImg=document.getElementsByClassName("small-img");
+	SmallImg[0].onclick=function()
+	{
+		ProductImg.src=SmallImg[0].src;
+
+	}
+	SmallImg[1].onclick=function()
+	{
+		ProductImg.src=SmallImg[1].src;
+
+	}
+	SmallImg[2].onclick=function()
+	{
+		ProductImg.src=SmallImg[2].src;
+
+	}
+	SmallImg[3].onclick=function()
+	{
+		ProductImg.src=SmallImg[3].src;
+
+	}
+</script>
+
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+
+        <img src="{% static 'images/productdetail/logo.png'%}" >
+
+        <img src="{% static 'images/lll.png'%}" >
+
+        <a href=""><p>About us</p></a>
+        <a href=""><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/productdetail/face.png'%}"></li>
+                <li><img src="{% static 'images/productdetail/twitter.png'%}"></li>
+                <li><img src="{% static 'images/productdetail/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+
+
+</body>
+</html>

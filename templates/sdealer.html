@@ -1,0 +1,546 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seeds Dealer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <style>
+
+    body{
+     background-image: url("{% static 'images/seednfert/seedbg.jpg' %} ");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -5px;
+            margin-left:0;
+            margin-right:0;
+            width:100%
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        .gtrans {
+            margin-left: 30%;
+        }
+
+    .fert{
+    position:absolute;
+    top:38px;
+    left: 400px;
+    font-size:70px;
+    color:#000;
+    }
+
+    .rectangle {
+    position:absolute;
+    top:120px;
+    left:50px;
+      height: 270px;
+      width: 1410px;
+      background-color: #E2A76F;
+      border-radius: 25px;
+    }
+    .table{
+    position: absolute;
+    top:440px;
+    left: 200px;
+    }
+
+    table {
+      border: 2px solid black;
+      border-radius:5px;
+      width: 1100px;
+
+       font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even){background-color: #FFFFCC;}
+    tr:nth-child(odd){background-color: #F2BB66;}
+
+     tr:hover {background-color: #ddd;}
+
+   td,  th {
+      border: 1px solid grey;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color:#F2BB66;
+      color: black;
+      height: 45px;
+    }
+
+    /* Pagination links */
+    .pagination{
+    margin-left: 630px;
+
+    }
+
+    .pagination a {
+
+      margin-top: 1250px;
+       margin-left: 20px;
+       margin-bottom: 30px;
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 0.5px solid grey;
+      background-color: #E2A76F;
+      border-radius: 50px;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {background-color: #C0C0C0; border-radius: 50px;}
+
+    #foot{
+
+	margin-top: 86%;
+    }
+    .container1{
+        max-width: 100%;
+        margin: auto;
+
+    }
+    .row1{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer{
+        position: absolute;
+        left:0;
+        background: #000;
+        color: #8a8a8a;
+        font-size: 14px;
+        padding: 60px 0 10px;
+    }
+    .footer p{
+        color:#8a8a8a;
+
+    }
+    .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+    {
+        min-width: 400px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .footer-col-1{
+        flex-basis: 30%;
+        margin-left: 30px;
+
+    }
+    .footer-col-1 img{
+        width:150px;
+        margin-left: 110px;
+    }
+    .footer-col-1 p{
+
+        margin-left: 150px;
+        color: #3B9C9C;
+    }
+    .footer-col-2{
+        flex: 1;
+        margin-left: 15px;
+
+    }
+    .footer-col-2 input{
+
+        border: 1px solid #3B9C9C;
+        padding: 10px;
+        width: 77%;
+        border-radius: 18px;
+        background-color: black;
+        color: #8a8a8a;
+    }
+
+    .footer-col-2 textarea{
+        border: 1px solid #3B9C9C;
+        border-radius: 18px;
+        text-align: center;
+        width: 77%;
+        color: #8a8a8a;
+        background-color: black;
+
+
+    }
+    .btn-primary{
+    box-shadow:none !important;
+    border: none;
+    border-radius: 25px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #3B9C9C;
+    width: 110px;
+
+
+    }
+    .footer-col-3{
+        flex-basis: 12%;
+        margin-left: 30px;
+        text-align: left;
+    }
+    .footer-col-3 .fa{
+
+        margin-right: 8px;
+        font-size: 25px;
+        height: 40px;
+        width:40px;
+        text-align: center;
+        padding-top: 7px;
+        color: #3B9C9C;
+        background-color:black;
+    }
+    /*to remove bullet style*/
+    ul{
+        list-style-type: none;
+    }
+
+    .copyright{
+        text-align: center;
+
+    }
+
+    /*----------social media--------------*/
+    .social-media{
+      width: 100%;
+      text-align: left;
+
+    }
+
+    .social-media ul{
+      list-style: none;
+    }
+
+    .social-media ul li{
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .social-media img{
+      width: 40px;
+      height: 40px;
+      border-radius: 35px;
+    }
+    .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+    </style>
+</head>
+<body>
+<div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+            </li>
+        </ul>
+    </div>
+    <center>
+        <div class="rectangle"><p class="fert"><img src="{% static 'images/seednfert/seedback.png'%} ">Seeds Dealers</p>
+        </div>
+
+        <div class="table">
+            <table>
+                <tr>
+                  <th  style="width:7%">Sr No.</th>
+                  <th>State</th>
+                  <th>District/Village</th>
+                  <th>Name & Address</th>
+                  <th style="width:20%">Phone no</th>
+
+                </tr>
+                <!--row 1 begin-->
+                <tr>
+                  <td>01</td>
+                  <td rowspan="3">ANDHRA PRADESH</td>
+                  <td>VIZIANAGARM</td>
+                  <td>Name:  Coramandal international Ltd,Gromor<br>
+                     Address:D.No -3-38,main road Pusapatirega
+                  </td>
+                    <td>8978781391</td>
+                </tr>
+                   <tr>
+                  <td>02</td>
+                  <td>CUDDEPAH</td>
+                  <td>Name:De nova seeds private limited<br>
+                    Address: House no.1-70 muneerabad vill pudur post medchal mnd</td>
+                  <td>9177155541</td>
+
+                </tr>
+                   <tr>
+                  <td>03</td>
+                  <td>KURNOOL</td>
+                  <td>Name: Sree Seetharam Seeds<br>
+                    Address: Alur</td>
+                  <td>9848543620</td>
+                 </tr>
+                <!--row 1 end-->
+                <!--row 2 begin-->
+                <tr>
+                  <td>04</td>
+                  <td rowspan="3">CHHATTISGARH</td>
+                  <td> RAIGARH</td>
+                  <td>Name: Anand Beej Bhandar<br>
+                     Address:At/Post-Baramkela
+                  </td>
+                    <td>7000878472</td>
+                </tr>
+                 <tr>
+                  <td>05</td>
+                  <td>RAIGARH</td>
+                  <td>Name:vedant krishi kendra<br>
+                     Address:baramkela
+                  </td>
+                    <td>9424191037</td>
+                </tr>
+                <tr>
+                  <td>06</td>
+                  <td>RAIGARH</td>
+                  <td>Name:vedant krishi kendra<br>
+                     Address:baramkela
+                  </td>
+                    <td>9424191037</td>
+                </tr>
+
+                <!--row 2 end-->
+                <!--row 3 begin-->
+                <tr>
+                  <td>07</td>
+                  <td rowspan="3">GUJARAT</td>
+                  <td> PORBANDAR</td>
+                  <td>Name: KHEDUT AGRO CENTRE<br>
+                     Address:MADHAVPUR PORBANDAR
+                  </td>
+                    <td> 9898527560</td>
+                </tr>
+                   <tr>
+                  <td>08</td>
+                  <td> KHEDA</td>
+                  <td>Name: Khodiyar Agro Centre<br>
+                    Address: Mahembad</td>
+                  <td>9631403897 </td>
+
+                </tr>
+                   <tr>
+                  <td>09</td>
+                  <td>KALYANPUR</td>
+                  <td>Name: : Vishal Agro Centre<br>
+                    Address: Haripar KALYANPUR</td>
+                  <td>9904492776</td>
+                 </tr>
+
+
+                <!--row 3 end-->
+                <!--row 4 begin-->
+                <tr>
+                  <td>10</td>
+                  <td rowspan="3">HARYANA</td>
+                  <td>  KARNAL</td>
+                  <td>Name: THE NISSING PACS LTD<br>
+                     Address:SALE POINT NISSING, NISSING AT CHIRAO
+                  </td>
+                    <td>  9053008180
+</td>
+                </tr>
+                   <tr>
+                  <td>11</td>
+                  <td>KARNAL</td>
+                  <td>Name: THE GONDER CS<br>
+                    Address: SALE POINT GONDER</td>
+                  <td>9355571028 </td>
+
+                </tr>
+                   <tr>
+                  <td>12</td>
+                  <td>KURKSHETRA</td>
+                  <td>Name: JAI SHRI RAM PESTICIDE<br>
+                    Address: VILLAGE DHERU MAJRA ,THANESAR</td>
+                  <td>9812050310</td>
+                 </tr>
+                <!--row 4 end-->
+                <!--row 5 begin-->
+                <tr>
+                  <td>13</td>
+                  <td rowspan="3">JHARKAND</td>
+                  <td>LOHARDAGA</td>
+                  <td>Name: sujit kumar sahu<br>
+                     Address:vill+p.o-senha,p.s-senha
+                  </td>
+                    <td> 9905332041</td>
+                </tr>
+                   <tr>
+                  <td>14</td>
+                  <td>HAZARIBAGH</td>
+                  <td>Name:  Ms. New Seed Kourniyar<br>
+                    Address: New Bus Stand</td>
+                  <td>8521748276</td>
+
+                </tr>
+                   <tr>
+                  <td>15</td>
+                  <td>RANCHI</td>
+                  <td>Name: Krishi Beej Bhandar<br>
+                    Address: Banta Hazzam</td>
+                  <td> 9905544508</td>
+                 </tr>
+                <!--row 5 end-->
+            </table><br>
+        </div>
+        <br>
+        <br></center>
+        <div class="pagination">
+          <a class="active"  href="#">1</a>
+          <a href="/seed2/">2</a>
+          <a href="/seed3/">3</a>
+          <a href="/seed2/">&raquo;</a>
+        </div>
+        <br>
+<section id="foot">
+<div class="footer">
+	<div class="container1">
+		<div class="row1">
+			<div class="footer-col-1">
+				 <img src="{% static 'images/lll.png' %}">
+				<a href="/about/"><p>About us</p></a>
+				<a href="/contact/"><p>Contact us</p></a>
+			</div>
+			<div class="footer-col-2">
+
+				<p><b>FEEDBACK FORM</b></p>
+				<input type="email" placeholder="ENTER YOUR NAME">
+				<input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+				<textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+				</textarea><br>
+				<button type="button" class="btn btn-primary">SUBMIT</button>
+			</div>
+			<div class=" footer-col-3">
+				<p></p>
+				<p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+				<p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+				<p><i class="fa fa-phone"></i> 9323131444</p>
+				 <div class="social-media">
+			        <ul>
+			           <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+			        </ul>
+			      </div>
+			</div>
+		</div>
+		<!-- <hr> -->
+		<p class="copyright">Copyright 2021 e-Kisan</p>
+	</div>
+</div>
+</section>
+
+</body>
+</html>

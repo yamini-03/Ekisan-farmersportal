@@ -1,0 +1,841 @@
+{% load static %}
+<html>
+
+<head>
+   <title>Schemes & Magazines</title>
+
+
+   <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+   <style>
+
+   .farmer1{
+   margin-top : -380px;
+   margin-left: -990px;
+   }
+   .farmer2{
+   margin-top : -420px;
+   margin-right: -1000px;
+   }
+
+      .header ul {
+         list-style-type: none;
+         margin-top: -40px;
+         padding: 0;
+         overflow: hidden;
+         background-color: rgb(248, 245, 245);
+         height: 80px;
+      }
+
+      .header li {
+         float: left;
+      }
+
+      .header li a {
+         display: block;
+         color: rgb(48, 47, 47);
+         font-size: 23px;
+         text-align: center;
+         padding: 15px 35px;
+         text-decoration: none;
+      }
+
+      /* .header li a:hover {
+         background-color: rgba(0, 0, 0, 0.3);
+         color: azure;
+      } */
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+      #textcss {
+         margin-top: 10px;
+         margin-left: -30px;
+      }
+
+      #textcss1 {
+         margin-top: 10px;
+         margin-left: -30px;
+      }
+
+      #textcss2 {
+         margin-top: 10px;
+         margin-left: -30px;
+      }
+
+      .gtrans {
+         margin-left: 25%;
+      }
+
+      .column {
+         float: left;
+         padding: 10px;
+         height: 200px;
+         /* Should be removed. Only for demonstration */
+      }
+
+      .left {
+         width: 20%;
+         < !-- margin-left: 200px;
+         -->
+      }
+
+      .left1 {
+         width: 20%;
+         margin-top: -140px;
+         margin-left: 1090px;
+      }
+
+      .middle {
+         width: 80%;
+         margin-left: -35px;
+         margin-top: 60px;
+      }
+
+      .box {
+         border: 2px;
+         background-color: #5ff1b9a9;
+         height: 535px;
+         width: 1078px;
+         border-radius: 10px;
+         position: absolute;
+         right: 2px;
+         top: 480px;
+      }
+
+      .box1 {
+         border: 2px;
+         background-color: #5ff1b9a9;
+         height: 535px;
+         width: 1078px;
+         border-radius: 10px;
+         position: absolute;
+         left: 2px;
+         top: 1050px;
+      }
+
+      .doubleUnderline {
+         text-decoration-line: underline;
+         text-decoration-style: double;
+         text-decoration-thickness: 2px;
+      }
+
+      a:link {
+         color: #3A1E08;
+      }
+
+      a:visited {
+         color: #3A1E08;
+      }
+
+      a:hover {
+         color: #3A1E08;
+      }
+
+      a:focus {
+         color: #3A1E08;
+      }
+
+      a:active {
+         color: #3A1E08;
+      }
+
+      .container {
+         position: relative;
+         text-align: center;
+         color: white;
+      }
+
+      /* text on image */
+      .center {
+         position: absolute;
+         top: 150px;
+         left: 550px;
+      }
+
+      #foot {
+
+         margin-top: 1150px;
+      }
+
+      .container1 {
+         max-width: 100%;
+         margin: auto;
+
+      }
+
+      .row1 {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         justify-content: space-around;
+      }
+
+      .footer {
+         position: absolute;
+         left: 0;
+         background: #000;
+         color: #8a8a8a;
+         font-size: 14px;
+         padding: 60px 0 10px;
+      }
+
+      .footer p {
+         color: #8a8a8a;
+
+      }
+
+      .footer-col-1,
+      .footer-col-2,
+      .footer-col-3,
+      .footer-col-4 {
+         min-width: 400px;
+         height: 250px;
+         margin-bottom: 20px;
+      }
+
+      .footer-col-1 {
+         flex-basis: 30%;
+         margin-left: 30px;
+
+      }
+
+      .footer-col-1 img {
+         width: 150px;
+         margin-left: 110px;
+      }
+
+      .footer-col-1 p {
+
+         margin-left: 150px;
+         color: #3B9C9C;
+      }
+
+      .footer-col-2 {
+         flex: 1;
+         margin-left: 15px;
+
+      }
+
+      .footer-col-2 input {
+
+         border: 1px solid #3B9C9C;
+         padding: 10px;
+         width: 77%;
+         border-radius: 18px;
+         background-color: black;
+         color: #8a8a8a;
+      }
+
+      .footer-col-2 textarea {
+         border: 1px solid #3B9C9C;
+         border-radius: 18px;
+         text-align: center;
+         width: 77%;
+         color: #8a8a8a;
+         background-color: black;
+
+
+      }
+
+      .btn-primary {
+         box-shadow: none !important;
+         border: none;
+         border-radius: 25px;
+         margin-top: 5px;
+         padding: 10px;
+         background-color: #3B9C9C;
+         width: 110px;
+
+
+      }
+
+      .footer-col-3 {
+         flex-basis: 12%;
+         margin-left: 30px;
+         text-align: left;
+      }
+
+      .footer-col-3 .fa {
+
+         margin-right: 8px;
+         font-size: 25px;
+         height: 40px;
+         width: 40px;
+         text-align: center;
+         padding-top: 7px;
+         color: #3B9C9C;
+         background-color: black;
+      }
+
+      /*to remove bullet style*/
+      ul {
+         list-style-type: none;
+      }
+
+      .copyright {
+         text-align: center;
+
+      }
+
+      /*----------social media--------------*/
+      .social-media {
+         width: 100%;
+         text-align: left;
+
+      }
+
+      .social-media ul {
+         list-style: none;
+      }
+
+      .social-media ul li {
+         display: inline-block;
+         cursor: pointer;
+      }
+
+      .social-media img {
+         width: 40px;
+         height: 40px;
+         border-radius: 35px;
+      }
+
+      .block-popup1 {
+         border: 2px;
+         display: none;
+         background-color: rgb(38, 68, 54);
+         height: 400px;
+         width: 900px;
+         border-radius: 10px;
+         position: absolute;
+         right: 80px;
+         top: 100px;
+         z-index: 9;
+      }
+
+      .block-popup2 {
+         border: 2px;
+         display: none;
+         background-color:  rgb(38, 68, 54);
+
+
+         ;
+
+         height: 400px;
+         width: 900px;
+         border-radius: 10px;
+         position: absolute;
+         right: 80px;
+         top: 100px;
+         z-index: 9;
+      }
+
+      .btn-cancel {
+         background-color: #fff;
+         margin-left: 810px;
+         margin-top: 20px;
+         width: 20px;
+         height: 20px;
+      }
+
+      .classbutton {
+         background-color: #fff;
+         width: 200px;
+         height: 140px;
+         font-size: 30px;
+         border-radius: 30px;
+         margin-left: 20px;
+         border-color: rgb(8, 80, 62);
+         margin-top:100px;
+         margin-left:120px;
+      }
+
+      .classbutton:hover {
+         background-color: gray;
+
+         cursor: pointer;
+
+
+      }
+
+      .pdfbox {
+         background-color: rgb(255, 255, 255);
+         width: 120px;
+         height: 57px;
+         font-size: 20px;
+         border-radius: 5px;
+         border-color: #fff;
+         padding: 10px;
+         margin: 10px;
+         color: rgb(0, 0, 0);
+      }
+
+      .pdfbox:hover {
+         background-color: rgb(211, 202, 202);
+         color: rgb(70, 67, 67);
+      }
+
+      table td {
+         text-align: center;
+         color: #fff;
+         padding: 8px;
+      }
+
+      .pdftext {
+         text-align: center;
+         color: #fff;
+      }
+      .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+      .block-popup3 {
+          border: 2px;
+         display: none;
+         background-color:  rgb(38, 68, 54);
+         height: 400px;
+         width: 900px;
+         border-radius: 10px;
+         position: absolute;
+         right: 80px;
+         top: 100px;
+         z-index: 9;
+      }
+
+
+   </style>
+
+   <!--script for type writer effect-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script>
+      var TxtType = function (el, toRotate, period) {
+         this.toRotate = toRotate;
+         this.el = el;
+         this.loopNum = 0;
+         this.period = parseInt(period, 10) || 2000;
+         this.txt = '';
+         this.tick();
+         this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function () {
+         var i = this.loopNum % this.toRotate.length;
+         var fullTxt = this.toRotate[i];
+
+         if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+         } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+         }
+
+         this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+         var that = this;
+         var delta = 200 - Math.random() * 100;
+
+         if (this.isDeleting) { delta /= 2; }
+
+         if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+         } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+         }
+
+         setTimeout(function () {
+            that.tick();
+         }, delta);
+      };
+
+      window.onload = function () {
+         var elements = document.getElementsByClassName('typewrite');
+         for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+               new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+         }
+         // INJECT CSS
+         var css = document.createElement("style");
+         css.type = "text/css";
+         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+         document.body.appendChild(css);
+      };
+   </script>
+   <!--script end-->
+
+</head>
+
+<body><br><br>
+   <div class="header">
+     <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+   </div>
+
+   <div class="container">
+      <img src="{% static 'images/prog/bgprog.png' %}" height="50%" width="100%"><br><br>
+      <div class="farmer1">
+      <img  src="{% static 'images/prog/farmer.png' %}" height="360px" width="360px"></div>
+      <div class="farmer2">
+      <img src="{% static 'images/prog/farmer2.png' %}" height="440px" width="440px"></div>
+      <div class="center">
+         <h1>
+            <a href="" class="typewrite" data-period="2000"
+               data-type='[ "    Vocal for Local….", "Farming is a profession of hope….", "Cultivating Ideas for Growth….", "Grow naturally, Live natural…." ]'>
+               <span class="wrap"></span>
+            </a>
+         </h1>
+      </div>
+   </div>
+   <div class="row">
+      <div class="column left"><br><br><br><br><br><br>
+         <center>
+
+            <img src="{% static 'images/prog/em.jpg' %}" width="400px" height="300px">
+         </center>
+      </div>
+
+      <div class="column middle">
+         <div class="box">
+            <center>
+               <img src="{% static 'images/prog/bulb2.png' %}" width="70px" height="90px">
+               <font size="7" class="doubleUnderline" style="font-color:#708238;">Programmes and Schemes</font>
+               <img src="{% static 'images/prog/bulb2.png' %}" width="70px" height="90px"><br><br>
+               <h2>
+                  <a href="https://pmksy.gov.in">◑ Pradhan Mantri Krishi Sinchayee Yojana</a><br><br>
+                  <a href="https://pmfby.gov.in/">◑ Pradhan Mantri Fasal Bima Yojanar</a><br><br>
+                  <a href="https://pgsindia-ncof.gov.in ">◑ Paramparagat Krishi Vikas Yojana (PKVY)</a><br><br>
+                  <a href="http://pmkmy.gov.in/">◑ Pradhan Mantri Kisan Samman Nidhi </a><br><br>
+                  <a href="http://pmkisan.gov.in">◑ Pradhan Mantri Kisan Samman Nidhi </a><br><br>
+                  <a href="https://soilhealth.dac.gov.in/">◑ Soil Health card</a><br><br>
+                  <a href="http://dahd.nic.in/">◑ Aminal Husbandry</a><br><br>
+               </h2>
+            </center>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="column middle">
+         <div class="box1">
+            <center>
+               <img src="{% static 'images/prog/book.png' %}" width="70px" height="90px">
+               <font size="7" class="doubleUnderline" style="font-color:#708238;">Magazines & Guides</font>
+               <img src="{% static 'images/prog/book.png' %}" width="70px" height="90px"><br><br>
+                </center>
+               <button class="classbutton" onclick="marathi()"> मराठी </button>
+               <button class="classbutton" onclick="hindi()"> हिंदी </button>
+               <button class="classbutton" onclick="english()"> English </button>
+               <div class="block-popup1" id="Marathi">
+                  <button type="button" class="btn-cancel" onclick="closeForm1()">&times;</button>
+                  <table border="0" cellpadding="10">
+                     <tr>
+
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201901.pdf">
+                           <div class="pdfbox">
+                              जानेवारी
+                                 २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201902.pdf">
+                           <div class="pdfbox">
+                              फेब्रुवारी २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201903.pdf">
+                           <div class="pdfbox">
+                              मार्च २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201904.pdf">
+                           <div class="pdfbox">
+                              एप्रिल २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201905.pdf">
+                           <div class="pdfbox">
+                              मे २०१९
+                           </div></a>
+                        </td>
+
+
+                     </tr>
+                     <tr>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201907.pdf">
+                           <div class="pdfbox">
+                              जुलै २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201908.pdf">
+                           <div class="pdfbox">
+                              ऑगस्ट २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201909.pdf">
+                           <div class="pdfbox">
+                              सप्टेंबर २०१९
+                           </div></a>
+                        </td>
+
+
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201911.pdf">
+                           <div class="pdfbox">
+                              नोव्हेंबर २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201912.pdf">
+                           <div class="pdfbox">
+                              डिसेंबर २०१९
+                           </div></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="block-popup2" id="Hindi">
+                  <button type="button" class="btn-cancel" onclick="closeForm2()">&times;</button>
+                  <table border="0" cellpadding="10">
+                     <tr>
+
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201901.pdf">
+                           <div class="pdfbox">
+                              जानेवारी
+                                 २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201902.pdf">
+                           <div class="pdfbox">
+                              फेब्रुवारी २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201903.pdf">
+                           <div class="pdfbox">
+                              मार्च २०१९
+                           </div></a>
+                        </td></a>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201904.pdf">
+                           <div class="pdfbox">
+                              एप्रिल २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201905.pdf">
+                           <div class="pdfbox">
+                              मे २०१९
+                           </div></a>
+                        </td>
+
+
+                     </tr>
+                     <tr>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201907.pdf">
+                           <div class="pdfbox">
+                              जुलै २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201908.pdf">
+                           <div class="pdfbox">
+                              ऑगस्ट २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201909.pdf">
+                           <div class="pdfbox">
+                              सप्टेंबर २०१९
+                           </div></a>
+                        </td>
+
+
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201911.pdf">
+                           <div class="pdfbox">
+                              नोव्हेंबर २०१९
+                           </div></a>
+                        </td>
+                        <td><a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/201912.pdf">
+                           <div class="pdfbox">
+                              डिसेंबर २०१९
+                           </div></a>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+
+<!--              Add this for eng magazine-->
+
+
+            <div class="block-popup3" id="English">
+                  <button type="button" class="btn-cancel" onclick="closeForm3()">&times;</button>
+                  <table border="0" cellpadding="10">
+                     <tr>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/april%202021.pdf">April 2021</a>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/march%202021.pdf">March 2021</a>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/january-2021%20shetkari%20mashil%20final.pdf">January 2021</a>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/ilovepdf_merged%20(3).pdf">February 2021</a>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/Shetakari%20Masik_202001.pdf">January 2020</a>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/202002.pdf">February 2020</a>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/202003.pdf">March 2020</a>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pdfbox">
+                              <a href="http://krishi.maharashtra.gov.in/Site/Upload/Pdf/Publications/202004.pdf">April 2020</a>
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+
+
+
+
+         </div>
+      </div>
+
+      <div class="column left1">
+         <center>
+            <img src="{% static 'images/prog/happy.png' %}" width="400px" height="300px">
+         </center>
+         <!--         </div>-->
+      </div>
+   </div>
+
+   <section id="foot">
+      <div class="footer">
+         <div class="container1">
+            <div class="row1">
+               <div class="footer-col-1">
+                  <img src="{% static 'images/lll.png' %}">
+                  <a href="">
+                     <p>About us</p>
+                  </a>
+                  <a href="">
+                     <p>Contact us</p>
+                  </a>
+               </div>
+               <div class="footer-col-2">
+
+                  <p><b>FEEDBACK FORM</b></p>
+                  <input type="email" placeholder="ENTER YOUR NAME">
+                  <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+                  <textarea rows="5" cols="50" style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+    				</textarea><br>
+                  <button type="button" class="btn btn-primary">SUBMIT</button>
+               </div>
+               <div class=" footer-col-3">
+                  <p></p>
+                  <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+                  <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+                  <p><i class="fa fa-phone"></i> 9323131444</p>
+                  <div class="social-media">
+                     <ul>
+                        <li><img src="{% static 'images/face.png' %}"></li>
+                        <li><img src="{% static 'images/twitter.png' %}"></li>
+                        <li><img src="{% static 'images/insta.png' %}"></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- <hr> -->
+            <p class="copyright">Copyright 2021 e-Kisan</p>
+         </div>
+      </div>
+   </section>
+   <script>
+      function marathi() {
+         document.getElementById("Marathi").style.display = "block";
+      }
+      function hindi() {
+         document.getElementById("Hindi").style.display = "block";
+      }
+      function closeForm1() {
+         document.getElementById("Marathi").style.display = "none";
+      }
+      function closeForm2() {
+         document.getElementById("Hindi").style.display = "none";
+      }
+
+      function english() {
+         document.getElementById("English").style.display = "block";
+      }
+      function closeForm3() {
+         document.getElementById("English").style.display = "none";
+      }
+   </script>
+</body>
+
+</html>

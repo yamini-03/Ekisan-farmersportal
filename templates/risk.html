@@ -1,0 +1,212 @@
+{% load static %}
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Risk Management</title>
+	<link rel="stylesheet" href="{% static '/css/risk.css'%}">
+
+
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+<!--	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+      #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+    .cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+<body>
+
+<!-- ----------------navbar section------------------------------------------ -->
+<section id="navbar">
+<div class="nav">
+    <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+</div>
+</section>
+
+<!-- main risk page-->
+
+	<div class="wrapper">
+
+		<div class="wrapper_inner">
+
+			<div class="vertical_wrap">
+			<div class="backdrop"></div>
+			<div class="vertical_bar">
+				<div class="profile_info">
+				</div>
+				<div class="">
+				<ul class="menu">
+					<li><a href="#" class="active">
+						<!-- <span class="icon"><i class="fas fa-home"></i></span> -->
+						<span class="text">Drought Management</span>
+					</a></li>
+					<li><a href="/risk2/">
+						<!-- <span class="icon"><i class="fas fa-file-alt"></i></span> -->
+						<span class="text">Hailstorm</span>
+					</a></li>
+					<li><a href="/risk3/">
+						<!-- <span class="icon"><i class="fas fa-chart-pie"></i></span> -->
+						<span class="text">Crop Protection</span>
+					</a></li>
+					<li><a href="/risk4/">
+						<!-- <span class="icon"><i class="fas fa-user"></i></span> -->
+						<span class="text">Soil Fertility</span>
+					</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main_container">
+			<div class="top_bar">
+				<div class="hamburger">
+					<i class="fas fa-bars"></i>
+				</div>
+				<div class="logo">
+					Risk <span>Management</span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content">
+					<div class="item"><p><h1>Drought Management</h1><br>
+						<img src="{% static 'images/risk/image98.jpg'%}" width="100%"><h3>Why Drought Management in India?</h3>
+            Drought is a condition where water availability falls below the statistical requirements for
+						a region and lack of water to satisfy the normal needs of agriculture, livestock, industry
+						or human population. In India drought is due to high temporal and spatial variations in rainfall and climatic conditions.
+						Drought declaration is announced when the rainfall is –20% to –59% (early warning), –60% to 99% (drought) and –100% of normal (severe drought) conditions.
+						Around 68% of the country is prone to drought to varying degrees.<br>
+            The main types of drought are as follows:<br>
+            <ul>
+              <li><b>Meteorological Drought:</b> <p>Reduction in rainfall for a specific period below a specific amount. </p></li>
+              <li><b>Hydrological Drought:</b>  <p>Drying up of water sources – both surface and groundwater (together or individually) </p></li>
+              <li><b>Soil Moisture Drought:</b> <br>
+              Unavailability of adequate moisture to support the standing crop.</li>
+              <li><b>Ecological Drought:</b> <p> Productivity of a natural ecosystem falls significantly as a consequence of distress induced environmental damage. </p></li>
+            </ul><br>
+            In India, since 60% of the agriculture is still rainfed, meteorological drought is an important cause of drought conditions. Thus, any deficit in monsoon rains is felt to a large extent especially in areas that have large rain variability – leeward side of Western Ghats (Marathwada and Vidarbha) and North-west extremities of the country.
+        </div>
+		<div class="item"><h3>Drought Management in India or Mitigation of Droughts</h3>
+            Drought mitigation involves a comprehensive plan that not only covers water availability but its judicious use and reuse along with an overhaul of agricultural systems:The components of a drought preparedness and mitigation plan are as follows:
+            <ul>
+              <li><b>Prediction-</b><p>Prediction can benefit from climate studies which use coupled ocean/atmosphere models, survey of snow packs, anomalous circulation patterns in the ocean and atmosphere, soil moisture, assimilation of remotely sensed data into numerical prediction models, and knowledge of stored water available for domestic, stock, and irrigation uses.</p></li>
+              <li><b>Monitoring-</b><p>Monitoring exists in countries which use ground-based information such as rainfall, weather, crop conditions and water availability. Satellite observations complement data collected by ground systems. Satellites are necessary for the provision of synoptic, wide-area coverage.</p></li>
+              <li><b>Impact assessment-</b><p>Impact assessment is carried out on the basis of land-use type, persistence of stressed conditions, demographics and existing infrastructure, intensity and areal extent, and its effect on agricultural yield, public health, water quantity and quality, and building subsidence.</p></li>
+              <li><b>Response.-</b><p>Response includes improved drought monitoring, better water and crop management, augmentation of water supplies with groundwater, increased public awareness and education, intensified watershed and local planning, reduction in water demand, and water conservation.</p></li>
+            </ul>
+        </div>
+		<div class="item"><h3>Drought preparedness and mitigation</h3>Drought preparedness and mitigation can be accomplished with the following practices: (a) soil and water conservation, and (b) herd management.
+            <ul>
+              <li><b>*</b> Adoption of micro-irrigation techniques by farmers. However, such systems will need to be subsidised to be made competitive for a majority of farmers who are small and marginal farmers.</li>
+              <li><b>*</b> Stringent application of water harvesting measures not only at the individual level but at community and village level too.</li>
+              <li><b>*</b> Seechewal model can be implemented especially in acute water deficit areas. This model is currently being extended along the banks of the Ganga</li>
+              <li><b>*</b> Wastewater recycling facilities in urban and industrial centres to allow for non-drinking uses.</li>
+              <li><b>*</b> Agricultural practices should focus on more crop, per drop. Government support through Krishi Vigyan Kendras (KVKs), Soil Health Card scheme etc. must be extended to all gram panchayats.</li>
+              <li><b>*</b> Agro-climatic basis for crop selection should be promoted. This can be done by adjusting MSP by the government.</li>
+            </ul>
+        </div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+<!---->
+<script>
+	var hamburger = document.querySelector(".hamburger");
+	var wrapper  = document.querySelector(".wrapper");
+	var backdrop = document.querySelector(".backdrop");
+
+	hamburger.addEventListener("click", function(){
+		wrapper.classList.add("active");
+	})
+
+	backdrop.addEventListener("click", function(){
+		wrapper.classList.remove("active");
+	})
+</script>
+
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+        <img src="{% static 'images/lll.png'%}" >
+        <a href=""><p>About us</p></a>
+        <a href=""><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/risk/face.png'%}"></li>
+                <li><img src="{% static 'images/risk/twitter.png'%}"></li>
+                <li><img src="{% static 'images/risk/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,149 @@
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>weather</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url("{% static 'images/back.jpg'%}");
+      background-size: 100% 100%;
+    }
+
+    .column {
+  float: left;
+  width: 23%;
+  padding: 0 12px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row1 {margin: 0;
+margin-left: 70px;}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  /* text-align: center; */
+  background-color: #f1f1f1;
+}
+/* table, th, td {
+  border: 1px solid black;
+} */
+
+    </style>
+</head>
+
+<body>
+  <div class="row" style="background: grey; color: white; margin: 40px 400px;">
+    <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
+  </div>
+
+  <center class="row">
+    <form action="" method="post" class="col-md-6 col-md-offset-3">
+      {% csrf_token %}
+      <div class="input-group">
+        <input type="text" class="form-control" name="city" placeholder="Search" width="200px">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+        </form>
+  </center>
+  <div >
+    {% if data.country_code %}
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3" style="background:rgba(255, 255, 255, 0.4); color: rgb(0, 0, 0);">
+      <center>
+        <!-- icon1="http://openweathermap.org/img/wn/"+ {{data.icon}} + "@2x.png" -->
+      <h1>{{city}}</h1>
+
+      <h3><img src='http://openweathermap.org/img/wn/{{data.icon}}@2x.png'></h3>
+      <h3>Condition : {{data.country_code}}</h3>
+        <h4>Longitude : {{data.longitude}}</h4>
+        <h4>Latitude : {{data.latitude}}</h4>
+        <br>
+      </center>
+      </div>
+    </div><br>
+    <div class="row1">
+      <div class="column">
+        <div class="card">
+          <table>
+            <tr>
+              <td  style="padding-right: 10px"><img src="{% static 'images/qq.png'%}" style="margin-left:5px; height:80px;"></td>
+              <td style="padding-left: 15px ; padding-bottom: 2px"><font size="5" >Temperature:<br>{{data.temp}} </font>
+              </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <table>
+            <tr>
+              <td  style="padding-right: 10px"><img src="{% static 'images/press.png'%}" style="margin-left:5px; height:80px;"></td>
+              <td style="padding-left: 15px ; padding-bottom: 2px"><font size="5" >Pressure:<br>{{data.pressure}} </font>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+
+      <div class="column">
+        <div class="card">
+          <table>
+            <tr>
+              <td  style="padding-right: 10px"><img src="{% static 'images/humidity.png'%}" style="margin-left:5px; height:80px;"></td>
+              <td style="padding-left: 15px ; padding-bottom: 2px"><font size="5" >Humidity:<br>{{data.humidity}} </font>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <table>
+            <tr>
+              <td  style="padding-right: 10px"><img src="{% static 'images/wind.png'%}" style="margin-left:5px; height:80px;"></td>
+              <td style="padding-left: 15px ; padding-bottom: 2px"><font size="5" >Wind:<br>{{data.wind}} </font>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+<br><br><br><br><br><br><br>
+    </div>
+    {% endif %}
+  </div>
+</body>
+
+</html>

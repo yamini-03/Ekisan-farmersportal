@@ -1,0 +1,299 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart Empty</title>
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+
+     <style>
+
+    .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -5px;
+            width:100%
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+    #foot{
+
+	margin-top: 88%;
+}
+.container1{
+	max-width: 100%;
+	margin: auto;
+
+}
+.row1{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.footer{
+	position: absolute;
+	left:0;
+	background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 10px;
+}
+.footer p{
+	color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+	min-width: 400px;
+	height: 250px;
+	margin-bottom: 20px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+	margin-left: 30px;
+
+}
+.footer-col-1 img{
+	width:150px;
+	margin-left: 110px;
+}
+.footer-col-1 p{
+
+	margin-left: 150px;
+	color: #3B9C9C;
+}
+.footer-col-2{
+	flex: 1;
+	margin-left: 15px;
+
+}
+.footer-col-2 input{
+
+ 	border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+ 	border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+
+
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+
+}
+.footer-col-3{
+	flex-basis: 12%;
+	margin-left: 30px;
+	text-align: left;
+}
+.footer-col-3 .fa{
+
+	margin-right: 8px;
+	font-size: 25px;
+	height: 40px;
+	width:40px;
+	text-align: center;
+	padding-top: 7px;
+	color: #3B9C9C;
+	background-color:black;
+}
+/*to remove bullet style*/
+ul{
+	list-style-type: none;
+}
+
+.copyright{
+	text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+
+		.main{
+		margin-top: 60px;
+		margin-left: 500px;
+		}
+
+		.main .noprobg{
+		height: 300px;
+		width: 350px;
+		margin-left: 20px;
+		}
+
+		h1{
+		margin-left: 50px;
+		font-size: 37px;
+		}
+
+		button{
+		margin-left: 140px;
+		height: 50px;
+		width: 100px;
+		color: white;
+		font-weight: bold;
+		border-radius: 10px;
+		}
+  </style>
+</head>
+<body>
+<div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+        </ul>
+    </div>
+<div class="main">
+
+    <img src="{% static 'images/nopro.jpg' %}" class="noprobg" >
+    <h1> Your Cart is empty</h1>
+    <a href="/index/"> <button style="background-color: teal;"> Home Page</button> </a>
+
+</div>
+
+<!--<section id="foot">-->
+<!--<div class="footer">-->
+<!--	<div class="container1">-->
+<!--		<div class="row1">-->
+<!--			<div class="footer-col-1">-->
+<!--				 <img src="{% static 'images/lll.png' %}">-->
+<!--				<a href=""><p>About us</p></a>-->
+<!--				<a href=""><p>Contact us</p></a>-->
+<!--			</div>-->
+<!--			<div class="footer-col-2">-->
+
+<!--				<p><b>FEEDBACK FORM</b></p>-->
+<!--				<input type="email" placeholder="ENTER YOUR NAME">-->
+<!--				<input type="email" placeholder="ENTER VALID EMAIL ADDRESS">-->
+<!--				<textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK-->
+<!--				</textarea><br>-->
+<!--				<button type="button" class="btn btn-primary">SUBMIT</button>-->
+<!--			</div>-->
+<!--			<div class=" footer-col-3">-->
+<!--				<p></p>-->
+<!--				<p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>-->
+<!--				<p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>-->
+<!--				<p><i class="fa fa-phone"></i> 9323131444</p>-->
+<!--				 <div class="social-media">-->
+<!--			        <ul>-->
+<!--			           <li><img src="{% static 'images/face.png' %}"></li>-->
+<!--                                <li><img src="{% static 'images/twitter.png' %}"></li>-->
+<!--                                <li><img src="{% static 'images/insta.png' %}"></li>-->
+<!--			        </ul>-->
+<!--			      </div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		&lt;!&ndash; <hr> &ndash;&gt;-->
+<!--		<p class="copyright">Copyright 2021 e-Kisan</p>-->
+<!--	</div>-->
+<!--</div>-->
+<!--</section>-->
+
+</body>
+</html>

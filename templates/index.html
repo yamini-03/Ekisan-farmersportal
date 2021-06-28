@@ -1,0 +1,1932 @@
+<!--1b8895b0e5b1abb0e5c19c15d8ba1e392-->
+{% load static %}
+
+{% if mess %}
+<script>
+    alert('{{ mess }}');
+</script>
+{% endif %}
+
+<html style="font-size: 16px;">
+
+<head>
+  <script src="{% static '/JS/script.js' %}" type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="keywords" content="92, 25, 37, 87">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+  <title>e-Kisan</title>
+  <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'css/Home.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+  <meta name="generator" content="Nicepage 3.7.2, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">
+
+
+  <style>
+
+    #google_translate_element{
+    margin-right: 90px;
+    }
+
+    #mybtn{
+    margin-right: 55px;
+    }
+
+
+    .u-section-1 {
+      background-image: url("{% static 'images/image11.jpg' %}");
+      background-position: 50% 50%;
+    }
+
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 50px;
+      /* Location of the box */
+
+      width: 60%;
+      /* Full width */
+      height: 50%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      color: black;
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #000;
+      margin: auto;
+      padding: 20px;
+
+      width: 80%;
+      color: black;
+    }
+
+
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
+    }
+
+
+
+    input[type="checkbox"] {
+      display: none;
+    }
+    select[type="checkbox"] {
+      display: none;
+    }
+
+    #show:checked~.cont {
+      display: block;
+    }
+
+    */
+
+    /*----------------------------*/
+    input,
+    button,select {
+      border: none;
+      outline: none;
+      background: none;
+    }
+
+    .cont {
+
+      overflow: hidden;
+      position: relative;
+      width: 900px;
+      height: 600px;
+      margin-left: 300px;
+      background: #fff;
+      /*box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);*/
+    }
+
+    .modal .cont .sub-cont .close {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      font-size: 25px;
+      cursor: pointer;
+
+    }
+
+    .modal .cont .sub-cont .close1 {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 25px;
+      cursor: auto;
+
+    }
+
+    .close:hover {
+      color: red;
+    }
+    
+    .close1:hover {
+      color: red;
+    }
+
+    .form {
+
+      position: relative;
+      /* justify: center;*/
+      width: 620px;
+      height: 80%;
+      /*padding: 50px 30px;*/
+
+      margin-left: 130px;
+      /*-webkit-transition: -webkit-transform 1.2s ease-in-out;
+      transition: -webkit-transform 1.2s ease-in-out;
+      transition: transform 1.2s ease-in-out;
+      transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;*/
+    }
+
+    h2 {
+      width: 100%;
+      font-size: 30px;
+      text-align: left;
+    }
+
+    label {
+      /*display: block;*/
+      width: 260px;
+
+      text-align: center;
+    }
+
+    label span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #505f75;
+      text-transform: uppercase;
+    }
+
+    input,select {
+      /*display: block;*/
+      width: 90%;
+      margin-top: 5px;
+      font-size: 16px;
+      padding-bottom: 5px;
+      border-top: 1px solid white;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+      text-align: center;
+      font-family: 'Nunito', sans-serif;
+      margin-bottom: 5px;
+      outline: none;
+      background: none;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      width: 260px;
+      height: 36px;
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    button:after {
+      border-radius: 30px;
+    }
+
+    .submit {
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-bottom: 0px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      width: 200px;
+      font-family: 'Nunito', sans-serif;
+      background: -webkit-linear-gradient(left,  rgb(3, 134, 134),rgb(27, 27, 27));
+      color: white;
+    }
+
+    .submit:hover {
+      background: -webkit-linear-gradient(left,  rgb(27, 27, 27),rgb(3, 134, 134))
+    }
+
+    .forgot-pass {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0c0101;
+      cursor: pointer;
+    }
+
+    .forgot-pass:hover {
+      padding-bottom: 10px;
+      color: red;
+    }
+
+    .social-media {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-media ul {
+      list-style: none;
+    }
+
+    .social-media ul li {
+      display: inline-block;
+      cursor: pointer;
+      margin: 25px 15px;
+    }
+
+    .social-media img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .sub-cont {
+      overflow: hidden;
+      position: absolute;
+      left: 640px;
+      top: 0;
+      width: 900px;
+      height: 100%;
+      padding-left: 260px;
+      background: #fff;
+      -webkit-transition: -webkit-transform 1.2s ease-in-out;
+      transition: -webkit-transform 1.2s ease-in-out;
+      transition: transform 1.2s ease-in-out;
+    }
+
+    .cont.s-signup .sub-cont {
+      -webkit-transform: translate3d(-640px, 0, 0);
+      transform: translate3d(-640px, 0, 0);
+    }
+
+    .img {
+      overflow: hidden;
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      padding-top: 360px;
+    }
+
+    .img:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 900px;
+      height: 100%;
+      background-image: url("{% static 'images/image22.jpg' %}");
+      background-size: cover;
+      transition: -webkit-transform 1.2s ease-in-out;
+      transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    }
+
+    .img:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .cont.s-signup .img:before {
+      -webkit-transform: translate3d(640px, 0, 0);
+      transform: translate3d(640px, 0, 0);
+    }
+
+    .img-text {
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 50px;
+      width: 100%;
+      padding: 0 20px;
+      text-align: center;
+      color: #fff;
+      -webkit-transition: -webkit-transform 1.2s ease-in-out;
+      transition: -webkit-transform 1.2s ease-in-out;
+      transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    }
+
+    .img-text h2 {
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+
+    .img-text p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .cont.s-signup .img-text.m-up {
+      -webkit-transform: translateX(520px);
+      transform: translateX(520px);
+    }
+
+    .img-text.m-in {
+      -webkit-transform: translateX(-520px);
+      transform: translateX(-520px);
+    }
+
+    .cont.s-signup .img-text.m-in {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+
+    .sign-in {
+      padding-top: 20px;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+    .cont.s-signup .sign-in {
+      -webkit-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 1.2s;
+      transition-duration: 1.2s;
+      -webkit-transform: translate3d(640px, 0, 0);
+      transform: translate3d(640px, 0, 0);
+    }
+
+    .img-btn {
+      overflow: hidden;
+      z-index: 2;
+      position: relative;
+      width: 100px;
+      height: 36px;
+      margin: 0 auto;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 30px;
+      /* background-color: rgb(0, 0, 0); */
+      /* Fallback color */
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      /* Black w/opacity/see-through */
+    }
+
+    .img-btn:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      color: white;
+
+    }
+
+    .img-btn span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: -webkit-transform 1.2s;
+      transition: -webkit-transform 1.2s;
+      transition: transform 1.2s;
+      transition: transform 1.2s, -webkit-transform 1.2s;
+      ;
+    }
+
+    .img-btn span.m-in {
+      -webkit-transform: translateY(-72px);
+      transform: translateY(-72px);
+    }
+
+    .cont.s-signup .img-btn span.m-in {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    .cont.s-signup .img-btn span.m-up {
+      -webkit-transform: translateY(72px);
+      transform: translateY(72px);
+    }
+
+    .sign-up {
+      padding-top: 0;
+      -webkit-transform: translate3d(-900px, 0, 0);
+      transform: translate3d(-900px, 0, 0);
+    }
+
+    .cont.s-signup .sign-up {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .box {
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black w/opacity/see-through */
+      height: 170px;
+      width: 210px;
+    }
+
+    .btn {
+      display: inline-block;
+      /*background: #ff523b;*/
+      background: -webkit-linear-gradient(left, #76A63F, #243313);
+      color: #fff;
+      padding: 8px 30px;
+      margin: 30px 0;
+      border-radius: 30px;
+      transition: background 0.5s;
+    }
+
+    .btn:hover {
+      background: #563434;
+
+    }
+
+    /*<!---------------------------for first form---------------------------->*/
+    .account-page {
+      margin-top: 10px;
+      padding: 0 10px;
+      /*background: -webkit-radial-gradient(#fff, #76A63F);*/
+      /*background:radial-gradient(#fff,green);*/
+    }
+
+    .form-container {
+      margin-bottom: 100px;
+      /* background: #fff; */
+      width: 390px;
+      height: 460px;
+      background-color: rgb(238, 237, 237);
+      color: rgb(0, 0, 0);
+      position: relative;
+      text-align: center;
+      /*padding: 20px 0;*/
+      /*margin: auto;*/
+      border: 3px solid teal;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 50px;
+    }
+
+    .form-container span {
+      font-weight: bold;
+      padding-top: 14px;
+      padding-bottom: 0px;
+      padding-right:10px;
+      padding-left:10px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      width: 100px;
+      display: inline-block;
+    }
+
+    .form-btn {
+      display: inline-block;
+    }
+
+    .form-container form {
+      max-width: 300px;
+      padding: 0 20px;
+      position: absolute;
+      top:75px;
+      transition: transform 1s;
+    }
+
+    form input {
+      width: 100%;
+      height: 30px;
+      margin: 5px 0;
+      padding: 3px 0px;
+      border: 1px solid rgb(34, 34, 34);
+    }
+    form select {
+      width: 100%;
+      height: 30px;
+      margin: 5px 0;
+      padding: 3px 0px;
+      border: 1px solid rgb(34, 34, 34);
+    }
+
+    form .btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    form .btn:focus {
+      outline: none;
+
+    }
+
+    #LoginForm {
+      margin-top: 20px;
+      left: -400px;
+    }
+
+    #RegForm {
+      left: 50px;
+    }
+
+    form a {
+      font-size: 12px;
+      color: red;
+    }
+
+    #Indicator {
+      width: 100px;
+      border: none;
+      /*background: #ff523b;*/
+      background: -webkit-linear-gradient(left, rgb(0, 138, 138), rgb(0, 0, 0));
+      height: 3px;
+      margin-top: 8px;
+      transform: translateX(100px);
+      transition: transform 1s;
+    }
+
+    /*------------snc form--------*/
+    .account-page1 {
+      margin-top: 25px;
+      padding: 0 10px;
+      /*background: -webkit-radial-gradient(#fff, #76A63F);*/
+      /*background:radial-gradient(#fff,green);*/
+    }
+
+    .container1 h2 {
+      text-align: center;
+      margin-top: -14px;
+    }
+
+    .form-container1 {
+      margin-bottom: 100px;
+      background: rgb(238, 237, 237);
+      width: 390px;
+      height: 505px;
+      position: relative;
+      margin-left: 120px;
+      text-align: center;
+      /*padding: 20px 0;*/
+      /*margin: auto;*/
+      border: 3px solid teal;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 50px;
+    }
+
+    .form-container1 span {
+      font-weight: bold;
+      padding-top:14px;
+      padding-bottom: 0 ;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      color: #555;
+      cursor: pointer;
+      width: 100px;
+      display: inline-block;
+    }
+
+    .form-btn1 {
+      display: inline-block;
+    }
+
+    .form-container1 form {
+      max-width: 300px;
+      padding: 0 20px;
+      position: absolute;
+      top: 75px;
+      transition: transform 1s;
+    }
+
+    form input {
+      width: 100%;
+      height: 30px;
+      margin: 7px 0;
+      padding: 0 10px;
+<!--      border: 2px solid #ccc;-->
+      border-radius:10%;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    form select {
+      width: 100%;
+      height: 30px;
+      margin: 7px 0;
+      padding: 0 10px;
+<!--      border: 2px solid #ccc;-->
+      border-radius:10%;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    form .btn1 {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    form .btn1:focus {
+      outline: none;
+
+    }
+
+    #LoginForm1 {
+      left: -400px;
+    }
+
+    .forget{
+    color: red;
+    }
+
+    #RegForm1 {
+      left: 50px;
+    }
+
+    form a {
+      font-size: 12px;
+      color: red;
+    }
+
+    #Indicator1 {
+      width: 100px;
+      border: none;
+      /*background: #ff523b;*/
+      background: -webkit-linear-gradient(left, rgb(0, 138, 138), rgb(0, 0, 0));
+      height: 3px;
+      margin-top: 8px;
+      transform: translateX(100px);
+      transition: transform 1s;
+    }
+
+    .box {
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black w/opacity/see-through */
+      height: 170px;
+      width: 210px;
+    }
+		.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cart{
+		margin-right: 40px;
+		}
+		.avatar{
+		margin-left: 10px;
+		}
+        .avatarimg {
+			margin-top:-60px;
+			margin-left: -85px;
+			width: 75px;
+		    height: 75px;
+		}
+		.cartimg {
+			margin-top:-64px;
+			margin-left: 1100px;
+			width: 65px;
+		    height: 65px;
+		    border-radius: 100px;
+		}
+		.logout {
+		    margin-top:-62px;
+			margin-left: 1210px;
+		}
+		.logbtn {
+		    width:75px;
+		    height:40px;
+		    border-radius: 4px;
+		    background-color: #41807C;
+		    font-size:18px;
+		}
+		.logbtn:hover {
+		    background-color: #00e5ee;
+		}
+        .mainform
+        {
+            top:10px;
+        }
+        .labelspan
+        {
+           font-size: 14px;
+           font-weight: 600;
+           color: #505f75;
+           text-transform: uppercase;
+        }
+
+
+  </style>
+
+  <!--links for categories-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" href="{% static 'css/templatemo-softy-pinko.css' %}">
+  <!--categories link end-->
+
+  <!--testomonials css link-->
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="{% static 'css/testo.css' %}">
+
+  <!--testomonials css end-->
+
+  <!--testomonials js script start-->
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+      var feedbackSlider = $('.feedback-slider');
+      feedbackSlider.owlCarousel({
+        items: 1,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        loop: true,
+        mouseDrag: true,
+        touchDrag: true,
+        navText: [],
+        responsive: {
+
+          // breakpoint from 767 up
+          767: {
+            nav: true,
+            dots: false
+          }
+        }
+      });
+
+      feedbackSlider.on("translate.owl.carousel", function () {
+        $(".feedback-slider-item h3").removeClass("animated fadeIn").css("opacity", "0");
+        $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating").removeClass("animated zoomIn").css("opacity", "0");
+      });
+
+      feedbackSlider.on("translated.owl.carousel", function () {
+        $(".feedback-slider-item h3").addClass("animated fadeIn").css("opacity", "1");
+        $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating").addClass("animated zoomIn").css("opacity", "1");
+      });
+      feedbackSlider.on('changed.owl.carousel', function (property) {
+        var current = property.item.index;
+        var prevThumb = $(property.target).find(".owl-item").eq(current).prev().find("img").attr('src');
+        var nextThumb = $(property.target).find(".owl-item").eq(current).next().find("img").attr('src');
+        var prevRating = $(property.target).find(".owl-item").eq(current).prev().find('span').attr('data-rating');
+        var nextRating = $(property.target).find(".owl-item").eq(current).next().find('span').attr('data-rating');
+        $('.thumb-prev').find('img').attr('src', prevThumb);
+        $('.thumb-next').find('img').attr('src', nextThumb);
+        $('.thumb-prev').find('span').next().html(prevRating + "⭐");
+        $('.thumb-next').find('span').next().html(nextRating + "⭐");
+      });
+      $('.thumb-next').on('click', function () {
+        feedbackSlider.trigger('next.owl.carousel', [300]);
+        return false;
+      });
+      $('.thumb-prev').on('click', function () {
+        feedbackSlider.trigger('prev.owl.carousel', [300]);
+        return false;
+      });
+
+    }); //end ready
+  </script>
+  <!--testomonials js end-->
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html",
+		"sameAs": [
+				"https://facebook.com/name",
+				"https://twitter.com/name",
+				"https://www.instagram.com/name"
+		]
+}</script>
+  <meta property="og:title" content="Home">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#478ac9">
+  <link rel="canonical" href="index.html">
+  <meta property="og:url" content="index.html">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Home">
+  <meta name="twitter:description" content="">
+</head>
+
+<body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-overlap u-overlap-contrast">
+  <!--header start-->
+  <header class="u-clearfix u-header u-header" id="sec-fd9a">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <div class="menu-collapse" style="font-size: 1.5rem; letter-spacing: 0px; font-weight: 700;">
+          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-shadow u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                  <rect y="1" width="16" height="2"></rect>
+                  <rect y="7" width="16" height="2"></rect>
+                  <rect y="13" width="16" height="2"></rect>
+                </symbol>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="u-nav-container">
+          <ul class="u-nav u-spacing-0 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-4-light-1 u-text-hover-palette-2-base u-text-palette-4-light-3"
+                href="/index/" style="padding: 22px 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);">Home</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-4-light-1 u-text-hover-palette-2-base u-text-palette-4-light-3"
+                style="padding: 22px 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);" href="/about/">About us</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-4-light-1 u-text-hover-palette-2-base u-text-palette-4-light-3"
+                href="/contact/" style="padding: 22px 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);">Contact</a>
+            </li>
+<!--            <li class="bgcart">-->
+<!--				<a href="contactUs.html"><img  class='cartimg' src="{% static 'images/cart.png' %}" height="100px" width="100px"></a>-->
+<!--            </li>-->
+          </ul>
+        </div>
+        <div class="u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/index/"
+                    style="padding: 22px 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);">Home</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                    style="padding: 22px 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);" href="/about/">About us</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/contact/"
+                    style="padding: 22px 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+      <a href="#" id="myBtn"
+        class="u-btn u-btn-round u-button-style u-hover-palette-4-light-1 u-palette-4-dark-2 u-radius-50 u-btn-1">
+        <span style="font-size: 1.25rem;">Register<span style="font-size: 1.125rem;">
+
+          </span>
+        </span>&nbsp;<span class="u-icon"><svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content"
+            viewBox="0 0 30.727 30.727" x="0px" y="0px" style="width: 1em; height: 1em;">
+            <path
+              d="M29.994,10.183L15.363,24.812L0.733,10.184c-0.977-0.978-0.977-2.561,0-3.536c0.977-0.977,2.559-0.976,3.536,0   l11.095,11.093L26.461,6.647c0.977-0.976,2.559-0.976,3.535,0C30.971,7.624,30.971,9.206,29.994,10.183z">
+            </path>
+          </svg></span>
+      </a>
+      <!--modal-->
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <div class="cont">
+
+          <!---------------------------account page----------------------------->
+          <div class="form">
+            
+            <div class="account-page">
+              
+              <h2>Consumer sign up / log in</h2>
+              <div class="container">
+                <div class="row">
+                  <span class="close">&times;</span>
+                  <!-- <div class="col-2">
+                    <img src="images/greet4-removebg-preview.png" width=100%>
+                    </div> -->
+                  <div class="col-2">
+                    
+                    <div class="form-container">
+                      <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Sign Up</span>
+                        <hr id="Indicator">
+                      </div>
+                      <form id="LoginForm" class="mainform" method="post" action="/Clogin/">
+                        {% csrf_token %}
+                        <input type="email" placeholder="Email" name="email">
+                        <input type="password" placeholder="Password" name="pass">
+                        <input type="submit" class="submit" value="Login">
+                        <a href="" class="forget">Forget password</a>
+                      </form>
+
+                      <form id="RegForm" method="post" action="/Csignup/">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="email" placeholder="Email id" name="email">
+                        <input type="tel"  pattern="[0-9]{10}" maxlength="10"  placeholder="Mobile no." name="contact">
+                        <input type="text" placeholder="Address" name="address">
+                        <input type="text" placeholder="City" name="city">
+                        <input type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="Pin Code" name="pin">
+                        <input type="password" placeholder="Password" name="pass">
+                        <input type="submit" class="submit" value="Register">
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-cont">
+            <span class="close1">&times;</span>
+            <div class="img">
+              <div class="img-text m-up">
+                <div class="box">
+                  <h2 class="box-text"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Farmer ?</h2>
+                  <p class="box-text">Sell your product to get maximum profit !</p>
+                </div>
+              </div>
+              
+              <div class="img-text m-in">
+                
+                <div class="box">
+                  <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are You Consumer ?</h2>
+                  <p>Sign up and get our Organic fruits, vegetables, and lot more to your door!</p>
+                </div>
+              </div>
+              <div class="img-btn">
+                <span class="m-up">Sign Up</span>
+                <span class="m-in">Sign Up</span>
+              </div>
+            </div>
+            <!---------------------------account page2----------------------------->
+
+
+            <div class="account-page1">
+
+              <div class="container1">
+                <h2>Farmer login/sign Up</h2>
+                <div class="row">
+                  <!-- <div class="col-2">
+                  <img src="images/greet4-removebg-preview.png" width=100%>
+                  </div> -->
+                  <div class="col-2">
+                    <div class="form-container1">
+                      <div class="form-btn1">
+                        <span onclick="loginn()">Login</span>
+                        <span onclick="registerr()">Sign Up</span>
+                        <hr id="Indicator1">
+                      </div>
+                      <form id="LoginForm1" method="post" action="/fsignin/">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Email id" name="email">
+                        <input type="password" placeholder="password" name="pass">
+                        <span class="labelspan">Role</span>
+                        <select id='inputid2' name="RoleName" placeholder="Role">
+                            <option value=""></option>
+                            <option value="far">Farmer</option>
+                            <option value="con">Consumer</option>
+                        </select>
+                        <input type="submit" value="Login" class="submit" name="mainlogin">
+                        <!-- <button type="submit" class="btn">Login</button> -->
+                        <a href="">Forget password</a>
+                      </form>
+
+                      <form id="RegForm1" method="post" action="/farmsignUp/">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="email" placeholder="Email id" name="email">
+                        <input type="tel"  pattern="[0-9]{10}" maxlength="10"  placeholder="Mobile no." name="contact">
+                        <input type="tel" placeholder="Adhar no." pattern="[0-9]{12}" maxlength="12" name="adhar">
+                        <input type="text" placeholder="Address" name="address">
+                        <input type="text" placeholder="City" name="city">
+                        <input type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="Pin Code" name="pin">
+                        <input type="password" placeholder="Password" name="pass">
+                        <input type="submit" class="submit" value="Register">
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- --------------------js for toggle form------------------------------- -->
+
+        <script type="text/javascript">
+
+          var LoginForm = document.getElementById("LoginForm");
+          var RegForm = document.getElementById("RegForm");
+          var Indicator = document.getElementById("Indicator");
+          function register() {
+
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+          }
+          function login() {
+
+            RegForm.style.transform = "translateX(350px)";
+            LoginForm.style.transform = "translateX(450px)";
+            Indicator.style.transform = "translateX(0px)";
+          }
+        </script>
+
+        <script type="text/javascript">
+
+          var LoginForm1 = document.getElementById("LoginForm1");
+          var RegForm1 = document.getElementById("RegForm1");
+          var Indicator1 = document.getElementById("Indicator1");
+          function registerr() {
+
+            RegForm1.style.transform = "translateX(0px)";
+            LoginForm1.style.transform = "translateX(0px)";
+            Indicator1.style.transform = "translateX(100px)";
+          }
+          function loginn() {
+
+            RegForm1.style.transform = "translateX(350px)";
+            LoginForm1.style.transform = "translateX(450px)";
+            Indicator1.style.transform = "translateX(0px)";
+          }
+        </script>
+        <!---------- javascript-------------------- -->
+        <script>
+          document.querySelector('.img-btn').addEventListener('click', function () {
+            document.querySelector('.cont').classList.toggle('s-signup')
+          }
+          );
+        </script>
+
+
+
+      </div>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        }
+
+        // Get the <span> element that closes the modal
+        var span1 = document.getElementsByClassName("close1")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function () {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+      <!--modal end-->
+
+      <a href="#" class="u-btn u-button-style u-none u-text-body-alt-color u-btn-2" >
+        <div id="google_translate_element" style="background-color: #eeeeee;"></div>
+      </a>
+       <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+      </script>
+
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <div class="cart" >
+       <a href="/displaycart/"><img class="cartimg" src="{% static 'images/cart1.png' %}"></a>
+      </div>
+      {% if cur %}
+        <div class="logout" >
+         <a href="/logout/"><img  src="{% static 'images/log.png' %}" height="65px" width="65px" style="border-radius:50%;"></a>
+        </div>
+        <div class="avatar" >
+          <a href="/myprof/"><img class="avatarimg" style="margin-top:-67px;margin-left:-167px;" height="60px" width="60px" src="{% static 'images/avatar1.png' %}"></a>
+        </div>
+      {% endif %}
+      <img src="{% static 'images/lll.png' %}" alt="" class="u-image u-image-default u-image-1"
+        data-image-width="491" data-image-height="478" style="margin-top:-75px;">
+      </div>
+  </header>
+  <!--header end-->
+  <!--section1 : website name,bg-image,tagline-->
+  <section class="u-clearfix u-image u-section-1" id="sec-e078">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h1 class="u-custom-font u-font-Lobster u-text u-text-body-alt-color u-text-1">e-Kisan</h1>
+      <h3 class="u-text u-text-palette-4-dark-1 u-text-2">-&nbsp The<span style="font-weight: 700;"> Future </span>&nbsp;​of
+        <span style="font-weight: 700;">Agro innovation&nbsp;</span>
+      </h3>
+    </div>
+  </section>
+  <!--section 1 end here-->
+
+<!--  CHATBOT bUTTON-->
+<!--  <a href="/chatbot/">-->
+  <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings =
+            {"appId":"1b8895b0e5b1abb0e5c19c15d8ba1e392","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+  <!--  END CHATBOT bUTTON-->
+
+  <!--section 2 about us part--><br>
+  <section class="u-clearfix u-section-2" id="sec-5fba">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h3 class="u-align-justify u-custom-font u-font-georgia u-text u-text-1">
+        <span class="u-text-palette-4-dark-2">&nbsp; &nbsp;<span style="font-size: 3rem;">W</span>
+        </span>e connect local farms and communities together in a method that is environmentally and economically
+        sustainable. We bring the seasons best mix of organic farm products conveniently to your door by growing and
+        partnering with local farms.
+      </h3>
+      <p class="u-text u-text-2">
+        <span style="font-weight: 700; font-size: 1.875rem;">Always Fresh</span>
+        <br>
+        <span style="font-size: 1.25rem;">We deliver our products always fresh &amp;organic so that you could enjoy your
+          meal.<br>
+        </span>
+        <br>
+        <span style="font-size: 1.875rem; font-weight: 700;">Mordern Farms</span>
+        <br>
+        <span style="font-size: 1.25rem;">Our farm combines mordern technologies, innovations and trusted farming
+          traditions.<br>
+        </span>
+        <br>
+        <span style="font-size: 1.875rem; font-weight: 700;">100% Organic</span>
+        <br>
+        <span style="font-size: 1.25rem;">We adhere to our organic philosophywhich implies avoiding pesticieds. Also our
+          farming technologies are designed accordingly.</span>
+        <!--g tag is used for icons i think-->
+      </p><span class="u-icon u-icon-circle u-palette-4-dark-2 u-spacing-8 u-icon-1"><svg class="u-svg-link"
+          preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a557"></use>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+          xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-a557"
+          style="enable-background:new 0 0 512 512;">
+          <g>
+            <g>
+              <path
+                d="M508.88,219.58c-0.416-2.278-1.609-4.342-3.378-5.838c-16.56-14.009-19.356-29.456-21.603-41.867l-0.294-1.617    c-0.776-4.236-4.178-7.5-8.442-8.1c-1.472-0.207-3.03-0.313-4.631-0.313c-9.517,0-22.925,4.01-31.426,12.967    c-1.45,1.529-2.381,3.477-2.659,5.566c-0.715,5.374-1.083,10.292-1.407,14.631c-1.225,16.351-2.308,18.085-7.289,19.661    c-3.122,0.988-5.562,3.441-6.533,6.567c-4.691,15.102-10.916,29.554-18.45,43.189c-3.721-7.104-7.833-13.494-11.66-19.44    c-9.36-14.542-16.754-26.03-14.228-40.267c8.186-46.144,4.031-80.904-12.353-103.316c-9.124-12.481-22.122-20.99-37.918-24.965    c3.144-24.532,20.192-35.654,29.629-38.183c5.335-1.429,8.501-6.913,7.071-12.248c-1.43-5.334-6.914-8.503-12.247-7.071    c-19.485,5.221-40.298,24.388-44.273,55.002c-15.96-0.045-30.455,4.829-42.383,14.359c-21.796,17.415-34.965,49.777-39.142,96.185    c-1.257,13.965-10.291,22.113-22.796,33.388c-10.207,9.204-21.577,19.48-30.685,35.015c-11.345-4.62-23.515-7.617-36.223-8.702    c3.602-23.552,20.167-34.306,29.421-36.785c5.335-1.429,8.501-6.913,7.071-12.247c-1.43-5.335-6.914-8.503-12.247-7.071    c-5.025,1.346-10.136,3.631-15.027,6.789c-2.275-11.229-7.779-21.761-16.113-30.094c-11.166-11.166-26.013-17.315-41.805-17.315    c-5.169,0-10.317,0.675-15.302,2.005c-3.457,0.923-6.158,3.624-7.081,7.081c-5.433,20.346,0.433,42.228,15.309,57.107    c10.351,10.351,23.87,16.381,38.37,17.208c-1.264,4.138-2.204,8.542-2.75,13.212C50.957,248.915,0,302.899,0,368.563    c0,68.839,56.005,124.844,124.843,124.844c25.584,0,49.954-7.604,70.817-22.028c3.286,1.442,6.583,2.83,9.895,4.136    c30.096,11.871,60.512,17.891,90.401,17.891c48.076,0,92.696-15.708,129.036-45.427c37.983-31.063,65.977-77.026,80.953-132.92    C510.832,296.829,515.143,253.875,508.88,219.58z M215.863,232.724c13.451-12.13,27.36-24.673,29.321-46.448    c3.669-40.765,14.336-68.473,31.707-82.352c10.312-8.239,23.058-11.416,37.888-9.434c14.646,1.955,25.952,8.252,33.603,18.718    c13.04,17.838,16.003,47.452,8.805,88.018c-3.897,21.961,6.779,38.546,17.103,54.586c5.786,8.989,11.742,18.258,15.792,29.046    c-33.703,48.67-84.844,84.163-141.117,97.16c0.48-4.462,0.724-8.957,0.724-13.455c0-45.109-24.051-84.706-60.001-106.647    C197.17,249.602,206.644,241.038,215.863,232.724z M93.926,199.51c-8.401-8.402-12.459-20.183-11.233-31.831    c1.382-0.146,2.771-0.221,4.165-0.221c10.449,0,20.274,4.069,27.662,11.457c8.402,8.402,12.461,20.184,11.234,31.831    c-1.381,0.146-2.771,0.22-4.162,0.22h-0.002C111.138,210.967,101.314,206.898,93.926,199.51z M124.843,473.407    c-57.811,0-104.843-47.032-104.843-104.844s47.032-104.844,104.843-104.844c57.812,0,104.845,47.032,104.845,104.844    c0,5.764-0.471,11.518-1.402,17.179c-6.433,0.83-12.91,1.357-19.417,1.579c1.37-6.133,2.086-12.4,2.086-18.758    c0-11.262-2.167-22.256-6.44-32.675c-2.095-5.108-7.934-7.554-13.047-5.457c-5.109,2.096-7.553,7.937-5.457,13.047    c3.281,7.999,4.944,16.438,4.944,25.085c0,6.288-0.891,12.465-2.633,18.446c-14.312-0.921-28.645-3.286-42.767-7.07    c-2.876-0.771-5.948-0.219-8.377,1.505c-8.888,6.31-17.846,14.247-23.158,29.465c-1.369,3.922-0.171,8.282,3.01,10.954    c18.37,15.431,37.563,28.512,57.333,39.131C159.23,469.145,142.38,473.407,124.843,473.407z M486.627,309.884    c-27.437,102.393-98.715,163.523-190.67,163.523c-53.682,0-110.347-22.009-160.292-62.119c2.647-4.752,5.92-8.023,9.437-10.815    c18.778,4.633,37.874,6.979,56.837,6.979c53.669,0,105.418-18.289,149.652-52.89c22.489-17.591,41.98-38.788,57.593-62.292    c0.186-0.252,0.361-0.512,0.522-0.78c12.325-18.699,22.197-38.846,29.159-59.796c14.015-7.052,15.084-21.336,16.121-35.192    c0.237-3.167,0.48-6.415,0.851-9.842c2.66-1.926,6.185-3.451,9.719-4.235c2.665,12.715,7.847,29.036,24.222,44.107    C494.411,255.994,491.047,293.387,486.627,309.884z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M322.502,115.069c-5.09-2.132-10.953,0.263-13.089,5.356s0.261,10.953,5.355,13.089    c7.275,3.05,11.292,25.001,4.894,61.054c-0.965,5.438,2.661,10.629,8.1,11.594c0.591,0.105,1.179,0.156,1.759,0.156    c4.757,0,8.975-3.408,9.835-8.254C345.078,165.824,346.798,125.255,322.502,115.069z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M388.602,401.291c-3.313-4.419-9.592-5.306-14.01-1.991c-0.004,0.002-0.047,0.034-0.05,0.036    c-4.454,3.261-5.403,9.501-2.146,13.957c1.955,2.674,4.997,4.089,8.08,4.089c2.054,0,4.127-0.628,5.909-1.93l0.229-0.169    C391.032,411.969,391.916,405.71,388.602,401.291z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M365.653,417.462c-2.517-4.916-8.541-6.863-13.458-4.348c-34.227,17.508-63.104,16.815-63.53,16.796    c-5.497-0.191-10.141,4.093-10.357,9.603c-0.216,5.518,4.082,10.167,9.601,10.383c0.153,0.006,0.691,0.024,1.584,0.024    c7.147,0,36.934-1.161,71.81-19.002C366.22,428.405,368.167,422.379,365.653,417.462z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M186.042,307.983l-0.329-0.33c-3.915-3.893-10.246-3.878-14.142,0.038c-3.895,3.916-3.878,10.248,0.038,14.143    l0.215,0.215c1.956,1.978,4.532,2.967,7.109,2.967c2.541,0,5.084-0.963,7.033-2.891    C189.892,318.242,189.926,311.909,186.042,307.983z">
+              </path>
+            </g>
+          </g>
+        </svg></span><span class="u-icon u-icon-circle u-palette-4-dark-2 u-spacing-10 u-icon-2"><svg class="u-svg-link"
+          preserveAspectRatio="xMidYMin slice" viewBox="0 0 482.13 482.13" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7282"></use>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+          xml:space="preserve" class="u-svg-content" viewBox="0 0 482.13 482.13" x="0px" y="0px" id="svg-7282"
+          style="enable-background:new 0 0 482.13 482.13;">
+          <g>
+            <g>
+              <path
+                d="M475.266,126.603c-0.001,0-0.001,0-0.002,0l-0.016-0.016l-31.12-4.44c-4.374-0.623-7.415-4.674-6.792-9.048    c0.299-2.102,1.422-3.998,3.12-5.272l25.152-18.864c3.535-2.651,4.251-7.665,1.6-11.2l-28.8-38.4    c-2.651-3.535-7.665-4.251-11.2-1.6l-25.144,18.864c-3.52,2.671-8.538,1.983-11.209-1.537c-1.297-1.709-1.853-3.868-1.543-5.991    l4.448-31.12c0.627-4.374-2.41-8.427-6.783-9.055c-0.003,0-0.006-0.001-0.009-0.001L339.48,2.139    c-4.373-0.628-8.428,2.408-9.056,6.782c0,0.001,0,0.001,0,0.002l-4.448,31.12c-0.623,4.374-4.674,7.415-9.048,6.792    c-2.102-0.299-3.998-1.422-5.272-3.12L292.8,18.563c-2.651-3.535-7.665-4.251-11.2-1.6l-24.04,18.04    c-10.876-1.156-21.844-1.156-32.72,0C153.614,43.144,97.759,99.946,90.816,171.299c-0.216,2.264-0.296,4.512-0.408,6.76h-2.4    c-3.796,0.007-7.065,2.681-7.824,6.4l-5.528,26.288l-22.144-15.272c-3.178-2.193-7.47-1.802-10.2,0.928l-24,24    c-2.726,2.729-3.116,7.015-0.928,10.192l15.2,22.104l-26.296,5.528c-3.678,0.806-6.296,4.067-6.288,7.832v32    c-0.002,3.784,2.649,7.052,6.352,7.832l26.296,5.528l-15.2,22.104c-2.188,3.177-1.798,7.463,0.928,10.192l24,24    c2.73,2.73,7.022,3.121,10.2,0.928l22.104-15.24l5.528,26.296c0.759,3.719,4.028,6.393,7.824,6.4h32    c3.784,0.002,7.052-2.649,7.832-6.352l5.528-26.296l22.104,15.2c3.177,2.188,7.463,1.798,10.192-0.928l12.424-12.464v22.8    c0.036,11.381,6.133,21.88,16,27.552v44.448c0,17.673,14.327,32,32,32h32c17.673,0,32-14.327,32-32v-44.448    c9.867-5.672,15.964-16.171,16-27.552v-31.664c0.217-13.323,7.187-25.623,18.504-32.656c6.639-4.307,12.935-9.122,18.832-14.4    l-10.672-11.92c-5.275,4.728-10.911,9.037-16.856,12.888c-15.885,9.97-25.609,27.334-25.808,46.088v31.664c0,8.837-7.163,16-16,16    h-64c-8.837,0-16-7.163-16-16v-32.328c-0.185-18.399-9.756-35.428-25.376-45.152c-63.407-39.842-82.511-123.541-42.669-186.948    c24.72-39.341,67.862-63.286,114.325-63.452c-0.119,0.285-0.224,0.576-0.312,0.872c-0.297,2.1,0.253,4.233,1.528,5.928    l18.856,25.144c1.988,2.573,2.179,6.107,0.48,8.88c-1.636,2.79-4.799,4.312-8,3.848l-31.12-4.448    c-4.374-0.627-8.427,2.41-9.055,6.783c0,0.003-0.001,0.006-0.001,0.009l-6.792,47.512c-0.627,4.373,2.41,8.427,6.783,9.055    c0.003,0,0.006,0.001,0.009,0.001l31.12,4.448c4.374,0.623,7.415,4.674,6.792,9.048c-0.299,2.102-1.422,3.998-3.12,5.272    l-25.144,18.856c-3.535,2.651-4.251,7.665-1.6,11.2l28.8,38.4c2.651,3.535,7.665,4.251,11.2,1.6l25.152-18.856    c3.538-2.646,8.552-1.923,11.198,1.616c1.266,1.693,1.811,3.819,1.514,5.912l-4.44,31.12c-0.628,4.373,2.408,8.428,6.782,9.056    c0.001,0,0.001,0,0.002,0l47.52,6.792c0.374,0.048,0.751,0.072,1.128,0.072c3.983,0.005,7.362-2.921,7.928-6.864l4.44-31.12    c0.623-4.374,4.674-7.415,9.048-6.792c2.102,0.299,3.998,1.422,5.272,3.12l18.864,25.144c2.651,3.535,7.665,4.251,11.2,1.6    l38.4-28.8c3.535-2.651,4.251-7.665,1.6-11.2l-18.856-25.144c-1.979-2.577-2.17-6.105-0.48-8.88c1.601-2.827,4.793-4.359,8-3.84    l31.12,4.44c4.373,0.628,8.428-2.409,9.056-6.782c0-0.001,0-0.001,0-0.002l6.784-47.52    C482.676,131.285,479.64,127.231,475.266,126.603z M210.112,410.059h64v16h-64V410.059z M210.112,442.059h64v8    c0,8.837-7.163,16-16,16h-32c-8.837,0-16-7.163-16-16V442.059z M146.424,304.099c4.368,3.572,8.932,6.898,13.672,9.96    c7.559,4.777,13.249,12.004,16.12,20.472l-17.16,17.128l-16.616-11.456c-7.276-5.014-17.239-3.18-22.254,4.096    c-1.202,1.745-2.046,3.711-2.482,5.784l-4.192,19.976H94.496l-4.192-19.944c-1.82-8.647-10.305-14.182-18.952-12.362    c-2.073,0.436-4.039,1.28-5.784,2.482l-16.624,11.424l-14.576-14.544l11.448-16.608c5.019-7.273,3.191-17.237-4.082-22.256    c-1.746-1.205-3.714-2.051-5.79-2.488L16,291.563v-19.008l19.944-4.2c8.644-1.833,14.166-10.326,12.333-18.971    c-0.435-2.051-1.268-3.996-2.453-5.725l-11.456-16.656l14.576-14.544l16.632,11.456c7.279,5.009,17.242,3.169,22.251-4.11    c1.2-1.743,2.042-3.707,2.477-5.778l1.4-6.656c1.282,9.218,3.405,18.298,6.344,27.128c-26.323,3.138-45.118,27.022-41.98,53.345    c3.138,26.323,27.022,45.118,53.345,41.98C125.259,327.934,139.13,318.293,146.424,304.099z M134,292.827    c-5.974,16.605-24.277,25.223-40.882,19.25c-16.605-5.974-25.223-24.277-19.25-40.882c4.57-12.703,16.631-21.164,30.131-21.136    c0.104,0,0.2,0,0.304,0C111.66,265.922,121.707,280.391,134,292.827z M460.512,172.971l-23.2-3.312    c-13.122-1.874-25.278,7.245-27.152,20.366c-0.9,6.301,0.74,12.702,4.56,17.794l14.056,18.744l-25.6,19.2l-14.064-18.736    c-7.952-10.605-22.995-12.756-33.599-4.804c-5.092,3.818-8.459,9.503-9.361,15.804l-3.24,23.232l-31.672-4.528l3.312-23.2    c1.879-13.121-7.235-25.281-20.356-27.159c-6.305-0.903-12.709,0.737-17.804,4.559l-18.744,14.056l-19.2-25.6l18.736-14.064    c10.605-7.952,12.756-22.995,4.804-33.599c-3.818-5.092-9.503-8.459-15.804-9.361l-23.2-3.312l4.528-31.672l23.2,3.312    c13.121,1.879,25.281-7.235,27.159-20.356c0.903-6.305-0.737-12.709-4.559-17.804l-14.104-18.76l25.6-19.2l14.064,18.744    c7.952,10.605,22.995,12.756,33.599,4.804c5.092-3.818,8.459-9.503,9.361-15.804l3.312-23.2l31.672,4.52l-3.312,23.2    c-1.874,13.122,7.244,25.278,20.366,27.152c6.301,0.9,12.702-0.74,17.794-4.56l18.744-14.056l19.2,25.6l-18.744,14.064    c-10.605,7.952-12.756,22.995-4.804,33.599c3.818,5.092,9.503,8.459,15.804,9.361l23.2,3.312L460.512,172.971z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M344,76.171c-35.346,0-64,28.654-64,64c0,35.346,28.654,64,64,64c35.346,0,64-28.654,64-64    C407.96,104.841,379.33,76.21,344,76.171z M344,188.171c-26.51,0-48-21.49-48-48s21.49-48,48-48c26.51,0,48,21.49,48,48    C391.969,166.668,370.497,188.14,344,188.171z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="234.112" y="354.059" width="16" height="24"></rect>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M207.12,275.491c-49.385-19.292-73.78-74.966-54.487-124.351c7.476-19.136,20.893-35.369,38.279-46.313l-8.552-13.536    c-52.336,32.971-68.035,102.126-35.064,154.462c12.769,20.269,31.701,35.91,54.016,44.626c19.752,7.568,32.795,26.528,32.8,47.68    h16C250.137,310.307,233.035,285.418,207.12,275.491z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="394.112" y="298.059" width="56" height="16"></rect>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="402.113" y="334.822" transform="matrix(0.6401 -0.7683 0.7683 0.6401 -133.6437 446.8239)"
+                width="16" height="62.48"></rect>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="346.112" y="362.059" width="16" height="56"></rect>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="9.128" y="130.058" transform="matrix(0.9701 -0.2425 0.2425 0.9701 -32.2251 14.3351)"
+                width="65.968" height="15.992"></rect>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="46.111" y="35.657" transform="matrix(0.5812 -0.8137 0.8137 0.5812 -34.3557 73.3688)"
+                width="15.992" height="68.816"></rect>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="97.938" y="1.024" transform="matrix(0.9688 -0.2477 0.2477 0.9688 -5.133 27.2971)" width="16"
+                height="66.056"></rect>
+            </g>
+          </g>
+        </svg></span><span class="u-icon u-icon-circle u-palette-4-dark-2 u-spacing-10 u-icon-3"><svg class="u-svg-link"
+          preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3805"></use>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+          xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" id="svg-3805">
+          <g>
+            <path
+              d="m405.433 192.298c-3.819-1.603-8.215.193-9.818 4.013l-47.908 114.154c-3.653 8.705 10.079 14.748 13.832 5.805l47.908-114.154c1.602-3.82-.195-8.215-4.014-9.818z">
+            </path>
+            <path
+              d="m355.649 191.713c-11.436 0-20.739 10.266-20.739 22.884s9.304 22.884 20.739 22.884 20.739-10.266 20.739-22.884-9.303-22.884-20.739-22.884zm0 30.769c-3.111 0-5.739-3.61-5.739-7.884s2.628-7.884 5.739-7.884 5.739 3.61 5.739 7.884-2.627 7.884-5.739 7.884z">
+            </path>
+            <path
+              d="m380.764 297.983c0 12.619 9.304 22.884 20.739 22.884s20.738-10.266 20.738-22.884-9.303-22.884-20.738-22.884-20.739 10.266-20.739 22.884zm26.477 0c0 4.274-2.628 7.884-5.738 7.884-3.111 0-5.739-3.61-5.739-7.884s2.628-7.884 5.739-7.884c3.11 0 5.738 3.61 5.738 7.884z">
+            </path>
+            <path
+              d="m123.265 324.627c4.142 0 7.5-3.358 7.5-7.5v-121.673c0-4.142-3.358-7.5-7.5-7.5h-26.007c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h18.506v114.173c.001 4.142 3.359 7.5 7.501 7.5z">
+            </path>
+            <path
+              d="m146.785 228.156v56.269c0 23.537 19.148 42.685 42.685 42.685s42.685-19.148 42.685-42.685v-56.269c0-23.537-19.148-42.685-42.685-42.685s-42.685 19.149-42.685 42.685zm15 0c0-15.266 12.419-27.685 27.685-27.685s27.685 12.419 27.685 27.685v56.269c0 15.266-12.419 27.685-27.685 27.685s-27.685-12.419-27.685-27.685z">
+            </path>
+            <path
+              d="m240.545 228.156v56.269c0 23.537 19.148 42.685 42.685 42.685s42.685-19.148 42.685-42.685v-56.269c0-23.537-19.148-42.685-42.685-42.685s-42.685 19.149-42.685 42.685zm70.369 0v56.269c0 15.266-12.419 27.685-27.685 27.685s-27.685-12.419-27.685-27.685v-56.269c0-15.266 12.419-27.685 27.685-27.685s27.685 12.42 27.685 27.685z">
+            </path>
+            <path
+              d="m437.02 75.271c-48.353-48.352-112.64-74.98-181.02-74.98s-132.667 26.628-181.02 74.98c-48.351 48.352-74.98 112.64-74.98 181.02 0 65.351 24.624 127.565 69.335 175.182 44.504 47.396 104.63 75.885 169.301 80.22.17.011.34.017.509.017 3.914 0 7.21-3.037 7.476-6.999.277-4.133-2.849-7.708-6.982-7.985-60.872-4.08-117.47-30.901-159.369-75.521-42.09-44.825-65.27-103.392-65.27-164.914 0-64.374 25.068-124.894 70.587-170.413s106.039-70.587 170.413-70.587c64.373 0 124.894 25.068 170.412 70.587 45.52 45.519 70.588 106.039 70.588 170.413 0 60.516-22.522 118.375-63.419 162.919-40.646 44.271-95.859 71.639-155.467 77.061-4.125.375-7.165 4.023-6.789 8.148.374 4.125 4.014 7.161 8.148 6.79 63.329-5.76 121.982-34.83 165.156-81.854 43.445-47.319 67.371-108.781 67.371-173.064 0-68.38-26.629-132.667-74.98-181.02z">
+            </path>
+            <path
+              d="m171.913 133.662c-5.314 7.77 6.665 16.826 12.381 8.468 3.766-5.506 7.947-10.53 12.433-15.029 3.14 6.329 7.767 11.912 14.08 15.908 8.194 5.187 16.217-7.487 8.023-12.674-4.872-3.084-8.217-7.923-10.187-13.435 17.669-12.803 38.162-18.27 56.682-14.062 9.455 2.159 12.78-12.478 3.324-14.627-21.314-4.844-43.606.685-61.988 11.926.453-4.81 1.913-9.166 4.025-13.445 11.55-22.121 40.511-27.703 61.862-20.314 25.285 8.773 41.751 30.798 49.845 55.614-20.596-6.331-43.383 3.733-61.06 11.542-11.449 5.371-4.106 16.82 6.062 13.721 20.934-9.249 44.66-19.732 61.493-4.618 5.192 4.66 13.617-.036 12.393-6.909-3.352-18.618-10.315-35.91-20.139-50.004-11.398-16.353-26.528-27.951-43.759-33.544-14.533-5.013-30.504-5.297-44.982-.8-15.582 4.841-28.03 14.945-35.054 28.452-4.942 9.617-6.741 20.348-5.378 31.127-7.43 6.496-14.184 14.117-20.056 22.703z">
+            </path>
+            <path
+              d="m223.216 455.285c30.018 15.469 73.508 10.466 90.66-21.513 5.699-10.625 7.876-21.809 6.475-32.434 7.302-6.435 13.949-13.956 19.737-22.418 5.476-8.004-6.903-16.469-12.381-8.469-3.763 5.501-7.94 10.521-12.422 15.016-5.748-10.787-15.597-18.839-28.2-22.917-20.439-6.615-38.282.705-54.023 7.163-18.498 7.59-33.108 13.584-50.295-.062-5.357-4.253-13.355.63-12.019 7.338 5.186 26.057 18.499 60.791 52.468 78.296zm15.539-71.695c14.656-6.012 28.499-11.69 43.712-6.769 9.978 3.229 17.431 9.87 20.985 18.7.009.022.016.045.025.068-17.698 12.866-38.242 18.37-56.802 14.153-9.455-2.15-12.781 12.478-3.324 14.627 21.343 4.85 43.673-.703 62.071-11.978-.735 5.046-2.323 9.809-4.766 14.29-12.979 24.198-46.968 27.432-70.57 15.269-22.149-11.414-34.007-32.108-40.347-51.456 17.738 5.927 34.141-.801 49.016-6.904z">
+            </path>
+          </g>
+        </svg></span>
+    </div>
+  </section>
+  <!--section2 end-->
+  <!--Categories code-->
+  <section class="u-clearfix u-section-3" id="sec-40db">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <br>
+      <center>
+        <h1>Categories</h1>
+      </center>
+      <!--mini boxes code-->
+      <section class="mini">
+        <div class="mini-content">
+          <div class="container">
+
+            <font size="4">
+
+              <div class="row">
+                <div class=" col-4">
+                  <a href="/buying/" class="mini-box">
+                    <i><img src="{% static 'images/cat/buy.png' %}" alt="" height="100px" width="150px"></i>
+                    <strong><b>Buying</b></strong>
+
+                  </a>
+                </div>
+                <div class=" col-4">
+                  <a href="/farmer/" class="mini-box">
+                    <i><img src="{% static 'images/cat/buysell.jpg' %}" alt="" height="110px" width="130px"></i>
+                    <strong><b>Selling</b></strong>
+
+                  </a>
+                </div>
+                <div class=" col-4">
+                  <a href="/crop/" class="mini-box">
+                    <i><img src="{% static 'images/cat/crop.png' %}" alt="" height="110px" width="130px"></i>
+                    <strong><b>Crop management </b></strong>
+
+                  </a>
+                </div>
+
+
+
+              </div>
+              <br><br><br><br><br><br><br><br><br>
+              <div class="row">
+                <div class=" col-4">
+                  <a href="/seedfert/" class="mini-box">
+                    <i><img src="{% static 'images/cat/ferti.jfif' %}" alt="" height="110px" width="130px"></i>
+                    <strong><b>Seed / Fertilizers</b></strong>
+
+                  </a>
+                </div>
+                <div class=" col-4">
+                  <a href="/risk/" class="mini-box">
+                    <i><img src="{% static 'images/cat/risk.jfif' %}" alt="" height="110px" width="130px"></i>
+                    <strong><b>Risk management</b></strong>
+
+                  </a>
+                </div>
+                <div class=" col-4">
+                  <a href="/animal/" class="mini-box">
+                    <i><img src="{% static 'images/cat/an.jpeg' %}" alt="" height="110px" width="130px"></i>
+                    <strong><b>Animal husbandry</b></strong>
+
+                  </a>
+                </div>
+
+
+
+              </div>
+
+              <br><br><br><br><br><br><br><br><br>
+              <div class="row">
+                <div class=" col-4">
+                  <a href="/soil1/" class="mini-box">
+                    <i><img src="{% static 'images/cat/soil_test1.png' %}" alt="" height="110px" width="130px"></i>
+                    <strong><b>Soil health cards </b></strong>
+
+                  </a>
+                </div>
+                <div class=" col-4">
+                  <a href="/weather/" class="mini-box">
+                    <i><img src="{% static 'images/cat/weather.png' %}" alt="" height="120px" width="160px"></i>
+                    <strong><b>Weather details</b>
+                    </strong>
+
+                  </a>
+                </div>
+                <div class=" col-4">
+                  <a href="/program/" class="mini-box">
+                    <i><img src="{% static 'images/cat/prog.png' %}" alt="" height="110px" width="150px"></i>
+                    <strong><b>Schemes & Magazines</b></strong>
+
+                  </a>
+                </div>
+
+
+                <br><br>
+              </div>
+            </font>
+            <br><br>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** Mini Box End ***** -->
+    </div>
+  </section>
+  <!--categories end here-->
+  <!--how it works n counter-->
+  <section class="u-clearfix u-section-4" id="sec-596d">
+    <br><br>
+    <img
+      src="{% static 'images/58a74445d7a03074bb3ed2d9b91ad3f61cf053b7ca8ae1603352f191a6d6ad2f79b0d9e6ac3d75e689c7d29f58c889ea43c04177e024c5ab687ed5_1280.jpg' %}"
+      alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1280" data-image-height="853">
+    <div class="u-expanded-width u-opacity u-opacity-30 u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+    <img
+      src="{% static 'images/34b0b5eb85a90194fa5ef94e8a1053af74469dc8b9a4a820a3a0f7d7ab4b27aeafbb9e1cab58d64ea595841ea4cf09107b6d650a40af28344c5a23_1280.jpg' %}"
+      alt="" class="u-image u-image-default u-image-2" data-image-width="1280" data-image-height="762">
+    <div class="u-list u-repeater u-list-1">
+      <div class="u-align-center u-container-style u-custom-color-1 u-list-item u-repeater-item u-list-item-1">
+        <div class="u-container-layout u-similar-container u-container-layout-1">
+          <h1 class="u-text u-title u-text-1" data-animation-name="counter" data-animation-event="scroll"
+            data-animation-duration="3000">10</h1>
+          <p class="u-text u-text-2">Cities</p>
+        </div>
+      </div>
+      <div class="u-align-center u-container-style u-custom-color-1 u-list-item u-repeater-item u-list-item-2">
+        <div class="u-container-layout u-similar-container u-container-layout-2">
+          <h1 class="u-text u-title u-text-3" data-animation-name="counter" data-animation-event="scroll"
+            data-animation-duration="3000">25</h1>
+          <p class="u-text u-text-4">Farmers</p>
+        </div>
+      </div>
+      <div class="u-align-center u-container-style u-custom-color-1 u-list-item u-repeater-item u-list-item-3">
+        <div class="u-container-layout u-similar-container u-container-layout-3">
+          <h1 class="u-text u-title u-text-5" data-animation-name="counter" data-animation-event="scroll"
+            data-animation-duration="3000">37</h1>
+          <p class="u-text u-text-6">Consumers</p>
+        </div>
+      </div>
+    </div>
+    <img src="{% static 'images/sss.png' %}" alt="" class="u-image u-image-default u-image-3" data-image-width="732"
+      data-image-height="472"><span class="u-icon u-icon-circle u-text-black u-icon-1"><svg class="u-svg-link"
+        preserveAspectRatio="xMidYMin slice" viewBox="0 0 64 64" style="">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7fd1"></use>
+      </svg><svg class="u-svg-content" id="svg-7fd1" style="color: rgb(71, 138, 201);">
+        <g>
+          <path d="m41 51h2v8h-2z"></path>
+          <path d="m45 51h2v8h-2z"></path>
+          <path
+            d="m55 35.99v-20.99h-2v-10.181l-2 .333v-2.152h-2v2.486l-2 .333v-4.819h-2v5.153l-2 .333v-3.486h-2v3.819l-2 .333v7.848h-2v10h-8v-14h-4v-6h-2v-4h-10v4h-2v6h-4v18.685c-2.072.989-3.581 2.962-3.92 5.315h-2.08v28h62v-28.153zm-14-27.143 10-1.667v7.82h-10zm-2 8.153h14v19.276l-6 .857v5.201l-3-4-3 4v-17.334h-2zm0 12h-14v-2h14zm0 20h10v12h-10zm1-2 4-5.333 4 5.333zm-25-44h6v2h-6zm-2 4h10v4h-10zm-4 6h18v12h-4v4.685c-.911-.434-1.926-.685-3-.685h-10c-.34 0-.672.033-1 .08zm1 18h10c2.414 0 4.434 1.721 4.899 4h-19.798c.465-2.279 2.485-4 4.899-4zm17 6v2h-24v-2zm-4 18h-4v-4h4zm-6 0h-4v-4h4zm0 2v4h-4v-4zm2 0h4v4h-4zm4-8h-4v-4h4zm-6 0h-4v-4h4zm-6 0h-4v-4h4zm-4 2h4v4h-4zm0 6h4v4h-4zm18 4v-18h-20v18h-2v-20h24v20zm1.92-26c-.216-1.502-.906-2.853-1.92-3.889v-.111h14v14l-2 2.667v13.333h-8v-26zm34.08 26h-10v-13.333l-2-2.667v-6.133l12-1.714z">
+          </path>
+          <path d="m31 33h2v2h-2z"></path>
+          <path d="m31 57h2v2h-2z"></path>
+          <path d="m31 37h2v2h-2z"></path>
+          <path d="m31 53h2v2h-2z"></path>
+          <path d="m31 45h2v2h-2z"></path>
+          <path d="m31 41h2v2h-2z"></path>
+          <path d="m31 49h2v2h-2z"></path>
+          <path d="m35 41h2v2h-2z"></path>
+          <path d="m35 37h2v2h-2z"></path>
+          <path d="m35 33h2v2h-2z"></path>
+          <path d="m57 57h2v2h-2z"></path>
+          <path d="m57 49h2v2h-2z"></path>
+          <path d="m57 53h2v2h-2z"></path>
+          <path d="m57 45h2v2h-2z"></path>
+          <path d="m57 41h2v2h-2z"></path>
+          <path d="m53 53h2v2h-2z"></path>
+          <path d="m53 41h2v2h-2z"></path>
+          <path d="m53 49h2v2h-2z"></path>
+          <path d="m53 57h2v2h-2z"></path>
+          <path d="m53 45h2v2h-2z"></path>
+          <path d="m23 15h2v2h-2z"></path>
+          <path d="m19 15h2v2h-2z"></path>
+          <path d="m11 15h2v2h-2z"></path>
+          <path d="m15 15h2v2h-2z"></path>
+          <path d="m15 19h2v2h-2z"></path>
+          <path d="m23 19h2v2h-2z"></path>
+          <path d="m11 19h2v2h-2z"></path>
+          <path d="m19 19h2v2h-2z"></path>
+          <path d="m11 23h2v2h-2z"></path>
+          <path d="m15 23h2v2h-2z"></path>
+          <path d="m19 23h2v2h-2z"></path>
+          <path d="m49 19h2v2h-2z"></path>
+          <path d="m45 19h2v2h-2z"></path>
+          <path d="m41 19h2v2h-2z"></path>
+          <path d="m49 23h2v2h-2z"></path>
+          <path d="m41 23h2v2h-2z"></path>
+          <path d="m45 23h2v2h-2z"></path>
+          <path d="m45 35h2v2h-2z"></path>
+          <path d="m45 31h2v2h-2z"></path>
+          <path d="m45 27h2v2h-2z"></path>
+          <path d="m49 31h2v2h-2z"></path>
+          <path d="m49 27h2v2h-2z"></path>
+        </g>
+      </svg></span><span class="u-icon u-icon-circle u-text-black u-icon-2"><svg class="u-svg-link"
+        preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5a78"></use>
+      </svg><svg class="u-svg-content" id="svg-5a78" style="color: rgb(71, 138, 201);">
+        <g>
+          <g>
+            <path
+              d="M10.138,480H10c-5.522,0-10,4.477-10,10s4.478,10,10,10h0.138c5.522,0,10-4.477,10-10S15.66,480,10.138,480z">
+            </path>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path
+              d="M480.581,350.419c-0.146-0.05-0.292-0.098-0.439-0.142l-82.738-24.547c-2.23-0.826-3.796-2.364-3.983-3.861v-24.536    c0-0.33-0.018-0.656-0.049-0.978l31.542-18.086c0.182-0.104,0.36-0.215,0.536-0.331c14.477-9.561,23.985-26.586,25.435-45.543    c0.02-0.254,0.029-0.508,0.029-0.763v-10.37c14.64-4.325,25.354-17.892,25.354-33.915c0-8.341-2.908-16.013-7.757-22.066    c4.485,1.421,8.91,2.902,13.229,4.479c1.122,0.41,2.281,0.607,3.429,0.607c3.06,0,6.028-1.407,7.959-3.943    c2.654-3.487,2.729-8.297,0.184-11.865l-46.285-64.876V41.231c0-4.146-2.559-7.863-6.433-9.342    C438.466,31.077,387.94,12,339.038,12c-48.902,0-99.429,19.077-101.556,19.889c-3.873,1.479-6.433,5.196-6.433,9.342v48.467    l-46.075,64.882c-2.535,3.57-2.453,8.375,0.203,11.855c2.656,3.482,7.269,4.83,11.381,3.328c4.223-1.542,8.549-2.991,12.932-4.384    c-4.804,6.038-7.683,13.673-7.683,21.97c0,16.023,10.715,29.591,25.355,33.915v10.37c0,0.254,0.01,0.508,0.029,0.762    c1.454,19.037,10.895,36.063,25.252,45.544c0.179,0.118,0.361,0.23,0.548,0.337l31.906,18.24c-0.021,0.27-0.041,0.541-0.041,0.817    v20.07c-0.102,0.572-0.164,1.158-0.164,1.759v2.412c0,1.585-1.645,3.276-4.021,4.156l-82.811,24.546    c-0.148,0.044-0.297,0.092-0.443,0.143C178.92,356.852,166,374.252,166,392.732V480h-64v-98h19c19.299,0,35-15.701,35-35V209.958    c0-5.523-4.478-10-10-10c-5.522,0-10,4.477-10,10V347c0,8.271-6.729,15-15,15h-10.287V209.031c0-5.523-4.478-10-10-10    c-5.522,0-10,4.477-10,10V362H65.425V209.031c0-5.523-4.478-10-10-10c-5.522,0-10,4.477-10,10V362H35c-8.271,0-15-6.729-15-15    V209.958c0-5.523-4.478-10-10-10s-10,4.477-10,10V347c0,19.299,15.701,35,35,35h19v98H39.985c-5.522,0-10,4.477-10,10    s4.478,10,10,10H502c5.522,0,10-4.477,10-10c0-1.187,0-97.268,0-97.268C512,374.252,499.08,356.852,480.581,350.419z M82,480h-8    v-98h8V480z M251.05,48.31C265.792,43.357,303.475,32,339.038,32c35.486,0,73.23,11.364,87.987,16.315v32.011    c-16.019-3.191-46.719-7.808-90.324-7.808c-42.198,0-70.506,4.345-85.651,7.548V48.31z M247.175,101.534    c9.055-2.393,38.72-9.016,89.526-9.016c51.354,0,84.291,6.768,94.308,9.154l28.646,40.153    c-36.776-9.957-77.852-15.156-120.507-15.156c-42.694,0-83.803,5.208-120.605,15.183L247.175,101.534z M263.217,261.084    c-9.014-6.081-14.99-17.195-16.054-29.849v-18.531c0-5.523-4.478-10-10-10c-8.467,0-15.355-6.888-15.355-15.355    s6.889-15.355,15.355-15.355c5.332,0,9.727-4.184,9.988-9.509l0.34-6.928c28.736-5.85,59.697-8.887,91.657-8.887    c32,0,62.998,3.044,91.765,8.908v6.416c0,5.523,4.478,10,10,10c8.467,0,15.354,6.888,15.354,15.355s-6.888,15.355-15.354,15.355    c-5.522,0-10,4.477-10,10v18.529c-1.06,12.582-7.106,23.697-16.241,29.854l-60.818,34.872c-0.182,0.105-0.361,0.215-0.536,0.331    c-8.942,5.905-19.617,5.904-28.558,0c-0.179-0.118-0.361-0.231-0.548-0.337L263.217,261.084z M373.419,322.461v6.463    l-34.236,34.082l-34.326-34.089v-20.99l9.165,5.238c7.731,5.03,16.373,7.543,25.017,7.543c8.645,0,17.289-2.515,25.021-7.547    l9.359-5.366v10.633c-0.018,0.244-0.037,0.487-0.037,0.735v2.412C373.382,321.873,373.407,322.166,373.419,322.461z M212.958,480    H186v-87.268c0-9.723,7.632-19.725,17.787-23.352l9.171-2.718V480z M445,480h-11.694v-70.355c0-5.523-4.478-10-10-10    c-5.522,0-10,4.477-10,10V480H264.652v-70.355c0-5.523-4.478-10-10-10c-5.522,0-10,4.477-10,10V480h-11.694V360.734l53.661-15.906    c0.149-0.044,0.297-0.092,0.443-0.143c1.292-0.449,2.525-0.98,3.701-1.578l41.382,41.095c1.95,1.937,4.498,2.904,7.047,2.904    c2.552,0,5.104-0.971,7.055-2.913l41.206-41.02c1.135,0.569,2.319,1.08,3.561,1.512c0.146,0.051,0.292,0.098,0.439,0.142    L445,360.713V480z M492,480h-27V366.646l9.213,2.733c10.154,3.628,17.787,13.63,17.787,23.353V480z">
+            </path>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path
+              d="M380.319,177.349c-6.249,0-11.333,5.084-11.333,11.333s5.084,11.333,11.333,11.333c6.249,0,11.333-5.084,11.333-11.333    C391.652,182.433,386.568,177.349,380.319,177.349z">
+            </path>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path
+              d="M297.757,177.349c-6.249,0-11.333,5.084-11.333,11.333s5.084,11.333,11.333,11.333c6.249,0,11.333-5.084,11.333-11.333    S304.006,177.349,297.757,177.349z">
+            </path>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path
+              d="M254.652,369.568c-5.522,0-10,4.477-10,10v0.141c0,5.523,4.478,10,10,10c5.522,0,10-4.477,10-10v-0.141    C264.652,374.045,260.174,369.568,254.652,369.568z">
+            </path>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path
+              d="M423.306,369.568c-5.522,0-10,4.477-10,10v0.141c0,5.523,4.477,10,10,10c5.522,0,10-4.477,10-10v-0.141    C433.306,374.045,428.828,369.568,423.306,369.568z">
+            </path>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path
+              d="M356.648,235.28c-3.409-4.012-9.307-4.663-13.496-1.613c-0.333,0.153-1.634,0.667-4.113,0.667    c-2.373,0-3.617-0.469-3.956-0.62c-4.14-3.063-10.002-2.49-13.457,1.448c-3.644,4.151-3.231,10.469,0.919,14.112    c1.353,1.187,6.539,5.06,16.494,5.06c9.87-0.001,15.101-3.795,16.468-4.958C359.715,245.798,360.226,239.487,356.648,235.28z">
+            </path>
+          </g>
+        </g>
+      </svg></span><span class="u-icon u-icon-circle u-text-black u-icon-3"><svg class="u-svg-link"
+        preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6fa2"></use>
+      </svg><svg class="u-svg-content" id="svg-6fa2" style="color: rgb(71, 138, 201);">
+        <g id="Outline">
+          <path
+            d="m164.028 357.154-12.236-10.308a68.155 68.155 0 0 0 -14.449 57.464l-24.99 81.34 15.294 4.7 19.1-62.154a74.4 74.4 0 0 0 4.567 6.627v53.177h16v-56a8.007 8.007 0 0 0 -1.874-5.146c-17.399-20.707-17.991-50.021-1.412-69.7z">
+          </path>
+          <circle cx="260" cy="140" r="12"></circle>
+          <path d="m224 184a8.009 8.009 0 0 1 -8-8h-16a24 24 0 0 0 48 0h-16a8.009 8.009 0 0 1 -8 8z"></path>
+          <path d="m360 432h16v32h-16z"></path>
+          <path d="m328 432h16v32h-16z"></path>
+          <path d="m296 432h16v32h-16z"></path>
+          <path d="m392 432h16v32h-16z"></path>
+          <path d="m424 432h16v32h-16z"></path>
+          <path d="m360 384h16v32h-16z"></path>
+          <path d="m328 384h16v32h-16z"></path>
+          <path d="m296 384h16v32h-16z"></path>
+          <path d="m392 384h16v32h-16z"></path>
+          <path d="m424 384h16v32h-16z"></path>
+          <path
+            d="m472 320h-34.615l-33.118-81.534a23.039 23.039 0 0 0 -14.728-13.5 22.445 22.445 0 0 0 -21.539 4.734 22.432 22.432 0 0 0 -21.54-4.728 22.874 22.874 0 0 0 -2.46.9v-105.872a56.014 56.014 0 0 0 -30.835-50.029 88.446 88.446 0 0 0 -81.165-53.971h-16a87.173 87.173 0 0 0 -53.73 18.3l9.777 12.665a71.3 71.3 0 0 1 43.953-14.965h16a72.344 72.344 0 0 1 67.415 46.683 71.492 71.492 0 0 1 4.585 25.317v16h-3.383l-20.8-36a8 8 0 0 0 -11.993-2.189l-18.11 14.817c-25.117 20.552-55.1 26.787-89.809 34.006-5.2 1.082-10.515 2.187-15.9 3.363v-29.997a72.006 72.006 0 0 1 17.205-46.706l-12.177-10.386a88.023 88.023 0 0 0 -21.033 57.092v28.319a31.984 31.984 0 0 0 16 59.681h3.662a79.616 79.616 0 0 0 36.338 45.288v26.712a8.009 8.009 0 0 1 -8 8h-32c-.426 0-.852 0-1.277.025a48.045 48.045 0 0 0 -11.01 1.568l4.08 15.47a32.072 32.072 0 0 1 7.43-1.045c.095 0 .22-.008.316-.014.152-.008.307 0 .461 0h10.614a74.651 74.651 0 0 0 27.092 32.3 76.5 76.5 0 0 0 42.294 12.524v-16c-17.621 0-39.113-7.8-51.449-28.828h3.449a24.028 24.028 0 0 0 24-24v-19.661a80.5 80.5 0 0 0 48 0v19.661a24.027 24.027 0 0 0 24 24h3.436a57.573 57.573 0 0 1 -14.481 16.461l9.779 12.664a75.351 75.351 0 0 0 22.656-29.125h10.61v-16h-32a8.009 8.009 0 0 1 -8-8v-26.731a80.777 80.777 0 0 0 22.373-19.22 55.677 55.677 0 0 0 41.713 29.4l-29.471 72.551h-34.615a24 24 0 0 0 -7.2 46.895l12.635 101.074a32.05 32.05 0 0 0 31.752 28.031h133.626a32.05 32.05 0 0 0 31.753-28.031l2.335-18.682-15.877-1.987-2.335 18.683a16.023 16.023 0 0 1 -15.876 14.017h-133.626a16.023 16.023 0 0 1 -15.876-14.015l-12.249-97.985h189.876l-6.89 55.119 15.877 1.984 7.275-58.203a24 24 0 0 0 -7.2-46.9zm-328-144a15.978 15.978 0 0 1 -12.776-25.6 7.936 7.936 0 0 0 6.6 1.393q3.1-.723 6.18-1.408v17.615c0 2.669.141 5.34.406 8zm144-8a63.3 63.3 0 0 1 -6.547 28.224c-.037.076-.072.151-.107.228a64.574 64.574 0 0 1 -28.912 28.9 64.024 64.024 0 0 1 -90.849-43.107 64.879 64.879 0 0 1 -1.585-14.245v-21.042l3.163-.659c4.486-.933 8.941-1.86 13.357-2.814a11.99 11.99 0 0 0 23.285-5.579c21.581-5.884 41.881-14.035 60.042-28.9l10.825-8.859 17.328 29.997zm16-32a16 16 0 0 1 0 32zm24 95.209a39.75 39.75 0 0 1 -31.02-30.409 78.9 78.9 0 0 0 5.428-16.8h1.592a31.923 31.923 0 0 0 24-10.868zm0-100.341a32.2 32.2 0 0 0 -8-6.563v-20.305c0-2.868-.148-5.716-.42-8.542a39.671 39.671 0 0 1 8.42 24.542zm51.2 110.325a6.612 6.612 0 0 1 5.726-.9 7.112 7.112 0 0 1 4.518 4.2l30.671 75.507h-16.372l-27.216-69.794a7.621 7.621 0 0 1 2.673-9.013zm-11.2 31.184 18.57 47.623h-37.14zm-21.442-27.89a7.112 7.112 0 0 1 4.518-4.2 6.607 6.607 0 0 1 5.726.905 7.62 7.62 0 0 1 2.671 9.012l-27.216 69.796h-16.372zm125.442 107.513h-208a8 8 0 0 1 0-16h208a8 8 0 0 1 0 16z">
+          </path>
+          <path
+            d="m96 376v-12.226l17.4-17.1a24.976 24.976 0 0 0 3.628-31.125 24.036 24.036 0 0 0 2.972-11.549v-96a24.027 24.027 0 0 0 -24-24h-56a24.027 24.027 0 0 0 -24 24v96a24.023 24.023 0 0 0 3.222 12.011 23.848 23.848 0 0 0 -3.222 11.989v48a23.943 23.943 0 0 0 8 17.869v94.131h16v-40h39v-1.145l9.178 42.822 15.644-3.354-19.264-89.881a24 24 0 0 0 11.442-20.442zm8.866-47.094a8.909 8.909 0 0 1 -2.679 6.355l-6.187 6.08v-13.341a23.738 23.738 0 0 0 8.527-1.571 9.01 9.01 0 0 1 .339 2.477zm-16.866-128.906h8a8.009 8.009 0 0 1 8 8v96a8.1 8.1 0 0 1 -8 8h-6.131a23.883 23.883 0 0 0 -1.869-1.869zm-56 8a8.009 8.009 0 0 1 8-8h24v104h-24a23.9 23.9 0 0 0 -7.877 1.334 8 8 0 0 1 -.123-1.334zm8 224v-32h28.958l6.858 32zm40-56a8.009 8.009 0 0 1 -8 8h-32a8.009 8.009 0 0 1 -8-8v-48a8.009 8.009 0 0 1 8-8h32a8.009 8.009 0 0 1 8 8z">
+          </path>
+        </g>
+      </svg></span>
+  </section>
+  <!--how it works end here-->
+  <!--Testomonials-->
+  <section class="u-clearfix u-section-5" id="sec-2121">
+    <br><br>
+    <div class="u-custom-color-2 u-shape u-shape-rectangle u-shape-1">
+      <br>
+      <center>
+        <h2>What users review about us.</h2>
+      </center>
+      <section class="test">
+        <div class="customer-feedback">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                <div class="owl-carousel feedback-slider">
+
+                  <!-- slider item -->
+                  <div class="feedback-slider-item">
+                    <img
+                      src="https://c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg//c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg"
+                      class="center-block img-circle" alt="Customer Feedback">
+                    <h3 class="customer-name" style="color:White;">Shweta</h3>
+                    <p style="color:White;">Grate Site for Farmers, Sell anything related to agriculture, Here, people
+                      can connect with each other to buy or sell anything. This would help to maximizing our profits to
+                      selling farm produce at a better price by selling locally or where farmer get maximum price.</p>
+                    <span class="light-bg customer-rating" data-rating="5">
+                      5
+                      <i>⭐</i>
+                    </span>
+                  </div>
+                  <!-- /slider item -->
+
+                  <!-- slider item -->
+                  <div class="feedback-slider-item">
+                    <img
+                      src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg"
+                      class="center-block img-circle" alt="Customer Feedback">
+                    <h3 class="customer-name" style="color:White;">Ruhi</h3>
+                    <p style="color:White;">Many many thanks for your great service, Post Ad/Listing in one minute: Now
+                      post anything related to Agriculture in one minute. Take a snap or upload a photo, just enter the
+                      details of product, click submit Ad and instantly your Ad will be displayed.
+                    </p>
+                    <span class="light-bg customer-rating" data-rating="4">
+                      4
+                      <i>⭐</i>
+                    </span>
+                  </div>
+                  <!-- /slider item -->
+
+                  <!-- slider item -->
+                  <div class="feedback-slider-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
+                      class="center-block img-circle" alt="Customer Feedback">
+                    <h3 class="customer-name" style="color:White;">Aarnav Das</h3>
+                    <p style="color:White;">Online market for farmers, Buy or Sell Near you , buying and exchanging
+                      agriculture commodities and services locally without middlemen through a Add/listing which they
+                      can post right from their mobile or web. Good website for farmers and also other buyers.
+                    </p>
+                    <span class="light-bg customer-rating" data-rating="5">
+                      5
+                      <i>⭐</i>
+                    </span>
+                  </div>
+                  <!-- /slider item -->
+
+                </div><!-- /End feedback-slider -->
+
+                <!-- side thumbnail -->
+                <div class="feedback-slider-thumb hidden-xs">
+                  <div class="thumb-prev">
+                    <span>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
+                        alt="Customer Feedback">
+                    </span>
+                    <span class="light-bg customer-rating">
+                      5
+                      <i>⭐</i>
+                    </span>
+                  </div>
+
+                  <div class="thumb-next">
+                    <span>
+                      <img
+                        src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg"
+                        alt="Customer Feedback">
+                    </span>
+                    <span class="light-bg customer-rating">
+                      4
+                      <i>⭐</i>
+                    </span>
+                  </div>
+                </div>
+                <!-- /side thumbnail -->
+
+              </div><!-- /End col -->
+            </div><!-- /End row -->
+          </div><!-- /End container -->
+        </div><!-- /End customer-feedback -->
+      </section>
+
+    </div>
+    <img src="{% static 'images/a.jpg' %}" alt="" class="u-image u-image-default u-image-1" data-image-width="626"
+      data-image-height="417">
+    <br><br><br><br>
+  </section>
+  <!--Testomonials end-->
+  <style class="u-overlap-style" style="">
+    .u-overlap:not(.u-sticky-scroll) .u-header {}
+  </style>
+
+  <!--footer-->
+  <footer class="u-align-center u-clearfix u-footer u-palette-5-dark-3 u-footer" id="sec-dd71">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-align-left u-small-text u-text u-text-variant u-text-1">Feedback Form</p>
+      <div class="u-social-icons u-spacing-13 u-social-icons-1">
+        <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span
+            class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-16a5"></use>
+            </svg><svg class="u-svg-content" id="svg-16a5" style="color: rgb(59, 89, 152);">
+              <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+              <path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span
+            class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-927b"></use>
+            </svg><svg class="u-svg-content" id="svg-927b" style="color: rgb(85, 172, 238);">
+              <circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle>
+              <path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
+            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
+            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
+            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
+            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/name"><span
+            class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8d79"></use>
+            </svg><svg class="u-svg-content" id="svg-8d79" style="color: rgb(197, 54, 164);">
+              <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+              <path fill="#FFFFFF"
+                d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z">
+              </path>
+              <path fill="#FFFFFF"
+                d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path>
+              <path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
+            </svg></span>
+        </a>
+      </div>
+      <p class="u-align-left u-text u-text-2">S.N.D.T, Santacruz ,<br>&nbsp;Mumbai 400049<br>
+        <br>info.e-kisan@gmail.com<br>
+        <br>9895498002
+      </p><span class="u-icon u-icon-circle u-text-palette-4-dark-1 u-icon-4"><svg class="u-svg-link"
+          preserveAspectRatio="xMidYMin slice" viewBox="0 0 477.867 477.867" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8cdf"></use>
+        </svg><svg class="u-svg-content" id="svg-8cdf" style="color: rgb(71, 138, 201);">
+          <g>
+            <g>
+              <path d="M460.8,68.267H17.067l221.867,182.75L463.309,68.779C462.488,68.539,461.649,68.368,460.8,68.267z">
+              </path>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M249.702,286.31c-6.288,5.149-15.335,5.149-21.623,0L0,98.406v294.127c0,9.426,7.641,17.067,17.067,17.067H460.8    c9.426,0,17.067-7.641,17.067-17.067V100.932L249.702,286.31z">
+              </path>
+            </g>
+          </g>
+        </svg></span><span class="u-icon u-icon-circle u-text-palette-4-dark-1 u-icon-5"><svg class="u-svg-link"
+          preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-53ca"></use>
+        </svg><svg class="u-svg-content" id="svg-53ca" style="color: rgb(71, 138, 201);">
+          <g id="_01-home">
+            <g id="glyph">
+              <path
+                d="m256 4c-108.075 0-196 87.925-196 196 0 52.5 31.807 119.92 94.537 200.378a1065.816 1065.816 0 0 0 93.169 104.294 12 12 0 0 0 16.588 0 1065.816 1065.816 0 0 0 93.169-104.294c62.73-80.458 94.537-147.878 94.537-200.378 0-108.075-87.925-196-196-196zm0 336c-77.2 0-140-62.8-140-140s62.8-140 140-140 140 62.8 140 140-62.8 140-140 140z">
+              </path>
+              <path
+                d="m352.072 183.121-88-80a12 12 0 0 0 -16.144 0l-88 80a12.006 12.006 0 0 0 -2.23 15.039 12.331 12.331 0 0 0 10.66 5.84h11.642v76a12 12 0 0 0 12 12h28a12 12 0 0 0 12-12v-44a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v44a12 12 0 0 0 12 12h28a12 12 0 0 0 12-12v-76h11.642a12.331 12.331 0 0 0 10.66-5.84 12.006 12.006 0 0 0 -2.23-15.039z">
+              </path>
+            </g>
+          </g>
+        </svg></span>
+      <h5 class="u-align-left u-text u-text-3">Copyright © 2021 e-Kisan&nbsp;</h5><span
+        class="u-icon u-icon-circle u-text-palette-4-dark-1 u-icon-6"><svg class="u-svg-link"
+          preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.006 512.006" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8e98"></use>
+        </svg><svg class="u-svg-content" id="svg-8e98" style="color: rgb(71, 138, 201);">
+          <g>
+            <g>
+              <g>
+                <path
+                  d="M502.05,407.127l-56.761-37.844L394.83,335.65c-9.738-6.479-22.825-4.355-30.014,4.873l-31.223,40.139     c-6.707,8.71-18.772,11.213-28.39,5.888c-21.186-11.785-46.239-22.881-101.517-78.23c-55.278-55.349-66.445-80.331-78.23-101.517     c-5.325-9.618-2.822-21.683,5.888-28.389l40.139-31.223c9.227-7.188,11.352-20.275,4.873-30.014l-32.6-48.905L104.879,9.956     C98.262,0.03,85.016-2.95,74.786,3.185L29.95,30.083C17.833,37.222,8.926,48.75,5.074,62.277     C-7.187,106.98-9.659,205.593,148.381,363.633s256.644,155.56,301.347,143.298c13.527-3.851,25.055-12.758,32.194-24.876     l26.898-44.835C514.956,426.989,511.976,413.744,502.05,407.127z">
+                </path>
+                <path
+                  d="M291.309,79.447c82.842,0.092,149.977,67.226,150.069,150.069c0,4.875,3.952,8.828,8.828,8.828     c4.875,0,8.828-3.952,8.828-8.828c-0.102-92.589-75.135-167.622-167.724-167.724c-4.875,0-8.828,3.952-8.828,8.828     C282.481,75.494,286.433,79.447,291.309,79.447z">
+                </path>
+                <path
+                  d="M291.309,132.412c53.603,0.063,97.04,43.501,97.103,97.103c0,4.875,3.952,8.828,8.828,8.828     c4.875,0,8.828-3.952,8.828-8.828c-0.073-63.349-51.409-114.686-114.759-114.759c-4.875,0-8.828,3.952-8.828,8.828     C282.481,128.46,286.433,132.412,291.309,132.412z">
+                </path>
+                <path
+                  d="M291.309,185.378c24.365,0.029,44.109,19.773,44.138,44.138c0,4.875,3.952,8.828,8.828,8.828     c4.875,0,8.828-3.952,8.828-8.828c-0.039-34.111-27.682-61.754-61.793-61.793c-4.875,0-8.828,3.952-8.828,8.828     C282.481,181.426,286.433,185.378,291.309,185.378z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg></span>
+      <div class="u-form u-form-1">
+        <form action="#" method="POST" class="u-clearfix u-form-spacing-3 u-form-vertical u-inner-form"
+          style="padding: 0px;" source="custom" name="form">
+          <div class="u-form-group u-form-name">
+            <label for="name-3b9a" class="u-form-control-hidden u-label">Name</label>
+            <input type="text" placeholder="Enter your Name" id="name-3b9a" name="name"
+              class="u-border-1 u-border-palette-4-light-2 u-input u-input-rectangle u-radius-13 u-input-1" required="">
+          </div>
+          <div class="u-form-email u-form-group">
+            <label for="email-3b9a" class="u-form-control-hidden u-label">Email</label>
+            <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email"
+              class="u-border-1 u-border-palette-4-light-2 u-input u-input-rectangle u-radius-13 u-input-2" required="">
+          </div>
+          <div class="u-form-group u-form-message">
+            <label for="message-3b9a" class="u-form-control-hidden u-label">Message</label>
+            <textarea placeholder="enter your Feedback" rows="4" cols="50" id="message-3b9a" name="message"
+              class="u-border-1 u-border-palette-4-light-2 u-input u-input-rectangle u-radius-13 u-input-3"
+              required=""></textarea>
+          </div>
+          <div class="u-align-left u-form-group u-form-submit">
+            <a href="#"
+              class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-palette-4-dark-1 u-radius-38 u-btn-1">Submit</a>
+            <input type="submit" value="submit" class="u-form-control-hidden">
+          </div>
+          <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+          <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try
+            again. </div>
+          <input type="hidden" value="" name="recaptchaResponse">
+        </form>
+      </div>
+      <img src="{% static 'images/lll.png' %}" alt="" class="u-image u-image-default u-image-1"
+        data-image-width="501" data-image-height="498">
+      <a href="#"
+        class="u-active-none u-border-3 u-border-palette-4-dark-1 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-text-palette-4-dark-1 u-btn-2">About
+        us</a>
+      <a href="#"
+        class="u-active-none u-border-2 u-border-palette-4-dark-1 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-3">Contact
+        us</a>
+    </div>
+  </footer>
+
+  <!--footer end-->
+</body>
+
+</html>

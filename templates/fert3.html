@@ -1,0 +1,528 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fertilizers</title>  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <style>
+
+    body{
+     background-image: url("{% static 'images/seednfert/fbg.png' %} ");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -5px;
+            width:100%
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+<!--        .header li a:hover {-->
+<!--            background-color: rgba(0, 0, 0, 0.3);-->
+<!--            color: azure;-->
+<!--        }-->
+ #textcss:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss1:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+        #textcss2:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        .gtrans {
+            margin-left: 30%;
+        }
+
+    .fert{
+    position:absolute;
+    top:25px;
+    left: 470px;
+    font-size:70px;
+    color:#fff;
+    }
+
+    .rectangle {
+    position:absolute;
+    top:100px;
+    left:50px;
+      height: 270px;
+      width: 1410px;
+      background-color: #3B9C9C;
+      border-radius: 25px;
+    }
+    .table{
+    position: absolute;
+    top:400px;
+    left: 200px;
+    }
+
+    table {
+      border: 2px solid black;
+      border-radius:5px;
+      width: 1100px;
+
+       font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2;}
+    tr:nth-child(odd){background-color: #baf5dd;}
+
+     tr:hover {background-color: #ddd;}
+
+   td,  th {
+      border: 1px solid grey;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color:#43BFC7;
+      color: white;
+      height: 45px;
+    }
+
+    /* Pagination links */
+    .pagination{
+    margin-left: 630px;
+
+    }
+
+    .pagination a {
+
+      margin-top: 1100px;
+       margin-left: 20px;
+       margin-bottom: 30px;
+      color: white;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 0.5px solid grey;
+      background-color: #3B9C9C;
+      border-radius: 50px;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+      background-color: black;
+      border-radius: 50px;
+      color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {background-color: #C0C0C0; border-radius: 50px;}
+
+    #foot{
+
+	margin-top: 78%;
+}
+.container1{
+	max-width: 100%;
+	margin: auto;
+
+}
+.row1{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.footer{
+	position: absolute;
+	left:0;
+	background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 10px;
+}
+.footer p{
+	color:#8a8a8a;
+
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4
+{
+	min-width: 400px;
+	height: 250px;
+	margin-bottom: 20px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+	margin-left: 30px;
+
+}
+.footer-col-1 img{
+	width:150px;
+	margin-left: 110px;
+}
+.footer-col-1 p{
+
+	margin-left: 150px;
+	color: #3B9C9C;
+}
+.footer-col-2{
+	flex: 1;
+	margin-left: 15px;
+
+}
+.footer-col-2 input{
+
+ 	border: 1px solid #3B9C9C;
+    padding: 10px;
+    width: 77%;
+    border-radius: 18px;
+    background-color: black;
+    color: #8a8a8a;
+}
+
+.footer-col-2 textarea{
+ 	border: 1px solid #3B9C9C;
+    border-radius: 18px;
+    text-align: center;
+    width: 77%;
+    color: #8a8a8a;
+    background-color: black;
+
+
+}
+.btn-primary{
+box-shadow:none !important;
+border: none;
+border-radius: 25px;
+margin-top: 5px;
+padding: 10px;
+background-color: #3B9C9C;
+width: 110px;
+
+
+}
+.footer-col-3{
+	flex-basis: 12%;
+	margin-left: 30px;
+	text-align: left;
+}
+.footer-col-3 .fa{
+
+	margin-right: 8px;
+	font-size: 25px;
+	height: 40px;
+	width:40px;
+	text-align: center;
+	padding-top: 7px;
+	color: #3B9C9C;
+	background-color:black;
+}
+/*to remove bullet style*/
+ul{
+	list-style-type: none;
+}
+
+.copyright{
+	text-align: center;
+
+}
+
+/*----------social media--------------*/
+.social-media{
+  width: 100%;
+  text-align: left;
+
+}
+
+.social-media ul{
+  list-style: none;
+}
+
+.social-media ul li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.social-media img{
+  width: 40px;
+  height: 40px;
+  border-radius: 35px;
+}
+.bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+<body>
+<div class="header">
+       <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/home/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+    </div>
+    <center>
+        <div class="rectangle"><p class="fert"><img src="{% static 'images/seednfert/fertiback.png' %}" height="100px" width="130px">Fertilizers</p>
+        </div>
+
+        <div class="table">
+            <table>
+                <tr>
+                  <th  style="width:7%">Sr No.</th>
+                  <th>State</th>
+                  <th>District/Village</th>
+                  <th>Name & Address</th>
+                  <th style="width:20%">Phone no</th>
+
+                </tr>
+                <!--row 1 begin-->
+                <tr>
+                  <td>01</td>
+                  <td rowspan="3">RAJASTHAN</td>
+                  <td>CJAIPUR / AMBER</td>
+                  <td>Name: VISHNU TRADING COMPANY CHOMU<br>
+                     Address:MRawanGate,Chomu
+                  </td>
+                    <td> 9351433633 </td>
+                </tr>
+                   <tr>
+                  <td>02</td>
+                  <td>PALI / DESURI</td>
+                  <td>Name:SHREE AASHAPURA AGRO ,NADOL<br>
+                    Address:  NADOL</td>
+                  <td>9414549935</td>
+
+                </tr>
+                   <tr>
+                  <td>03</td>
+                  <td>RAIPUR</td>
+                  <td>Name: SHREE SARSWATI KHAD BEEJ BHANDAR,RAIPUR<br>
+                    Address:  RAIPUR </td>
+                  <td> 9269722672</td>
+                 </tr>
+                <!--row 1 end-->
+                <!--row 2 begin-->
+                <tr>
+                  <td>04</td>
+                  <td >	SIKKIM</td>
+                  <td>GYALSHING</td>
+                  <td>Name: SIMFED<br>
+                     Address: S.G. Marg, Gangtok,
+                  </td>
+                    <td> 9832584038</td>
+                </tr>
+
+                <!--row 2 end-->
+                <!--row 3 begin-->
+                <tr>
+                  <td>07</td>
+                  <td rowspan="4">TAMILNADU</td>
+                  <td>Ariyalur / JAYAMKONDAM</td>
+                  <td>Name:G.Senathipathi Agro Agency<br>
+                     Address:3/39,Main Road,Melanikuzhi(Po).Meensuruti Tk, Udayarpalayam.Ariyalur-Dt.
+                  </td>
+                    <td>  9095080410</td>
+                </tr>
+                   <tr>
+                  <td>08</td>
+                  <td>TIRUCHIRAPPALLI / THOTTIAM</td>
+                  <td>Name: Bharatha Vilas Ura Kadai<br>
+                    Address:  1/15,Mariamman Kovil Street,Main Road,Kolakkudi(PO),Thottiyam(TK),Trichy </td>
+                  <td>9488992823  </td>
+
+                </tr>
+                   <tr>
+                  <td>09</td>
+                  <td>NAMAKKAL / KABILAMALAI</td>
+                  <td>Name: MKSakthivel<br>
+                    Address: 4/90,Main Road, Jederpalayam</td>
+                  <td>9443027301</td>
+                 </tr>
+
+                <tr>
+                  <td>10</td>
+                  <td>VIRUDHUNAGAR / VEMBAKOTTAI</td>
+                  <td>Name: Bhuvaneswari Traders<br>
+                    Address: 3/612-B TNC Mukku Road</td>
+                  <td>9865627039 </td>
+                 </tr>
+                <!--row 3 end-->
+                <!--row 4 begin-->
+                <tr>
+                  <td>11</td>
+                  <td rowspan="3"> UTTAR PRADESH</td>
+                  <td> HATHRAS / HATHRAS</td>
+                  <td>Name: FAUJI KHAD BHANDAR<br>
+                     Address:PORA STATION
+                  </td>
+                    <td>9758749177 </td>
+                </tr>
+                   <tr>
+                  <td>12</td>
+                  <td>HATHRAS / SASNI</td>
+                  <td>Name:Vinay Kisan Seva Kendra<br>
+                    Address:  Dariyapur</td>
+                  <td> 9759590617 </td>
+
+                </tr>
+                   <tr>
+                  <td>13</td>
+                  <td>SHIVRAJPUR</td>
+                  <td>Name: Kapoor Khad Bhandar<br>
+                    Address: Jagdeeshpur</td>
+                  <td>9628975797 </td>
+                 </tr>
+                <!--row 4 end-->
+                <!--row 5 begin-->
+                <tr>
+                  <td>14</td>
+                  <td rowspan="3">WEST BENGAL</td>
+                  <td>MALDAH / GAZOLE</td>
+                  <td>Name:M/S Maa Laxmi Sar Bhandar<br>
+                     Address:Eklaxmi, Rajadighi
+                  </td>
+                    <td> 9909129695</td>
+                </tr>
+                   <tr>
+                  <td>15</td>
+                  <td>MALDAH / GAZOLE</td>
+                  <td>Name: Gazole L/S Co-OP M.S.Ltd.<br>
+                    Address: Gazole</td>
+                  <td>9685745263</td>
+
+                </tr>
+
+                <!--row 5 end-->
+            </table><br>
+        </div>
+        <br>
+        <br></center>
+        <div class="pagination">
+            <a href="/fert2/">&laquo;</a>
+          <a href="/fert1/">1</a>
+          <a href="/fert2/">2</a>
+          <a class="active" href="#">3</a>
+
+        </div>
+        <br>
+<section id="foot">
+<div class="footer">
+	<div class="container1">
+		<div class="row1">
+			<div class="footer-col-1">
+				 <img src="{% static 'images/lll.png' %}">
+				<a href=""><p>About us</p></a>
+				<a href=""><p>Contact us</p></a>
+			</div>
+			<div class="footer-col-2">
+
+				<p><b>FEEDBACK FORM</b></p>
+				<input type="email" placeholder="ENTER YOUR NAME">
+				<input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+				<textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+				</textarea><br>
+				<button type="button" class="btn btn-primary">SUBMIT</button>
+			</div>
+			<div class=" footer-col-3">
+				<p></p>
+				<p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+				<p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+				<p><i class="fa fa-phone"></i> 9323131444</p>
+				 <div class="social-media">
+			        <ul>
+			           <li><img src="{% static 'images/face.png' %}"></li>
+                                <li><img src="{% static 'images/twitter.png' %}"></li>
+                                <li><img src="{% static 'images/insta.png' %}"></li>
+			        </ul>
+			      </div>
+			</div>
+		</div>
+		<!-- <hr> -->
+		<p class="copyright">Copyright 2021 e-Kisan</p>
+	</div>
+</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+{% load static %}
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Risk Management</title>
+	<link rel="stylesheet" href="{% static 'css/risk.css'%}">
+	<link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+<!--	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+<body>
+
+<!-- ----------------navbar section------------------------------------------ -->
+<section id="navbar">
+<div class="nav">
+    <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+</div>
+</section>
+
+<!-- main risk page-->
+	<div class="wrapper">
+		<div class="wrapper_inner">
+			<div class="vertical_wrap">
+			<div class="backdrop"></div>
+			<div class="vertical_bar">
+				<div class="profile_info">
+
+				</div>
+				<ul class="menu">
+					<li><a href="/risk/" >
+						<!-- <span class="icon"><i class="fas fa-home"></i></span> -->
+						<span class="text">Drought Management</span>
+					</a></li>
+					<li><a href="/risk2/">
+						<!-- <span class="icon"><i class="fas fa-file-alt"></i></span> -->
+						<span class="text">Hailstorm</span>
+					</a></li>
+					<li><a href="#" class="active">
+						<!-- <span class="icon"><i class="fas fa-chart-pie"></i></span> -->
+						<span class="text">Crop Protection</span>
+					</a></li>
+					<li><a href="/risk4/">
+						<!-- <span class="icon"><i class="fas fa-user"></i></span> -->
+						<span class="text">Soil Fertility</span>
+					</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+		<div class="main_container">
+			<div class="top_bar">
+				<div class="hamburger">
+					<i class="fas fa-bars"></i>
+				</div>
+				<div class="logo">
+					Risk <span>Management</span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content">
+					<div class="item">
+						<h1>
+						Protecting Crops From Damaging Insects:-</h1><br><img src="{% static 'images/risk/image33.jpg'%}" width="100%" height="auto"><br><h3>What is Crop Protection?</h3><br>
+					Crop protection is the general method or the practice of protecting the crop yields from different agents including pests, weeds, plant diseases, and other organisms that cause damage to the agricultural crops.<br>Apart from crops, agricultural fields would have weeds, small animals like rats, mites, insects, pests, disease-causing pathogens and frequently raided by birds. All these factors are mainly responsible for the loss or damage to the crops. Thus to yield high crop production, farmers need to protect the crop from these pests. Hence crop protection management is important before, during and after the cultivation.</div>
+					<div class="item"><h2>What are the methods of crop protection:</h2>There are many crop protection tools and practices, which farmers can implement to increase the success of their crops.<br>
+						<p>Crop protection before and during the cultivation:</p>
+						<h3>Weed Management: </h3><p>
+							<ul>
+							Weeds are unwanted plants growing along with the crops. These undesirable plants, steal the nutrients, sunlight, water and other resources from the crops and affect their growth, which results in the undernourishment of crops and decreases the yields. To safeguard the productivity of crops, farmers remove these weeds by a process called weeding.
+							Weeding is the process of controlling the growth of weeds. There are various methods of weeding:
+							<li>(i)Spraying weedicides on the weeds</li>
+							<li>(ii)Manually plucking the weeds by hands</li>
+							<li>(iii)Removing weeds by trowel and harrow</li>
+							<li>(iv)Ploughing the field to remove the weeds even before sowing the seeds</li>
+							Few examples of weeds are Amaranthus, Cyperinus rotundus, Bermuda grass, etc.
+							Apart from weeding, Herbicides – a chemical substance also play an important role in controlling the growth of the weeds and also help in preventing soil erosion and water loss.
+					</ul>
+
+					</div>
+					<div class="item">
+						<h3>Pests and Insects Management :</h3><br>
+						<p>Both insects and pests are the major cause of crop damage and yield loss. They could ruin the whole crop and eat up the large portion of grains.  In fact, they can reduce crop output by 30-50(%) every year if left unchecked. The best ways to protect crop damage are by incorporating integrated pest and insect management. Spraying insecticides, pesticides help to minimize the crop damage by controlling the insects and other pests.</p></div>
+					<div class="item"><h3>Plant Disease Management :</h3><br>
+						<p>Pathogenic diseases are another type of crop-damaging factors. Microorganisms like bacteria, fungi, and viruses affect different parts of the crop through various means. Crops could be protected from these diseases by using pesticides and biocontrol agents.<br>These are crop protection management, which should be followed before and during the cultivation.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+<script>
+	var hamburger = document.querySelector(".hamburger");
+	var wrapper  = document.querySelector(".wrapper");
+	var backdrop = document.querySelector(".backdrop");
+
+	hamburger.addEventListener("click", function(){
+		wrapper.classList.add("active");
+	})
+
+	backdrop.addEventListener("click", function(){
+		wrapper.classList.remove("active");
+	})
+</script>
+
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+        <img src="{% static 'images/lll.png'%}" >
+        <a href="/about/"><p>About us</p></a>
+        <a href="/contact/"><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/risk/face.png'%}"></li>
+                <li><img src="{% static 'images/risk/twitter.png'%}"></li>
+                <li><img src="{% static 'images/risk/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+</body>
+</html>

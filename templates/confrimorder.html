@@ -1,0 +1,786 @@
+{% load static %}
+<!--hr tag css-->
+<!--position: relative;-->
+<!--            top: 20px;-->
+<!--            border: none;-->
+<!--            height: 12px;-->
+<!--            background: black;-->
+<!--            margin-bottom: 50px;-->
+
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+    <title>Confrim Order</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <script src="https://use.fontawesome.com/f729208842.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Poppins:wght@200;300;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body{
+            background-color: #e2e2e2dc;
+        }
+        .small-container {
+            max-width: 912px;
+            margin-top: 10px;
+            padding-bottom: 15px;
+            background-color: #fff;
+             border: 1px solid grey;
+             /* box-shadow: 3px 3px grey; */
+             border-radius:5px;
+        }
+
+        /*<!-- --------------navbar------------------- -->*/
+        .header ul {
+            list-style-type: none;
+            /* margin: 0; */
+            margin-top: -40px;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(248, 245, 245);
+            height: 80px;
+        }
+
+        .header li {
+            float: left;
+        }
+
+        .header li a {
+            display: block;
+            color: rgb(48, 47, 47);
+            font-size: 23px;
+            /* padding-top: 20px; */
+            /* padding-left: 30px; */
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 15px 35px;
+            text-decoration: none;
+        }
+
+        .header li a:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
+        }
+
+        #logoimg {
+            margin-top: -80px;
+            margin-right: -40px;
+            height: 230px;
+            width: 230px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+
+        #textcss {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss1 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* font-size: 30px; */
+        }
+
+        #textcss2 {
+            margin-top: 10px;
+            margin-left: -30px;
+            /* <!--            padding-left:px--> */
+            /* font-size: 30px; */
+        }
+
+        .gtrans {
+            margin-left: 30%;
+        }
+
+        .container1 {
+            max-width: 100%;
+            margin: auto;
+
+        }
+
+        .row1 {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .bgcart {
+            background-color: none;
+        }
+
+        .bgcart:hover {
+            background-color: none;
+        }
+
+        .cartimg {
+            margin-top: -5px;
+            margin-left: 150px;
+            width: 55px;
+            height: 55px;
+            border-radius: 100px;
+        }
+
+        /*<!-- --------------------cart items details-------------------- -->*/
+        .cart-page {
+            margin: 80px auto;
+
+        }
+
+        table {
+            width: 88%;
+            border-collapse: collapse;
+            font-size: 17px;
+
+        }
+
+        .ordsum h2 {
+
+            margin-left: 30px;
+            margin-top: 20px;
+            font-weight: normal;
+            text-align: center;
+            padding-top: 0px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .ordsum {
+
+            width: 350px;
+            height: 240px;
+            margin-left: -10px;
+            margin-top: 0px;
+            border: 1px solid grey;
+            background-color: #fff;
+
+        }
+
+        .info {
+            width: 230px;
+            height: 15px;
+            background-color: #fff;
+            color: black;
+            margin-left: 40px;
+            padding: 40px 20px;
+            border-radius: 10px;
+
+
+
+        }
+
+        .input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /*.cart-info img{
+		size: 10%;
+	}*/
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: teal;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: teal;
+            font-size: 12px;
+        }
+
+        td img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+
+        .total-price {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 10px;
+            padding-right: 10px;
+        }
+
+        .table1 {
+            border-top: 3px solid rgb(2, 116, 116);
+            width: 100%;
+            max-width: 500px;
+            font-size: 18px;
+
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+
+        .form-container {
+            background: #fff;
+            width: 300px;
+            height: 400px;
+            position: relative;
+            text-align: center;
+            padding: 20px 0;
+            margin: auto;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+        }
+
+        .form-container span {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #555;
+            cursor: pointer;
+            width: 100px;
+            display: inline-block;
+        }
+
+        .form-btn {
+            display: inline-block;
+        }
+
+        .form-container form {
+            max-width: 300px;
+            padding: 0 20px;
+            position: absolute;
+            top: 130px;
+            transition: transform 1s;
+        }
+
+        form input {
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        form .btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        form .btn:focus {
+            outline: none;
+
+        }
+
+        #LoginForm {
+            left: -300px;
+        }
+
+        #RegForm {
+            left: 0;
+        }
+
+        form a {
+            font-size: 12px;
+        }
+
+        #Indicator {
+            width: 100px;
+            border: none;
+            background: #ff523b;
+            height: 3px;
+            margin-top: 8px;
+            transform: translateX(100px);
+            transition: transform 1s;
+        }
+
+        #cartimg {
+
+            margin-top: 20px;
+        }
+
+        .contact3-form-btn {
+            font-family: Poppins-Medium;
+            font-size: 19px;
+            color: white;
+            margin-left: 80px;
+            margin-top: -30px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            padding: 0 50px;
+            min-width: 100px;
+            height: 55px;
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        .contact3-form-btn::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(1, 161, 161);
+            opacity: 1;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+        .contact3-form-btn:hover {
+            color: rgb(114, 226, 174);
+            background-color: rgb(193, 201, 198);
+        }
+
+        /*---===================-----footer----===============================-----*/
+        .footer {
+            position: absolute;
+            left: 0;
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 10px;
+            margin-right: -20px;
+            margin-top: -23px;
+        }
+
+        .footer p {
+            color: #8a8a8a;
+
+        }
+
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            min-width: 400px;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col-1 {
+            flex-basis: 30%;
+            margin-left: 30px;
+
+        }
+
+        .footer-col-1 img {
+            width: 150px;
+            margin-left: 110px;
+
+        }
+
+        .footer-col-1 p {
+
+            margin-left: 150px;
+            color: #3B9C9C;
+        }
+
+        .footer-col-2 {
+            flex: 1;
+            margin-left: 15px;
+
+        }
+
+        .footer-col-2 input {
+
+            border: 1px solid #3B9C9C;
+            padding: 10px;
+            width: 77%;
+            border-radius: 18px;
+            background-color: black;
+            color: #8a8a8a;
+        }
+
+        .footer-col-2 textarea {
+            border: 1px solid #3B9C9C;
+            border-radius: 18px;
+            text-align: center;
+            width: 77%;
+            color: #8a8a8a;
+            background-color: black;
+
+
+        }
+
+        .btn-primary {
+            box-shadow: none !important;
+            border: none;
+            border-radius: 25px;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #3B9C9C;
+            width: 110px;
+
+
+        }
+
+        .footer-col-3 {
+            flex-basis: 12%;
+            margin-left: 30px;
+            text-align: left;
+        }
+
+        .footer-col-3 .fa {
+
+            margin-right: 8px;
+            font-size: 25px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding-top: 7px;
+            color: #3B9C9C;
+            background-color: black;
+        }
+
+        /*to remove bullet style*/
+        ul {
+            list-style-type: none;
+        }
+
+        .copyright {
+            text-align: center;
+
+        }
+
+        /*-----===========-----social media-------============-------*/
+        .social-media {
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .social-media ul {
+            list-style: none;
+        }
+
+        .social-media ul li {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            border-radius: 35px;
+        }
+
+
+        /* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+
+.left{
+  width: 66%;
+  height: 590px;
+}
+ .right {
+  width: 30%;
+  height: 890px;
+}
+
+.login{
+margin-top: -23px;
+height:58px;
+width:860px;
+  padding-top: -5px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  border: 1px solid grey;
+  /* box-shadow: 3px 3px grey; */
+  /* border-radius:5px; */
+  text-align: left;
+  color: grey;
+  background-color: #fff;
+
+}
+
+.address{
+margin-top: 10px;
+height:110px;
+width:860px;
+border: 1px solid grey;
+  padding: 0px;
+  padding-left: 50px;
+  /* box-shadow: 3px 3px grey; */
+  background-color: #fff;
+  /* border-radius:5px; */
+  text-align: left;
+
+}
+
+.address h2{
+color: grey;
+}
+
+.titlee{
+width:863px;
+height: 47px;
+font-size: 25px;
+ background-color:rgb(1, 161, 161);
+ color: white;
+text-align: left;
+padding-left: 50px;
+ padding-top: 14px;
+ }
+
+i{
+ color: blue;
+ }
+    </style>
+</head>
+
+
+<body>
+    <!-- --------------navbar------------------- -->
+    <br><br>
+    <div class="header">
+        <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/about/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+
+        </ul>
+    </div>
+    <br>
+    <!-- --------------------cart items details-------------------- -->
+        <div class="row">
+    <div class="column left"><center>
+        <div class="login">
+            <h2> 1.  &nbsp;Login &nbsp;  <i>✔</i> </h2>
+        </div>
+
+        <div class="address">
+            <h2>2. &nbsp;Address: &nbsp;  <i>✔</i> </h2> <font size="4px">{{add}},{{city}}, Pin code: {{pin}}</font>
+        </div>
+        <div class="small-container" class="cart-page">
+            <div class="titlee">3. &nbsp; Order Details</div>
+            <table>
+                {% for key, d in det.items %}
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="{{d.url}}">
+                            <!--					<img src="images/onion.jpg">-->
+                            <div>
+                                <p>{{ d.Productname }}</p>
+                                <small>Price:₹ {{ d.Price }}.00</small>
+                                <br>
+                                <a href="/removefromcart/?z={{key}}">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <!--			<td><input type="number" value="{{ d.Requiredquantity }}"  min="1" max={{d.maxquant}}></td>-->
+                    <td><input type="text" value="{{ d.Requiredquantity }}" disabled style="border: 1px solid black;"></td>
+                    <td>₹{{ d.totalprice }}.00</td>
+                </tr>
+                {% endfor %}
+            </table>
+            </div>
+    </center>
+    </div>
+
+    <div class="column right" >
+        <div class="ordsum">
+            <h2>Order Summary</h2>
+            <br>
+             <div class="total-price">
+            <table class="table1">
+                <!--            <tr><td>Order summary</td></tr>-->
+                <tr>
+                    <td style="padding-top: 18px;">Subtotal</td>
+                    <td style="padding-top: 18px;">₹ {{ sum }}.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>₹ 20.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>₹ {{ sum1 }}.00</td>
+                </tr>
+            </table>
+            <br><br><br>
+         </div>
+        </div>
+        <br><br><br>
+
+
+
+
+
+    {% if orderinfo.items %}
+<form>
+    <button id="rzp-button1" class="contact3-form-btn">Pay Now</button>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+var options = {
+    "key": "rzp_test_ssmxVx39H1TlGF",
+    "amount": "{{ orderinfo.amount }} ",
+    "currency": "INR",
+    "name": "e-Kisan",
+    "description": "Buying and Selling of Agrifood products",
+    "image": "{% static 'images/mainlogo.png' %}",
+    "order_id": "{{ odid}}",
+    "handler": function (response){
+        window.location.href = "/success/?oid={{ odid }}&amm={{amm}}";
+    },
+    "theme": {
+        "color": "rgb(2, 116, 116)"
+    }
+
+};
+var rzp1 = new Razorpay(options);
+
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+
+<!--rzp1.on('payment.failed', function (response){-->
+<!--    alert(response.error.code);-->
+<!--    alert(response.error.description);-->
+<!--    alert(response.error.source);-->
+<!--    alert(response.error.step);-->
+<!--    alert(response.error.reason);-->
+<!--    alert(response.error.metadata.order_id);-->
+<!--    alert(response.error.metadata.payment_id);-->
+<!--}-->
+}
+</script>
+</form>
+    </div>
+ </div>
+{% endif %}
+<!--</div>-->
+
+
+
+
+<!--        &lt;!&ndash;================================ footer ====================================&ndash;&gt;-->
+<!--        <br> <br> <br> <br> <br>-->
+<!--        <section id="foot">-->
+<!--            <div class="footer">-->
+<!--                <div class="container1">-->
+<!--                    <div class="row1">-->
+<!--                        <div class="footer-col-1">-->
+<!--                            <img src="{% static 'images/logo.png' %}">-->
+<!--                            <a href="">-->
+<!--                                <p>About us</p>-->
+<!--                            </a>-->
+<!--                            <a href="">-->
+<!--                                <p>Contact us</p>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                        <div class="footer-col-2">-->
+
+<!--                            <p><b>FEEDBACK FORM</b></p>-->
+<!--                            <input type="email" placeholder="ENTER YOUR NAME">-->
+<!--                            <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">-->
+<!--                            <textarea rows="5" cols="50" style="width:80%; height: 80px;">ENTER YOUR FEEDBACK-->
+<!--    				</textarea><br>-->
+<!--                            <button type="button" class="btn btn-primary">SUBMIT</button>-->
+<!--                        </div>-->
+<!--                        <div class=" footer-col-3">-->
+<!--                            <p></p>-->
+<!--                            <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>-->
+<!--                            <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>-->
+<!--                            <p><i class="fa fa-phone"></i> 9323131444</p>-->
+<!--                            <div class="social-media">-->
+<!--                                <ul>-->
+<!--                                    <li><img src="{% static 'images/face.png' %}"></li>-->
+<!--                                    <li><img src="{% static 'images/twitter.png' %}"></li>-->
+<!--                                    <li><img src="{% static 'images/insta.png' %}"></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; <hr> &ndash;&gt;-->
+<!--                    <p class="copyright">Copyright 2021 e-Kisan</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <!-- ------------------js for toggle menu------------------- -->
+
+        <script>
+            var MenuItems = documents.getElementById("MenuItems")
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight == "200px"
+                }
+                else {
+                    MenuItems.style.maxHeight == "0px"
+                }
+            }
+        </script>
+
+</body>
+
+</html>

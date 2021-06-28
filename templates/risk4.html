@@ -1,0 +1,219 @@
+{% load static %}
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Risk Management</title>
+	<link rel="stylesheet" href="{% static 'css/risk.css'%}">
+	<link rel="icon" href="{% static 'images/mainlogo.png' %}" type="image/x-icon">
+<!--	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#logoimg {
+            margin-top: -50px;
+            margin-right: -40px;
+            height: 190px;
+            width: 200px;
+            margin-left: -10px;
+            background-color: transparent;
+        }
+        .bgcart {
+			background-color:none;
+		}
+		.bgcart:hover {
+			background-color:none;
+		}
+		.cartimg {
+			margin-top:-5px;
+			margin-left: 150px;
+			width: 55px;
+		    height: 55px;
+		    border-radius: 100px;
+		}
+    </style>
+</head>
+<body>
+
+<!-- ----------------navbar section------------------------------------------ -->
+<section id="navbar">
+<div class="nav">
+    <ul>
+            <li><img id='logoimg' src="{% static 'images/lll.png' %}"></li>
+            <li id='textcss'><a href="/index/">Home</a></li>
+            <li id='textcss1'><a href="/aboutus/">About Us</a></li>
+            <li id='textcss2'><a href="/contact/">Contact Us</a></li>
+            <li class="gtrans">
+                <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            </li>
+            <li class="bgcart">
+				<a href="/displaycart/"><img  class='cartimg' src="{% static 'images/cart1.png' %}"></a>
+        </li>
+        </ul>
+</div>
+</section>
+
+<!-- main risk page-->
+	<div class="wrapper">
+		<div class="wrapper_inner">
+			<div class="vertical_wrap">
+			<div class="backdrop"></div>
+			<div class="vertical_bar">
+				<div class="profile_info">
+				</div>
+				<ul class="menu">
+					<li><a href="/risk/" >
+						<!-- <span class="icon"><i class="fas fa-home"></i></span> -->
+						<span class="text">Drought Management</span>
+					</a></li>
+					<li><a href="/risk2/">
+						<!-- <span class="icon"><i class="fas fa-file-alt"></i></span> -->
+						<span class="text">Hailstorm</span>
+					</a></li>
+					<li><a href="/risk3/" >
+						<!-- <span class="icon"><i class="fas fa-chart-pie"></i></span> -->
+						<span class="text">Crop Protection</span>
+					</a></li>
+					<li><a href="#" class="active">
+						<!-- <span class="icon"><i class="fas fa-user"></i></span> -->
+						<span class="text">Soil Fertility</span>
+					</a></li>
+					<!-- <li><a href="#">
+						<span class="icon"><i class="fas fa-cog"></i></span>
+						<span class="text">Settings</span>
+					</a></li> -->
+				</ul>
+
+			</div>
+		</div>
+		<div class="main_container">
+			<div class="top_bar">
+				<div class="hamburger">
+					<i class="fas fa-bars"></i>
+				</div>
+				<div class="logo">
+					Risk <span>Management</span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content">
+					<div class="item">
+						<h1>
+						How To Manage Soil fertility-</h1><br><img src="{% static 'images/risk/image11.jpg'%}" width="100%" ><br><br>
+				From an agricultural point of view, a fertile soil is one that can provide adequate amounts of nutrients for plant growth. This results in better crop yields and quality.<h3>FACTORS AFFECTING SOIL FERTILITY:</h3>
+There are various factors that define and contribute to soil fertility.
+<h3>Mineral composition –</h3> knowing the mineral composition of the soil, we can predict its ability to retain plant nutrients.  This is determined by the source rock, the climate, biological and chemical processes.
+When referring to the soil mineral nutrients, there’s a wide gap between the total amount of mineral nutrients in the soil and their availability to the plant. In fact, only a small fraction of the minerals composing the soil will be available for the plant.<br>
+Applying fertilizers and soil amendments, is a key element in enhancing and preserving the mineral content of the soil and therefore, a proper fertilizing program is one of the most influencing factor on the soil fertility.
+</div>
+					<div class="item">
+						<h3>Soil pH –</h3>
+						<p>Soil pH is important in maintaining proper soil fertility. It affects the nutrient availability in the soil. A pH range of 5.5-7 is considered to be adequate for most plants.
+						</p>
+					</div>
+					<div class="item">
+						<h3>Soil Texture – </h3>
+						<p>Different sized minerals particles give the soil its structure –  sand, silt a clay. In comparison to sandy soils, clay soils are capable to retain more nutrients and so act as a bigger nutrient reservoir.<br>
+						<p>The CEC (Cation Exchange Capacity) of the soil can be used as an indication to the soil fertility. Higher CEC means higher capacity of the soil to hold nutrients. Clayey soils will have a higher CEC than sandy soils and therefore, will usually be more fertile.(A – Clay. B – Sand):<br>
+							<img src="{% static 'images/risk/image60.png'%}"></p>
+
+						</div>
+					<div class="item">
+						<h3>Organic Matter – </h3>
+						<p>The organic matter is considered to be a source of nitrogen and phosphorus. Nitrogen and phosphorous can be mineralized and become available for plant uptake. The organic matter also increases soil fertility, as it improves the soil structure while increasing the CEC.
+						</p>
+					</div>
+					<div class="item">
+						<h2>HOW TO MAINTAIN A FERTILE SOIL:</h2>
+						<h3>Correct Nutrient Management:</h3>
+							<p>Inadequate use of fertilizershas negative effects on soil fertility. Over-using fertilizers is not only costly, but also creates soil health problems. Mineral salts that are not used by the crop, accumulate and affect future crops grown on that soil.
+							<br>
+							On the other hand, without using sufficient amounts of fertilizers, originally fertile soils will gradually deplete of nutrients. This way, the crop would not reach its potential yield and the grower’s profits will decrease.
+						</p>
+						<h3>Monitoring Nutrient Content:</h3>
+							<p>Applying fertilizers should be correlated to the target yield and preferably be split according to the growing stage of the crop.<br>
+							<img src="{% static 'images/risk/image20.png'%}" width="300px">
+						</p>
+					</div>
+					<div class="item">
+						<h3>HOW TO EVALUATE THE FERTILITY OF YOUR SOIL:</h3>
+							<p>Soil and plant tissue analyses are important tools to keep track of the fertility status of the soil. In order to achieve high yields and to maintain soil fertility for the following years, an appropriate fertilizing program should be established.</p>
+							<ul><li>(i)Recommends the ideal fertilizer mixture/ blends.</li>
+							<li>(ii)Saves up to 50% on fertilizer costs.</li>
+							<li>(iv)Comprehensive data on hundreds of crop varieties.</li>
+							<li>(v)Interprets test results for any extraction method.</li>
+								</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+<script>
+	var hamburger = document.querySelector(".hamburger");
+	var wrapper  = document.querySelector(".wrapper");
+	var backdrop = document.querySelector(".backdrop");
+
+	hamburger.addEventListener("click", function(){
+		wrapper.classList.add("active");
+	})
+
+	backdrop.addEventListener("click", function(){
+		wrapper.classList.remove("active");
+	})
+</script>
+
+<!-- ------------footer-------------------------- -->
+
+<section id="foot">
+<div class="footer">
+  <div class="container1">
+    <div class="row1">
+      <div class="footer-col-1">
+        <img src="{% static 'images/lll.png'%}" >
+        <a href=""><p>About us</p></a>
+        <a href=""><p>Contact us</p></a>
+      </div>
+      <div class="footer-col-2">
+
+        <p><b>FEEDBACKF FORM</b></p>
+        <input type="email" placeholder="ENTER YOUR NAME">
+        <input type="email" placeholder="ENTER VALID EMAIL ADDRESS">
+        <textarea  rows = "5" cols = "50"  style="width:80%; height: 80px;">ENTER YOUR FEEDBACK
+        </textarea><br>
+        <button type="button" class="btn btn-primary">SUBMIT</button>
+      </div>
+      <div class=" footer-col-3">
+        <p></p>
+        <p><i class="fa fa-map-marker"></i> S.N.D.T. Santacruz,Mumbai 400049</p>
+        <p><i class="fa fa-envelope-o"></i> info.e-kisan@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 9323131444</p>
+         <div class="social-media">
+              <ul>
+                <li><img src="{% static 'images/risk/face.png'%}"></li>
+                <li><img src="{% static 'images/risk/twitter.png'%}"></li>
+                <li><img src="{% static 'images/risk/insta.png'%}"></li>
+              </ul>
+            </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+    <p class="copyright">Copyright 2021 e-Kisan</p>
+  </div>
+</div>
+</section>
+</body>
+</html>
